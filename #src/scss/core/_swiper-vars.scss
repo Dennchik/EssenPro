@@ -1,0 +1,24 @@
+$themeColor: #7796f3 !default;
+:root {
+	--swiper-scrollbar-top: auto;
+	--swiper-scrollbar-bg-color: rgba(0, 0, 0, 0.1);
+	--swiper-scrollbar-drag-bg-color: rgba(0, 0, 0, 0.5);
+	--swiper-scrollbar-size: 0.4rem;
+	--swiper-scrollbar-bottom: 0.4rem;
+	--swiper-scrollbar-sides-offset: 1%;
+	--swiper-scrollbar-border-radius: 1rem;
+	--swiper-theme-color: $themeColor;
+	--swiper-navigation-size: 3rem;
+	--swiper-pagination-color: #f65e38;
+	--swiper-pagination-bullet-opacity: 1;
+	--swiper-pagination-bullet-size: 1.2rem;
+	--swiper-pagination-bullet-border-radius: 50%;
+	--swiper-pagination-bullet-inactive-opacity: 0.4;
+	--swiper-pagination-bullet-inactive-color: rgb(0, 0, 0);
+	--swiper-pagination-bullet-width: 1.2rem;
+	--swiper-pagination-bullet-height: 1.2rem;
+	--swiper-pagination-top: auto;
+	--swiper-pagination-bottom: 0.5rem;
+	--swiper-pagination-bullet-horizontal-gap: 0.5rem;
+	--swiper-transition-opacity: 0.9s;
+}

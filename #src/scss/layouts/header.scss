@@ -1,0 +1,136 @@
+.header {
+	// .header__header
+	&__header {
+		padding: 10px 0;
+		white-space: nowrap;
+		display: flex;
+		gap: 0.5rem;
+
+		@include flex-align-center-justify-space-between;
+	}
+
+	// .header__column
+	&__column {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	// .header__top-menu
+	&__top-menu {
+		font-size: 14px;
+		@include flex-align-center;
+	}
+
+	// .header__login
+	&__login {
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__footer
+	&__footer {
+		padding: 9px;
+		display: flex;
+		align-items: center;
+		border-radius: 10px;
+		background: linear-gradient(to right, #a83434 50%, #ea8e7f 100%);
+		@include flex-align-center-justify-space-between;
+	}
+
+	// .header__cart
+	&__cart {
+	}
+
+	&__link {
+		._icon {
+			margin-right: 1rem;
+			font-size: 24px;
+		}
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__search
+	&__search {
+	}
+}
+
+.top-menu {
+	// .top-menu__logo
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		margin-right: 10px;
+	}
+
+	// .top-menu__image
+
+	&__image {
+		margin-right: 13px;
+		width: 149px;
+		height: 42px;
+		img {
+		}
+	}
+
+	// .top-menu__text
+
+	&__text {
+		font-size: 13px;
+	}
+
+	// .top-menu__contacts
+
+	&__contacts {
+		margin-right: 3.4rem;
+		@include flex-align-center;
+	}
+
+	// .top-menu__phone
+	&__phone {
+		margin-right: 1.5rem;
+	}
+
+	// .top-menu__email
+	&__email {
+	}
+}
+
+.main-menu {
+	flex: 1 1 auto;
+	margin-right: 3rem;
+
+	// .main-menu__body
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: $bg-color;
+	}
+
+	// .main-menu__link
+
+	&__link {
+	}
+}
+
+.search-container {
+	// .search-container__form
+
+	&__form {
+	}
+}
+
+.search-form {
+	// .search-form__input
+
+	&__input {
+	}
+
+	// .search-form__button
+
+	&__button {
+	}
+}

@@ -1,0 +1,145 @@
+.feed-back {
+	.data-form__line {
+		@include _490 {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.data-form__lebel {
+		min-width: 150px;
+		@include _490 {
+			margin-right: 1.5rem;
+			margin-left: 1.5rem;
+			white-space: normal;
+			margin-bottom: 1rem;
+			text-align: left;
+			width: 100%;
+		}
+	}
+
+	.data-form__input {
+		@include _min-690 {
+			input {
+				min-width: 30rem;
+			}
+		}
+
+		@include _375 {
+			input {
+				min-width: 100%;
+			}
+			width: 100%;
+		}
+	}
+}
+
+.data-form {
+	// .data-form__body
+	&__body {
+		display: grid;
+		width: auto;
+		grid-template-columns: min-content min-content;
+		justify-content: center;
+
+		column-gap: 2rem;
+		row-gap: 3.8rem;
+		margin-bottom: 2rem;
+		@include _690 {
+			grid-template-columns: min-content;
+		}
+		@include _375 {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .data-form__column
+	&__column {
+		width: 100%;
+	}
+
+	// .data-form__title
+	&__title {
+		text-align: left;
+		font-size: 15px;
+		font-weight: 700;
+		@include _min-690 {
+			grid-column: 1 / 3;
+		}
+	}
+
+	// .data-form__line
+	&__line {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		text-align: right;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+		@include _375 {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	// .data-form__lebel
+	&__lebel {
+		margin-right: 2rem;
+
+		@include _375 {
+			margin-right: 1.5rem;
+			margin-left: 1.5rem;
+			white-space: normal;
+			margin-bottom: 1rem;
+			text-align: left;
+			width: 100%;
+		}
+	}
+
+	// .data-form__input
+	&__input {
+		input {
+			border: 1px solid #004646;
+			height: 32px;
+			border-radius: 5px;
+			padding-left: 0.5rem;
+			height: 32px;
+			line-height: 228.571429%; /* 32px/14 */
+			font-size: 13px;
+			&:focus {
+				box-shadow: 0 0 0 2px rgba(0, 70, 70, 0.4666666667);
+			}
+		}
+
+		@include _min-690 {
+			input {
+				min-width: 22rem;
+			}
+		}
+		@include _screen-690 {
+			input {
+				min-width: 30rem;
+			}
+		}
+		@include _375 {
+			input {
+				min-width: 100%;
+			}
+			width: 100%;
+		}
+	}
+
+	// .data-form__button
+	&__button {
+		width: 22rem;
+		height: 32px;
+		color: #fbf9f4;
+		font-size: 1.4rem;
+		padding: 0.9rem 3rem;
+		border-radius: 16px;
+		background: #004646;
+		margin-bottom: 1.5rem;
+	}
+}

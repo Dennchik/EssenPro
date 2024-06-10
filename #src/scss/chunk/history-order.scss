@@ -1,0 +1,107 @@
+.history-order {
+	// .history-order__period-date
+	&__period-date {
+		display: grid;
+		grid-template-columns: min-content min-content min-content;
+		align-items: center;
+		margin-bottom: 3rem;
+		@include _425 {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	// .history-order__period-history
+
+	&__period-history {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.date-period {
+	// .date-period__title
+	&__title {
+		margin-right: 5px;
+		@include _425 {
+			grid-column: 1 / 3;
+			margin-bottom: 2rem;
+		}
+	}
+
+	// .date-period__item
+	&__item {
+		margin-right: 3rem;
+	}
+
+	// .date-period__label
+	&__label {
+		margin-right: 1rem;
+	}
+
+	// .date-period__input
+	&__input {
+		display: flex;
+		align-items: center;
+		margin-right: 1.5rem;
+		input {
+			position: relative;
+			padding: 0.5rem;
+			padding-left: 3rem;
+			border: 1px solid $color;
+			border-radius: 5px;
+
+			@include _425 {
+				max-width: 105px;
+			}
+
+			&::-webkit-calendar-picker-indicator {
+				position: absolute;
+				left: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.history-period {
+	// .history-period__thead
+
+	&__thead {
+		margin-bottom: 20px;
+		padding: 13px 13px;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		border: 1px solid $color;
+		border-radius: 5px;
+		font-weight: 700;
+	}
+
+	// .history-period__item
+	&__item {
+		display: flex;
+		align-items: center;
+		flex: 23%;
+		@include _425 {
+			font-size: 10px;
+		}
+	}
+
+	// .history-period__row
+
+	&__row {
+		border: 1px solid #d3d3d3;
+		border-radius: 5px;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 20px 13px;
+
+		&:not(:last-child) {
+			margin-bottom: 13px;
+		}
+	}
+}

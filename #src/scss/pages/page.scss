@@ -1,0 +1,225 @@
+.page {
+	// .page__container
+	&__container {
+		background: #fbf9f4;
+	}
+
+	// .page__header
+	&__header {
+		position: relative;
+		z-index: 7;
+		// width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: $bg-color;
+		width: 100%;
+		padding: 0 10px;
+		transition: all 0.7s ease-in-out;
+		@include _screen-690 {
+			box-shadow: 0 0 5px #000;
+		}
+	}
+
+	// .page__content
+	&__content {
+		padding-top: 1.8rem;
+		position: relative;
+		@include _screen-690 {
+			margin-top: 48px;
+			left: 0;
+			z-index: 1;
+		}
+		@include _min-690 {
+			margin-top: 14.2rem;
+		}
+	}
+
+	// .page__textile
+	&__textile {
+		margin-bottom: 8.9rem;
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+		@include _690 {
+			margin-top: 0;
+		}
+	}
+
+	// .page__image
+	&__image {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .page__new-products
+	&__new-products {
+		padding: 4.3rem 0 8.9rem;
+		@include _690 {
+			// padding-bottom: 4.7rem;
+		}
+	}
+
+	// .page__portiere-fabrics
+	&__portiere-fabrics {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__furniture-fabrics
+	&__furniture-fabrics {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__costume-fabrics
+	&__costume-fabrics {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__sale-products
+	&__sale-products {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__delivery
+	&__delivery {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__about
+	&__about {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__reviews
+	&__reviews {
+		padding: 4.3rem 0 8.9rem;
+	}
+
+	// .page__footer
+	&__footer {
+		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+		background: url('../img/bg-footer.png') center / cover no-repeat;
+		margin-bottom: 1rem;
+	}
+
+	// .page__buttom-menu
+	&__buttom-menu {
+		transition: all 0.5s ease 0.3s;
+		z-index: 9;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+
+		@include _min-690 {
+			display: none;
+		}
+	}
+
+	// .page__bread-crumbs
+	&__bread-crumbs {
+		margin-bottom: 2rem;
+	}
+
+	// .page__categories
+	&__categories {
+		padding: 0 0 8.9rem;
+		@include _690 {
+			padding: 0;
+		}
+	}
+	//* --------------------------------------------------------------------------
+	// .page__sidebar-catalog
+	&__sidebar-catalog {
+		display: none;
+		overflow-x: hidden;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+		transform: translateX(-105%);
+		background: $bg-color;
+
+		@include _screen-690 {
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			box-shadow: 1px 0px 7px #0000008c;
+			width: 320px;
+			display: block;
+			padding: 0 10px 123px;
+			scrollbar-width: none;
+
+			&._opened-menu {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	// .page__sidebar-menu
+	&__sidebar-menu {
+		display: none;
+		overflow-x: hidden;
+		position: fixed;
+		z-index: 9;
+		right: 0;
+		height: 100%;
+		transition: all 0.5s ease-in-out;
+		transform: translateX(100%);
+		background: $bg-color;
+
+		@include _screen-690 {
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			width: 320px;
+			display: block;
+			padding: 20px 10px 123px;
+			box-shadow: 1px 0px 7px #0000008c;
+
+			&._opened-menu {
+				transform: translateX(0);
+			}
+		}
+
+		@include _320 {
+			border-radius: 0;
+		}
+	}
+	//* --------------------------------------------------------------------------
+	// .cart-page
+	&__cart-page {
+		padding-bottom: 5rem;
+	}
+
+	// .page__product-card
+	&__product-card {
+		position: relative;
+		padding: 0 0 8.9rem;
+	}
+
+	// .page__row-card
+	&__row-card {
+		padding: 0 0 8.9rem;
+	}
+
+	// .page__favourites
+	&__favourites {
+		padding: 4.3rem 0 8.9rem;
+	}
+	//* --------------------------------------------------------------------------
+	// .page__personal-account
+	&__personal-account {
+		padding: 0 0 8.9rem;
+		.order-place__send-button {
+			// display: block;
+		}
+		.slide-container__favourit {
+			color: red;
+		}
+	}
+}

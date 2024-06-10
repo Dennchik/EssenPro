@@ -1,0 +1,60 @@
+.counter-product {
+	// .counter-product__quantity
+	&__quantity {
+		border: 1px solid $color;
+		border-radius: 5px;
+		display: flex;
+		@include flex-align-center-justify-space-between;
+		[class*='icon-'] {
+			pointer-events: none;
+		}
+	}
+
+	// .counter-product__new-price
+	&__price {
+		margin-top: 2rem;
+		@include _690 {
+			margin-top: 4rem;
+			text-align: center;
+		}
+	}
+}
+
+.quantity {
+	// .quantity__buttom
+	&__button {
+		cursor: pointer;
+		font-size: 15px;
+		width: 3rem;
+		height: 3rem;
+		line-height: 100%;
+		.icon {
+			pointer-events: none;
+		}
+
+		.icon-minus {
+			font-size: 13px;
+		}
+
+		.icon-cancel {
+			font-size: 7px;
+			transform: rotate(45deg);
+		}
+	}
+
+	// .quantity__input
+	&__input {
+		display: flex;
+		input {
+			font-size: 12px;
+			text-align: center;
+			max-width: 50px;
+		}
+	}
+}
+
+.quantity-remove {
+	&._disabled {
+		opacity: 0.3;
+	}
+}

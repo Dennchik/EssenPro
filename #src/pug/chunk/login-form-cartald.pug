@@ -1,0 +1,27 @@
+.login-modal
+	._modal-content
+		span._close
+			+iconfont('cross-middle','icon')
+		form._form(action="#")
+			._input 
+				label._label(for="username-cart") Логин:
+				input#username-cart(type="text", name="username", autocomplete="off", required)
+			._input 
+				label._label(for="password-cart") Пароль:
+				input#password-cart(type="password", name="password", autocomplete="off", required)
+			button(type="submit")._button-login Войти
+		button(type="button")._recovery Забыли пароль?
+.recovery-modal
+	._modal-content
+		p._text Введите почту по которой регестрировались ранее, пароль отправим на нее
+		span._close
+			+iconfont('cross-middle', 'icon')
+		form._form(action="")
+			._input 
+				label._label(for="email-cart") Эл.почта:
+				input#email-cart(type="email", name="email", autocomplete="off", required)
+			button(type="submit")._button-recovery Отправить
+.registrations-modal
+	._modal-content 
+		button(type="button")._button-private-person Физическое лицо
+		button(type="button")._button-corporate-person Юридическое лицо

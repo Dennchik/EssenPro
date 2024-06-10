@@ -1,0 +1,103 @@
+.result-container {
+	// .result-container__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-between;
+		border: 1px solid $color;
+		border-radius: 5px;
+		padding: 17px 10px;
+		margin-bottom: 4.3rem;
+		@include _490 {
+			gap: 15px;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .result-container__column
+	&__column {
+		&:nth-child(1) {
+			p {
+				font-weight: 700;
+				&:nth-child(1) {
+					margin-bottom: 3px;
+				}
+				&:nth-child(2) {
+					margin-bottom: 16px;
+				}
+			}
+		}
+		&:nth-child(2) {
+			justify-self: end;
+			text-align: right;
+		}
+	}
+
+	// .result-container__button
+
+	&__button {
+		border: 1px solid $color;
+		border-radius: 24px;
+		padding: 8px 27px;
+		background: $bg-color;
+		&:active {
+			background: $color;
+			color: $bg-color;
+		}
+	}
+
+	// .result-container__column--result
+
+	&__column--result {
+		.icon-rub {
+			font-size: 13px;
+			font-weight: 100;
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+
+	// .result-container__totalprice-order
+
+	&__totalprice-order {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		gap: 5px;
+		margin-bottom: 8px;
+	}
+
+	// .result-container__total-sum
+
+	&__total-sum {
+	}
+
+	// .result-container__discounts
+
+	&__discounts {
+		display: flex;
+		justify-content: flex-end;
+		gap: 10px;
+		margin-bottom: 8px;
+	}
+
+	// .result-container__discounts-sum
+
+	&__discounts-sum {
+	}
+
+	// .result-container__final-order
+	&__final-order {
+		display: flex;
+		justify-content: flex-end;
+		gap: 10px;
+		font-weight: 700;
+	}
+
+	// .result-container__final-sum
+
+	&__final-sum {
+	}
+}
+.input-total {
+}

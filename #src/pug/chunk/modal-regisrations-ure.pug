@@ -1,0 +1,46 @@
+.modal-registrations-ure
+	._content
+		._body 
+			span._close-btn
+				+iconfont('cancel', 'icon')
+			h2._title Юридическое лицо
+			form(action="").registration-form
+				._column
+					._line
+						label(for="ure-company")._lebel Название организации:&nbsp;*
+						._input
+							input.input(id='ure-company', autocomplete=" ", type="text", name="company")
+					._line
+						label(for="ure-contactname")._lebel Ф.И.О. контактного&nbsp;лица:
+							span *
+						._input
+							input.input(id='ure-contactname', autocomplete=" ", type="text", name="contactname")
+					._line
+						label(for="reg-inn")._lebel ИНН:&nbsp;*
+						._input
+							input.input(id="reg-inn", autocomplete=" ", type="text", name="inn")
+					._line
+						label(for="ure-phone")._lebel Телефон:&nbsp;*
+						._input
+							input.input(id='ure-phone', autocomplete=" ", type="text", name="phone")
+				._column
+					._line
+						label(for="ure-email")._lebel Эл.почта*:
+						._input
+							input.input(id="ure-email", autocomplete=" ", type="text", name="email") 
+					._line
+						label(for="ure-city")._lebel Город:&nbsp;*
+						._input
+							input.input(id="ure-city", autocomplete=" ", type="text", name="city")
+					._line 
+						button(type="submit")._button Зарегистрироваться
+						._checkbox
+							.checkbox
+								input._input(id="ure-agreement", name="agreement", type="checkbox", checked) 
+								label(for="ure-agreement")._label 
+									span.icon
+										i.icon-arow-down
+									span Я согласен с&nbsp;
+										a(href="#") условиями 
+										| предоставления услуг и&nbsp;политикой конфиденциальности
+			._info Логин и пароль придет на электронную почту или СМС на телефон.

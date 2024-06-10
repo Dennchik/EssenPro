@@ -1,0 +1,66 @@
+form(action="", method="get").cart-page__place-order.order-place 
+  ._shopping.shopping-cart
+    h1.cart-page__title Ваш заказ
+    .shopping-cart
+      ._item(data-quantity)
+        ._column
+          ._image 
+            img(src="@@webRoot/img/products/catalog/K-5462.png", alt="картинка")
+          ._info
+            ._title
+              p BH Fitness F1 G6414V
+              span Беговая дорожка
+            .card-name  
+              ._price
+                .card-name__new-price.product-prices
+                  p 1 000
+                    i.icon-ruble
+        ._column
+          .quantity._row 
+            ._button.quantity-remove._disabled
+              +iconfont('cross-middle', 'icon')
+            ._input
+              input.input(type="text", name="form[]", value="1", placeholder="<+>", autocomplete="off")
+            ._button.quantity-add._arrow._arrow_next
+              +iconfont('cross-middle', 'icon')
+          .shopping-cart__row
+            .card-name__price
+              .product-cart__quantity-price
+                span Всего:
+                .card-name__value-price
+                  p.card-name__quantity-price  
+            button.shopping-cart__reset(type="submit")
+      ._item(data-quantity)
+        ._column
+          ._image
+            img(src="@@webRoot/img/products/catalog/K-5462.png", alt="картинка")
+          ._info
+            ._title
+              p BH Fitness F1 G6414V
+              span Беговая дорожка
+            .card-name__price
+              .card-name__new-price.product-prices
+                p
+                  | 1 000
+                  i.icon-ruble
+        ._column
+          .quantity._row.quantity
+            ._button.quantity-remove._arrow._arrow_prev._disabled -
+            ._input
+              input.input(type="text", name="form[]", value="1", placeholder="<+>", autocomplete="off")
+            ._button.quantity-add._arrow._arrow_next +
+          ._row
+            .card-name
+              ._price
+                ._new-price
+                  span Всего:
+                  .product-cart__quantity-price
+                    p._quantity-price 
+        button.shopping-cart__reset(type="submit")
+      ._footer
+        span Итого:
+        .input-total
+          | 129 980
+          i.icon-ruble
+      ._button
+        button.button(type="submit") Оформить заказ

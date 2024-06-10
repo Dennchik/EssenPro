@@ -1,0 +1,154 @@
+.footer {
+	// .footer__body
+	&__body {
+		padding: 5.7rem 3.4rem;
+		display: grid;
+		gap: 3rem;
+		grid-template-columns: 1fr 1fr 1fr min-content;
+		@include _768 {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			row-gap: 2rem;
+			column-gap: 0;
+		}
+		@include _375 {
+			padding: 5.7rem 1.5rem;
+		}
+	}
+
+	// .footer__column
+	&__column {
+		ul {
+			color: $font-color-other;
+			font-size: 1.6rem;
+			font-weight: 400;
+			@include _425 {
+				font-size: 11px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+		li {
+			white-space: nowrap;
+		}
+
+		&:nth-child(1) {
+			display: flex;
+			flex-direction: column;
+			li {
+				line-height: 170%;
+			}
+			@include _768 {
+				grid-column: 2 / 3;
+				grid-row: -3 / -2;
+			}
+
+			@include _425 {
+				margin-left: calc(
+					-15px + (1 - (-15)) * ((100vw - 320px) / (425 - 320))
+				);
+			}
+		}
+		&:nth-child(2) {
+			li {
+				line-height: 130%;
+				@include _425 {
+					line-height: 170%;
+				}
+			}
+		}
+		&:nth-child(3) {
+			line-height: 170%;
+			@include _768 {
+				grid-column: 1 / 2;
+				grid-row: 1 / 2;
+			}
+		}
+		&:nth-child(4) {
+			display: flex;
+			flex-direction: column;
+			justify-self: end;
+
+			@include _768 {
+				justify-self: start;
+				align-self: end;
+			}
+		}
+	}
+
+	// .footer__logo
+	&__logo {
+		height: 100%;
+		@include _768 {
+			display: none;
+		}
+	}
+
+	// .footer__title
+	&__title {
+		margin-bottom: 0.5rem;
+		color: #fff;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 118.75%; /* 19px/16 */
+		text-align: left;
+	}
+
+	// .footer__brand
+
+	&__brand {
+		height: 100%;
+		@include _768 {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			margin-right: 1.5rem;
+		}
+	}
+}
+
+.networks-icons {
+	padding-bottom: 0.5rem;
+	justify-content: flex-end;
+	@include flex-align-center;
+	@include _425 {
+		margin-left: calc(-53px + (1 - (-53)) * ((100vw - 320px) / (425 - 320)));
+	}
+
+	// .networks-icons__image
+	&__image {
+		@include flex-align-center-justify-center;
+
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+		.icon-vk-brand {
+			background: #507299;
+		}
+		.icon-whatsapp {
+			background: #4caf50;
+		}
+
+		.icon-telegram-fly {
+			background: #0088cc;
+		}
+
+		[class*='icon-'] {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			font-size: 2.2rem;
+			color: $color;
+			background: $bg-color;
+			transition: all 0.4s ease-in-out;
+
+			&:hover {
+				transform: rotate(180deg);
+				scale: -1;
+				color: red;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.float-menu {
+	background: $bg-color;
+	// .float-menu__items
+	&__items {
+		padding: 0.7rem 4.9rem;
+		box-shadow: 0 0 5px #000;
+		justify-content: space-between;
+		[class*='icon-'] {
+			font-size: 20px;
+			width: 30px;
+			height: 30px;
+		}
+
+		.icon-shopping-cart {
+			font-size: 24px;
+		}
+		@include flex-align-center;
+		@include _425 {
+			padding: 0.7rem 1rem;
+		}
+	}
+
+	// .float-menu__item
+	&__item {
+		flex-direction: column;
+		@include flex-align-center;
+		img {
+			display: block;
+			width: 26px;
+			height: 26px;
+		}
+	}
+
+	// .float-menu__link
+	&__link {
+		// margin-top: 0.4rem;
+		@include _425 {
+			font-size: 11px;
+		}
+		flex-direction: column;
+		@include flex-align-center;
+	}
+}

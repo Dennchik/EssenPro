@@ -1,0 +1,15 @@
+%graystyle {
+	transition: all 0.1s ease 0s;
+	-webkit-filter: grayscale(1);
+	-moz-filte: grayscale(1);
+	-o--filter: grayscale(1);
+	filter: grayscale(1);
+}
+
+%graystyleoff {
+	transition: all 0.3s ease 0s;
+	-webkit-filter: grayscale(0);
+	-moz-filte: grayscale(0);
+	-o--filter: grayscale(0);
+	filter: grayscale(0);
+}

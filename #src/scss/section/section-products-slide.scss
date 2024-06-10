@@ -1,0 +1,233 @@
+.new-products {
+	// .new-products__title
+	&__title {
+		margin: 0 0 6.2rem 0;
+		justify-content: space-between;
+		@include flex-align-center;
+
+		[class*='icon-'] {
+			font-size: 2.4rem;
+			color: $color;
+		}
+	}
+
+	// .new-products__text
+	&__text {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: rgb(0, 70, 70);
+		font-size: 3rem;
+		font-weight: 400;
+		letter-spacing: 0%;
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 120%; /* 36px/30px */
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: url('../img/icons/brand.png') center / contain no-repeat;
+		}
+
+		&::before {
+			left: -13px;
+			transform: translateX(-100%);
+		}
+		&::after {
+			right: -13px;
+			transform: translateX(100%);
+		}
+	}
+
+	// .new-products__content
+	&__content {
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		padding-bottom: 0.5rem;
+	}
+
+	// .new-products__slide
+	&__slide {
+		height: 100% !important;
+	}
+}
+
+.sale-products {
+	// .new-products__title
+	&__title {
+		margin: 0 0 6.2rem 0;
+		justify-content: space-between;
+		@include flex-align-center;
+
+		[class*='icon-'] {
+			font-size: 2.4rem;
+			color: $color;
+		}
+	}
+
+	// .new-products__content
+	&__content {
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		padding-bottom: 0.5rem;
+	}
+
+	// .new-products__slide
+	&__slide {
+		height: 100% !important;
+	}
+}
+
+.slide-container {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+
+	// .slide-container__body
+	&__body {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
+
+	// .slide-container__content
+	&__content {
+		padding: 0 7px;
+		flex: 1 1 auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .slide-container__image
+	&__image {
+		position: relative;
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	// .slide-container__inner
+	&__inner {
+		padding: 0 7px;
+		width: 100%;
+		position: absolute;
+		top: 11px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .slide-container__lable
+	&__lable {
+		/* Rectangle 453 */
+		padding: 4px 15px;
+
+		border-radius: 5px;
+		background: rgb(255, 255, 255);
+		font-size: 9px;
+		font-weight: 700;
+		line-height: 11px;
+		letter-spacing: 0%;
+		text-transform: uppercase;
+	}
+
+	// .slide-container__info-product
+	&__info-product {
+		flex: 1 1 auto;
+		height: 100%;
+		margin: 1.4rem 0;
+		font-size: 1.5rem;
+		line-height: 18px;
+		span {
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+	}
+
+	// .slide-container__name-product
+	&__name-product {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0%;
+	}
+
+	// .slide-container__price
+	&__price {
+		padding: 0 7px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .slide-container__new-price
+	&__new-price {
+		color: rgb(0, 70, 70);
+		font-weight: 700;
+		line-height: 120%; /* 18px/15 */
+		letter-spacing: 0%;
+		white-space: nowrap;
+	}
+
+	// .slide-container__old-price
+	&__old-price {
+		color: rgb(148, 148, 148);
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 120%; /* 18px/15 */
+		letter-spacing: 0%;
+		text-decoration-line: line-through;
+		white-space: nowrap;
+	}
+
+	// .slide-container__favourit
+	&__favourit {
+		color: #fff;
+		.icon-heart-like {
+			font-size: 18px;
+		}
+		&._add-product {
+			color: red;
+		}
+	}
+
+	// .slide-container__button
+	&__button {
+		width: 100%;
+		margin-top: 1.4rem;
+
+		font-family: 'Arial', sans-serif;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 120%;
+		text-align: center;
+		border: 1px solid $color;
+		border-radius: 32px;
+
+		transition: all 0.5s ease-in-out;
+		&:hover {
+			box-shadow: 1px 1px 0.5rem #000;
+		}
+		a {
+			position: relative;
+			z-index: 1;
+			transition: 0.25s linear;
+			padding: 0.7rem 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+			letter-spacing: 1px;
+		}
+	}
+}
+// -----------------------------------------------------------------------------

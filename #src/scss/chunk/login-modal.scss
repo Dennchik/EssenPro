@@ -1,0 +1,249 @@
+/* Стили для модального окна */
+.login-modal {
+	padding: 3.2rem 4.5rem;
+	position: absolute;
+	top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0; /* Начальная прозрачность */
+	transform: translate(0, 20%);
+	border: 1px solid $color;
+	background: $bg-color;
+	border: 1px solid $color;
+	border-radius: 10px;
+	z-index: 9;
+	transition: all 0.5s ease; /* Плавный переход */
+	pointer-events: none;
+	box-shadow: 1px 1px 5px #000;
+
+	@include _screen-960 {
+		right: 0;
+	}
+
+	/* Стили для модального контента */
+	&._show {
+		transform: translate(0, 0);
+		pointer-events: all;
+		opacity: 1;
+	}
+
+	&__modal-content {
+		position: relative;
+		border-radius: 10px;
+		transition: transform 0.4s ease; /* Плавный переход для трансформации */
+		// transform: translateY(-100px); /* Начальная позиция */
+	}
+
+	&__input {
+		display: flex;
+		align-items: center;
+		display: flex;
+		width: 100%;
+		border: 1px solid $color;
+		border-radius: 5px;
+		margin-bottom: 2rem;
+		input {
+			width: 100%;
+			height: 32px;
+			padding-left: 0.5rem;
+		}
+	}
+
+	&__label {
+		font-size: 14px;
+		padding-left: 0.5rem;
+	}
+
+	&__close {
+		position: absolute;
+		top: -15px;
+		right: -35px;
+		font-size: 20px;
+		color: $color;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__close:hover,
+	&__close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__button-login {
+		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: $color;
+		border-radius: 23px;
+		color: $bg-color;
+		margin-bottom: 2rem;
+	}
+
+	&__recovery {
+		padding: 1rem 0;
+		width: 100%;
+		border-radius: 5px;
+		border: 1px solid $color;
+	}
+}
+
+/* Стили для кнопки закрытия */
+.recovery-modal {
+	position: absolute;
+	top: 30px;
+	padding: 3.2rem 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0; /* Начальная прозрачность */
+	transform: translate(0, 20%);
+	border: 1px solid $color;
+	background: $bg-color;
+	border: 1px solid $color;
+	border-radius: 10px;
+	z-index: 9;
+	transition: all 0.5s ease; /* Плавный переход */
+	pointer-events: none;
+
+	box-shadow: 1px 1px 5px #000;
+	@include _min-690 {
+		min-width: 390px;
+	}
+
+	@include _screen-960 {
+		right: 0;
+	}
+	&._show {
+		transform: translate(0, 0);
+		pointer-events: all;
+		opacity: 1;
+	}
+
+	&__modal-content {
+		position: relative;
+		transition: transform 0.5s ease; /* Плавный переход для трансформации */
+		// transform: translateY(-100px); /* Начальная позиция */
+	}
+	&__text {
+		margin-bottom: 2rem;
+	}
+
+	&__input {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		display: flex;
+		margin-bottom: 2rem;
+
+		input {
+			padding-left: 0.5rem;
+			border: 1px solid $color;
+			border-radius: 5px;
+			height: 32px;
+			width: 100%;
+		}
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__label {
+		font-size: 1.4rem;
+		padding-right: 1rem;
+	}
+
+	&__close {
+		position: absolute;
+		top: -2.5rem;
+		right: -2.5rem;
+		font-size: 20px;
+		color: $color;
+	}
+
+	&__close:hover,
+	&__close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__button-recovery {
+		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: $color;
+		border-radius: 23px;
+		color: $bg-color;
+	}
+}
+
+.registrations-modal {
+	position: absolute;
+	top: 30px;
+	padding: 3.2rem 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0; /* Начальная прозрачность */
+	transform: translate(0, 20%);
+	border: 1px solid $color;
+	background: $bg-color;
+	border: 1px solid $color;
+	border-radius: 10px;
+	z-index: 9;
+	transition: all 0.5s ease; /* Плавный переход */
+	pointer-events: none;
+	width: 300px;
+
+	box-shadow: 1px 1px 5px #000;
+	@include _screen-960 {
+		right: 0;
+	}
+	&._show {
+		transform: translate(0, 0);
+		pointer-events: all;
+		opacity: 1;
+	}
+
+	&__modal-content {
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.5s ease; /* Плавный переход для трансформации */
+		// transform: translateY(-100px); /* Начальная позиция */
+	}
+
+	&__box {
+		width: 100%;
+	}
+
+	&__button-private-person {
+		display: block;
+		height: 32px;
+		border: 1px solid $color;
+		border-radius: 5px;
+		margin-bottom: 2rem;
+	}
+
+	&__button-corporate-person {
+		display: block;
+		height: 32px;
+		border: 1px solid $color;
+		border-radius: 5px;
+	}
+}

@@ -1,0 +1,47 @@
+header.header._container
+	._header 
+		._column
+			.top-menu._top-menu 
+				._logo 
+					._image
+						img(src="@@webRoot/img/header/logo.png", alt="logo")
+					._text поставки 
+						br
+						| продуктов питания
+				._contacts
+					._phone
+						a(href="tel:89308409757") +7 (930) 840 97-57
+					._email
+						a(href="mailto:zakaz@essenpro.ru") zakaz@essenpro.ru
+		._column 
+			._cart 
+				a(href="@@webRoot/catalog/cart.html")._link
+					+iconfont('shopping-cart', '_icon')
+					span
+						| Моя корзина 
+					span._value-cart (0)  
+			.login-container._login
+				._body
+					._login(data-move-el="[{'bp-max': 690.98, 'index': 1, 'target': '.bp-7'}]")
+						._user-button
+							+iconfont('user-check', '_icon')
+						._list
+							._link.login Войти 
+							span /
+							._link.registrations Регистриция 
+						//- include ../chunk/login-form
+				._button
+					button(type="submit") Заказать звонок
+	._footer
+		nav.main-menu
+			ul._body
+				a(href="@@webRoot/index.html" title="Главная")._link Главная
+				a(href="@@webRoot/catalog.html" title="О магазине")._link Продукция
+				a(href="@@webRoot/catalog/information-work.html" title="Как купить")._link Марки
+				a(href="#" title="Оплата")._link Оплата и доставка
+				a(href="#" title="Доставка")._link Акции 
+				a(href="#" title="Доставка")._link Контакты 
+		._search
+			include ../chunk/search 
+
+

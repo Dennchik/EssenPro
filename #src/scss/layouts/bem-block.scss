@@ -1,0 +1,331 @@
+// -----------------------------------------------------------------------------
+.menu-catalog__parent-menu > ._collapse:not(._show) {
+	display: none;
+}
+.select > ._collapse:not(._show) {
+	display: none;
+}
+@include _690 {
+	.catalog__categories > ._collapse:not(._show) {
+		display: none;
+	}
+}
+
+// -----------------------------------------------------------------------------
+.login-container {
+	// .login-container__body
+	&__body {
+		position: relative;
+		margin-right: 2rem;
+		width: 100%;
+		height: 100%;
+		z-index: 9;
+
+		@include _screen-960 {
+			justify-content: end;
+		}
+	}
+
+	// .login-container__login
+	&__login {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		[class*='icon-'] {
+			margin-right: 5px;
+			font-size: 1.8rem;
+		}
+	}
+
+	// .login-container__list
+	&__list {
+		cursor: pointer;
+		width: auto;
+		display: flex;
+		justify-content: space-between;
+
+		@include _690-960 {
+			padding: 2rem;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			opacity: 0;
+			transform: translateY(60%);
+			border: 1px solid $color;
+			background: $bg-color;
+			border-radius: 10px;
+			transition: all 0.5s ease-in-out;
+			&._visible {
+				pointer-events: all;
+				opacity: 1;
+				display: flex;
+			}
+		}
+
+		span {
+			margin-right: 1rem;
+			line-height: 170%;
+		}
+	}
+
+	// .login-container__link
+	&__link {
+		white-space: nowrap;
+		font-size: 14px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $color;
+			text-decoration: underline;
+		}
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+
+		@include _min-960 {
+			&:first-child {
+				padding-left: 0.5rem;
+			}
+			line-height: 0;
+		}
+
+		@include flex-align-center;
+	}
+
+	// .login-container__button
+	&__user-button {
+		&._icon {
+			pointer-events: none;
+		}
+		@include _690 {
+			display: none;
+			pointer-events: none;
+		}
+	}
+
+	// .login-container__phone
+	&__phone {
+		white-space: nowrap;
+		justify-self: end;
+		align-self: center;
+
+		a {
+			line-height: 120%;
+			&:hover {
+				line-height: 110%;
+				font-size: 1.455rem;
+				letter-spacing: -0.4px;
+			}
+		}
+	}
+
+	// .login-container__button
+	&__button {
+		border: 1px solid #585856;
+		border-radius: 10px;
+		white-space: nowrap;
+		transition:
+			background-color 0.3s,
+			color 0.3s ease-in-out;
+		button {
+			font-size: 14px;
+			padding: 10px 25px;
+		}
+		&:active {
+			background-color: $color;
+			color: $bg-color;
+		}
+	}
+}
+// -----------------------------------------------------------------------------
+.swiper-wrapper {
+	align-items: flex-start;
+}
+// -----------------------------------------------------------------------------
+.title-text {
+	&__text {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: rgb(0, 70, 70);
+		font-size: 3rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		line-height: 100%; /* 36px/30px */
+		text-align: center;
+
+		@include _425 {
+			font-size: 2.3rem;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: url('../img/icons/brand.png') center / contain no-repeat;
+
+			@include _490 {
+				display: none;
+			}
+		}
+
+		&::before {
+			left: -13px;
+			transform: translateX(-100%);
+		}
+		&::after {
+			right: -13px;
+			transform: translateX(100%);
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------
+._ibg {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+}
+// -----------------------------------------------------------------------------
+._lnb {
+	position: relative;
+	&::before {
+		display: block;
+		content: attr(title);
+		font-weight: 700;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+// -----------------------------------------------------------------------------
+._clip-circle {
+	@include _min-920 {
+		position: relative;
+		z-index: 2;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			background-color: $color;
+			clip-path: circle(var(--size) at var(--pos));
+			transition: all 0.5s ease-in-out;
+			z-index: 1;
+			border-radius: 32px;
+		}
+
+		&:hover {
+			a {
+				color: $bg-color;
+			}
+			&:before {
+				--size: 235px;
+			}
+		}
+	}
+}
+// -----------------------------------------------------------------------------
+.checkbox {
+	&._error {
+		.checkbox__lable::before {
+			box-shadow: 0px 0px 14px 3px #f16666;
+		}
+	}
+
+	// .checkbox__input
+	&__input {
+		display: none;
+		&:checked + .checkbox__label .icon-arow-down {
+			display: block;
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	&__checed {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 140%;
+	}
+
+	// .checkbox__lable
+	&__label {
+		max-width: 250px;
+		cursor: pointer;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 110%;
+
+		.icon {
+			margin-right: 0.5rem;
+			margin-left: -3.2rem;
+			height: 3.5rem;
+			@include _1024 {
+				margin-left: -3.6rem;
+			}
+		}
+
+		.icon-arow-down {
+			position: absolute;
+			position: relative;
+			display: flex;
+			align-items: center;
+			transition: all 0.3s ease-in-out;
+			opacity: 0;
+			height: 28px;
+			font-size: 2.8rem;
+			color: #2cc55f;
+		}
+
+		&::before {
+			content: '';
+			position: relative;
+			margin-right: 10px;
+			flex: 0 0 20px;
+			height: 20px;
+			align-self: center;
+			border: 1px solid $color;
+			border-radius: 7px;
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		a {
+			text-decoration: underline;
+			font-weight: 600;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		span {
+			font-size: 10px;
+		}
+	}
+}
+.product-offer {
+	&__title--favourites {
+		display: flex;
+		justify-content: center;
+	}
+}

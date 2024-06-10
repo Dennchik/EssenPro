@@ -1,0 +1,57 @@
+//-! Mxin Head-Links
+mixin style(href)
+	link(rel="stylesheet" type="text/css" href=href)
+mixin icons(href)
+	link(rel="icon" type="image/x-icon" href=href)
+mixin script(src)
+	script(defer="defer" type="text/javascript" src=src)
+
+//-! Mxin link & attributes --------------------------
+mixin link(id, href, name)
+	a(class=id, href=href)&attributes(attributes) 
+		span=name
+		block
+//-! Mxin link ---------------------------------------
+mixin btn-link(type, text, mod)
+	- m = mod || ''
+	a(class=mod + '' type=type)=text
+	block
+
+//-! mixin iconFont		
+mixin iconfont(mod, classes)
+	i(class='icon-' + mod + ' ' + classes)
+		block
+
+//-! Mxin list «rest arguments».
+mixin list-item(list, link, alink, name)
+	li(class=list)
+		a(class=link href=`${alink}`)=name
+//-! Sprite SVG --------------------------------------
+mixin svg(name, bem, mod)
+	- m = mod || ''
+		svg(class= name + ' '+ bem + ' '+ mod + ' ')
+			use(href=`img/sprites/sprite.svg#${name}`)
+
+//- initialization
+- var blocks = {}
+
+mixin set(key)
+	- blocks[key] = this.block
+
+//- mixin definition ---------------------------------
+mixin layout
+	block
+	.page__main-content
+		if blocks.mainContent 
+			- blocks.mainContent ()
+		else
+			//- Do nothing
+
+	.side
+		if blocks.side
+			- blocks.side()
+		else
+			//- Do nothing
+	+set('main')
+	+set('side')
+ 

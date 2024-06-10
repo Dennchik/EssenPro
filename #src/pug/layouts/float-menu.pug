@@ -1,0 +1,22 @@
+.float-menu 
+	ul._items
+		li._item 
+			a(href="@@webRoot/index.html")._link
+				img(src="@@webRoot/img/icons/brand.png", alt="bramd")
+				span Главная
+		li._item 
+			a(href="@@webRoot/catalog.html")._link
+				+iconfont('mobile-catalog', 'link')
+				span Каталог
+		li._item 
+			a(href="@@webRoot/favourites.html")._link
+				+iconfont('heart', 'link') 
+				span Избранное
+		li._item 
+			a(href="@@webRoot/catalog/cart.html")._link
+				+iconfont('shopping-cart', 'link') 
+				span Корзина
+		li._item 
+			a(href="")._link
+				+iconfont('mobile-profile', 'link') 
+				span Профиль

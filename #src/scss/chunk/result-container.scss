@@ -1,0 +1,38 @@
+.result-container {
+	&__body {
+		gap: 3rem;
+		display: grid;
+		justify-content: end;
+		align-items: center;
+		margin-bottom: 4.3rem;
+		padding: 0 1.5rem;
+		height: 50px;
+		border: 1px solid $color;
+		border-radius: 5px;
+		align-items: center;
+		justify-items: start;
+		grid-template-columns: 12rem 15rem;
+	}
+
+	&__column {
+		font-weight: 700;
+		text-align: right;
+		&:nth-child(2) {
+			justify-self: end;
+		}
+	}
+
+	&__totalprice-order {
+		text-align: right;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+
+		.icon-rub {
+			align-items: flex-end;
+			line-height: 120%;
+			margin-left: 0.5rem;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+//* ------------------------------- [Variables] --------------------------------
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1470px;
+$headerHeight: 4rem;
+$footerHeight: 4rem;
+$sidebarWidth: 4rem;
+$titleHeight: 3rem;
+$min-height: calc(100% - ($headerHeight + $footerHeight));
+//* ---------------------------- [Font Variables] ------------------------------
+$font-path: '../fonts';
+$font-defoult: 'Inter', sans-serif;
+$font-size: 1.5rem;
+$font-family-secondary: 'Arial', sans-serif;
+$font-weight-defoult: 400;
+//* ------------------------------ [Font color] --------------------------------
+$font-color-defoult: rgb(0, 0, 0);
+$font-color-secondary: rgb(0, 70, 70);
+$font-color-other: #e1b69e;
+//* -------------------------------- [Color] -----------------------------------
+$color: #a83434;
+$bg-color: #ffff;
+$color-second: #ea8e7f;
+$color-link: #dd8686;
+$color-hover: red;
+//* ------------------------------- [margins] ----------------------------------
+$margins-footer: 1.7rem;
+//* ---------------------------- [Other colors] --------------------------------
+
+//* ----------------------------------------------------------------------------
+$text-selection: #0054633f;
+$text-color-selection: #9b9999;
+//* ----------------------------------------------------------------------------
+:root {
+	--font-body-color: rgb(0, 0, 0);
+	--font-color-second: rgb(0, 70, 70);
+	--font-color-title: #88c0ff;
+	--font-color-active: #7796f3;
+	--font-color-not-active: #8bb0ff6c;
+	//* ---------------------------- [Background] --------------------------------
+	--background-color: #0e0e0e;
+	--background-second: #020a10;
+	--background-selected: #2b2d4156;
+	--background-terminal: #16161e;
+	--background-side-bar: #191b27;
+	--background-active-bar: #1e202e;
+	--background-color-title: #0e0e13;
+	--background-transparent: #0e0e13da;
+	//* ---------------------------- [Scrollbar] ---------------------------------
+	--selected-color: #71cbff;
+	--themes-color: #5e4da8;
+	--background-thumb: #16161e;
+	--scrollbar-thumb-bgcolor: rgb(71, 83, 45);
+	//* -------------------------- [Other colors] --------------------------------
+	// --border-color: #3c548d49;
+
+	// ---------------------------------------------------------------------------
+	--pos: center;
+	--size: 0;
+	--inset-top: 0;
+	--inset-right: 100%;
+	--inset-bottom: 100%;
+	--inset-left: 0;
+	// ---------------------------------------------------------------------------
+	--stripe-width: 10px;
+	--nav-marker-border: #3b8686;
+	--sidebar-width: 28.5rem;
+	--duration: 0.3s;
+
+	--button-size: 4rem;
+	--mob-expanded-width: 320px;
+	--mob-collapsed-width: 4rem;
+}
+
+$snap: cubic-bezier(1, 0.005, 0.24, 1);
+$bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);

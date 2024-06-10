@@ -1,0 +1,163 @@
+.modal-registrations-fiz,
+.modal-registrations-ure {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background: #00000088;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s ease-in-out;
+
+	&._show {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	// .modal-registrations-fiz__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+	}
+
+	// .modal-registrations-fiz__close-btn
+	&__close-btn {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 14px;
+		color: $color;
+		.icon-cancel {
+			font-size: 1.4rem;
+		}
+	}
+
+	// .modal-registrations-fiz__title
+	&__title {
+		font-size: 1.7rem;
+		font-weight: 700;
+		margin-bottom: 2rem;
+	}
+
+	// .modal-registrations-fiz__body
+	&__body {
+		display: inline-block;
+		margin: 0 auto;
+		background-color: #fefefe;
+		margin: 0 auto;
+		padding: 3rem 4rem;
+		border: 1px solid #888;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		transform: translate(0, 60%);
+		@include _690 {
+			transform: translate(0, 15%);
+			padding: 3rem 2rem;
+		}
+		@include _375 {
+			padding: 3rem 1rem;
+		}
+	}
+
+	// .modal-registrations-fiz__info
+	&__info {
+		font-size: 12px;
+	}
+}
+// -----------------------------------------------------------------------------
+.modal-registrations-fiz {
+	.registration-form {
+		// .registration-form__column
+		&__column {
+			&:nth-child(2) {
+				.registration-form__line {
+					&:nth-child(4) {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-end;
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal-registrations-ure {
+	// .registration-form__column
+	.registration-form {
+		&__column {
+			&:nth-child(2) {
+				.registration-form__line {
+					&:nth-child(3) {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-end;
+					}
+				}
+			}
+		}
+	}
+}
+// -----------------------------------------------------------------------------
+.registration-form {
+	display: grid;
+	width: auto;
+	grid-template-columns: min-content min-content;
+	justify-content: center;
+	gap: 4rem;
+	margin-bottom: 2rem;
+	@include _690 {
+		grid-template-columns: min-content;
+	}
+
+	// .registration-form__line
+	&__line {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		text-align: right;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	// .registration-form__lebel
+	&__lebel {
+		white-space: nowrap;
+		margin-right: 2rem;
+		@include _375 {
+			margin-right: 1.5rem;
+			white-space: normal;
+		}
+	}
+
+	// .registration-form__input
+	&__input {
+		input {
+			min-width: 22rem;
+			border: 1px solid #004646;
+			height: 32px;
+			border-radius: 5px;
+			padding-left: 0.5rem;
+			height: 32px;
+			line-height: 228.571429%; /* 32px/14 */
+		}
+	}
+
+	// .registration-form__button
+	&__button {
+		width: 22rem;
+		height: 32px;
+		color: #fbf9f4;
+		font-size: 1.4rem;
+		padding: 0.9rem 3rem;
+		border-radius: 16px;
+		background: #004646;
+		margin-bottom: 1.5rem;
+	}
+}

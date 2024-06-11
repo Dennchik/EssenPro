@@ -46,20 +46,21 @@
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Chunk --------------------------------------
-@import 'chunk/login-modal';
 @import 'chunk/search';
 @import 'chunk/burger-button';
-@import 'chunk/sidebar-menu';
-@import 'chunk/sidebar-catalog';
-@import 'chunk/modal-registration';
+// @import 'chunk/login-modal';
+// @import 'chunk/sidebar-menu';
+// @import 'chunk/sidebar-catalog';
+// @import 'chunk/modal-registration';
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
-@import 'modules/swinging-menu';
+@import 'modules/sidebar-menu';
+// @import 'modules/swinging-menu';
 // todo -------------------------- Sections ------------------------------------
-@import 'section/section-products-slide';
-@import 'section/section-portiere-fabrics';
-@import 'section/section-furniture-fabrics';
-@import 'section/section-costume-fabrics';
-@import 'section/section-delivery';
-@import 'section/section-about';
-@import 'section/section-reviews';
+// @import 'section/section-products-slide';
+// @import 'section/section-portiere-fabrics';
+// @import 'section/section-furniture-fabrics';
+// @import 'section/section-costume-fabrics';
+// @import 'section/section-delivery';
+// @import 'section/section-about';
+// @import 'section/section-reviews';

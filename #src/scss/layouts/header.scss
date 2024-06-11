@@ -1,8 +1,12 @@
 .header {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+
 	// .header__header
 	&__header {
-		padding: 10px 0;
+		padding: 10px;
 		white-space: nowrap;
+		font-size: 1.4rem;
 		display: flex;
 		gap: 0.5rem;
 
@@ -13,12 +17,18 @@
 	&__column {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		justify-content: flex-end;
+		gap: 1rem;
+		&:nth-child(1) {
+			flex: 0 1 auto;
+		}
+		&:nth-child(2) {
+			flex: 0 1 45%;
+		}
 	}
 
 	// .header__top-menu
 	&__top-menu {
-		font-size: 14px;
 		@include flex-align-center;
 	}
 
@@ -30,22 +40,33 @@
 
 	// .header__footer
 	&__footer {
-		padding: 9px;
+		padding: 15px;
+		margin: 0 10px;
 		display: flex;
 		align-items: center;
 		border-radius: 10px;
 		background: linear-gradient(to right, #a83434 50%, #ea8e7f 100%);
 		@include flex-align-center-justify-space-between;
+		@include _768 {
+			display: none;
+		}
 	}
 
 	// .header__cart
 	&__cart {
+		@include _768 {
+			span {
+				&:nth-child(2) {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&__link {
 		._icon {
-			margin-right: 1rem;
-			font-size: 24px;
+			margin-right: 0.5rem;
+			font-size: 23px;
 		}
 		display: flex;
 		align-items: center;
@@ -53,44 +74,70 @@
 
 	// .header__search
 	&__search {
+		@include _768 {
+			width: 100%;
+		}
+	}
+
+	&__burger-button {
+		margin-left: 1.5rem;
+		padding: 10px 6px;
+		overflow: hidden;
+		background: #dbdbdb;
+		height: 36px;
+		width: 36px;
+		cursor: pointer;
+		border-radius: 3px;
+		@include _min-920 {
+			display: none;
+		}
 	}
 }
 
 .top-menu {
 	// .top-menu__logo
-
 	&__logo {
 		display: flex;
 		align-items: center;
-		margin-right: 10px;
-	}
-
-	// .top-menu__image
-
-	&__image {
-		margin-right: 13px;
-		width: 149px;
-		height: 42px;
-		img {
+		@include _min-768 {
+			margin-right: 3rem;
 		}
 	}
 
-	// .top-menu__text
+	// .top-menu__image
+	&__image {
+		margin-right: 10px;
+		width: 14.4rem;
+		height: 4.2rem;
+	}
 
+	// .top-menu__text
 	&__text {
 		font-size: 13px;
+		@include _768 {
+			display: none;
+		}
 	}
 
 	// .top-menu__contacts
-
 	&__contacts {
-		margin-right: 3.4rem;
-		@include flex-align-center;
+		font-size: 13px;
+		font-weight: 500;
+		@include _min-425 {
+			border: 1px solid red;
+			flex-wrap: wrap;
+			@include flex-align-center;
+		}
 	}
 
 	// .top-menu__phone
 	&__phone {
-		margin-right: 1.5rem;
+		@include _min-425 {
+			margin-right: 1.5rem;
+		}
+		@include _425 {
+			margin-bottom: 3px;
+		}
 	}
 
 	// .top-menu__email
@@ -100,19 +147,27 @@
 
 .main-menu {
 	flex: 1 1 auto;
-	margin-right: 3rem;
 
 	// .main-menu__body
 	&__body {
 		display: flex;
-		align-items: center;
+		margin-right: 6.5rem;
 		justify-content: space-between;
+
 		color: $bg-color;
+		@include _768 {
+			margin-right: 0;
+			color: black;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	// .main-menu__link
-
 	&__link {
+		@include _768 {
+			line-height: 250%;
+		}
 	}
 }
 

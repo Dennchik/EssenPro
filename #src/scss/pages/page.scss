@@ -8,15 +8,13 @@
 	&__header {
 		position: relative;
 		z-index: 7;
-		// width: 100%;
 		position: fixed;
 		top: 0;
 		left: 0;
 		background: $bg-color;
 		width: 100%;
-		padding: 0 10px;
 		transition: all 0.7s ease-in-out;
-		@include _screen-690 {
+		@include _768 {
 			box-shadow: 0 0 5px #000;
 		}
 	}
@@ -54,13 +52,7 @@
 		}
 	}
 
-	// .page__new-products
-	&__new-products {
-		padding: 4.3rem 0 8.9rem;
-		@include _690 {
-			// padding-bottom: 4.7rem;
-		}
-	}
+	// .page__search
 
 	// .page__portiere-fabrics
 	&__portiere-fabrics {
@@ -161,35 +153,6 @@
 		}
 	}
 
-	// .page__sidebar-menu
-	&__sidebar-menu {
-		display: none;
-		overflow-x: hidden;
-		position: fixed;
-		z-index: 9;
-		right: 0;
-		height: 100%;
-		transition: all 0.5s ease-in-out;
-		transform: translateX(100%);
-		background: $bg-color;
-
-		@include _screen-690 {
-			border-top-left-radius: 10px;
-			border-bottom-left-radius: 10px;
-			width: 320px;
-			display: block;
-			padding: 20px 10px 123px;
-			box-shadow: 1px 0px 7px #0000008c;
-
-			&._opened-menu {
-				transform: translateX(0);
-			}
-		}
-
-		@include _320 {
-			border-radius: 0;
-		}
-	}
 	//* --------------------------------------------------------------------------
 	// .cart-page
 	&__cart-page {

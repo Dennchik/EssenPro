@@ -1,4 +1,4 @@
-header.header._container
+header.header
 	._header 
 		._column
 			.top-menu._top-menu 
@@ -8,7 +8,7 @@ header.header._container
 					._text поставки 
 						br
 						| продуктов питания
-				._contacts
+				._contacts(data-move-el="[{'bp-max': 425.98, 'index': 1, 'target': '.bp-1'}]") 
 					._phone
 						a(href="tel:89308409757") +7 (930) 840 97-57
 					._email
@@ -19,10 +19,11 @@ header.header._container
 					+iconfont('shopping-cart', '_icon')
 					span
 						| Моя корзина 
-					span._value-cart (0)  
+					span._value-cart (0)
+		
 			.login-container._login
 				._body
-					._login(data-move-el="[{'bp-max': 690.98, 'index': 1, 'target': '.bp-7'}]")
+					._login
 						._user-button
 							+iconfont('user-check', '_icon')
 						._list
@@ -31,16 +32,27 @@ header.header._container
 							._link.registrations Регистриция 
 						//- include ../chunk/login-form
 				._button
-					button(type="submit") Заказать звонок
+					button.order-call(type="submit")(data-move-el="[{'bp-max': 550.98, 'index': 0, 'target': '.bp-1'}]") Заказать звонок
+			.toggle-button  
+				._toggle-menu
+					span
+					span
+					span
 	._footer
-		nav.main-menu
+		nav.main-menu(data-move-el="[{'bp-max': 768.98, 'index': 0, 'target': '.bp-2'}]")
 			ul._body
-				a(href="@@webRoot/index.html" title="Главная")._link Главная
-				a(href="@@webRoot/catalog.html" title="О магазине")._link Продукция
-				a(href="@@webRoot/catalog/information-work.html" title="Как купить")._link Марки
-				a(href="#" title="Оплата")._link Оплата и доставка
-				a(href="#" title="Доставка")._link Акции 
-				a(href="#" title="Доставка")._link Контакты 
+				li 
+					a(href="@@webRoot/index.html" title="Главная")._link Главная
+				li 
+					a(href="@@webRoot/catalog.html" title="О магазине")._link Продукция
+				li 
+					a(href="@@webRoot/catalog/information-work.html" title="Как купить")._link Марки
+				li 
+					a(href="#" title="Оплата")._link Оплата и доставка
+				li 
+					a(href="#" title="Доставка")._link Акции 
+				li 
+					a(href="#" title="Доставка")._link Контакты 
 		._search
 			include ../chunk/search 
 

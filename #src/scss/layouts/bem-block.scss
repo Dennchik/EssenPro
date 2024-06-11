@@ -10,6 +10,21 @@
 		display: none;
 	}
 }
+// -----------------------------------------------------------------------------
+.order-call {
+	border: 1px solid #585856;
+	border-radius: 10px;
+	white-space: nowrap;
+	transition:
+		background-color 0.3s,
+		color 0.3s ease-in-out;
+	font-size: 1.4rem;
+	padding: 10px 25px;
+	&:active {
+		background-color: $color;
+		color: $bg-color;
+	}
+}
 
 // -----------------------------------------------------------------------------
 .login-container {
@@ -19,11 +34,7 @@
 		margin-right: 2rem;
 		width: 100%;
 		height: 100%;
-		z-index: 9;
-
-		@include _screen-960 {
-			justify-content: end;
-		}
+		z-index: 10;
 	}
 
 	// .login-container__login
@@ -33,8 +44,7 @@
 		justify-content: flex-end;
 
 		[class*='icon-'] {
-			margin-right: 5px;
-			font-size: 1.8rem;
+			font-size: 18px;
 		}
 	}
 
@@ -45,7 +55,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include _690-960 {
+		@include _screen-960 {
 			padding: 2rem;
 			pointer-events: none;
 			position: absolute;
@@ -65,7 +75,7 @@
 		}
 
 		span {
-			margin-right: 1rem;
+			margin-right: 0.3rem;
 			line-height: 170%;
 		}
 	}
@@ -81,7 +91,7 @@
 			text-decoration: underline;
 		}
 		&:not(:last-child) {
-			margin-right: 1rem;
+			margin-right: 0.3rem;
 		}
 
 		@include _min-960 {
@@ -97,10 +107,6 @@
 	// .login-container__button
 	&__user-button {
 		&._icon {
-			pointer-events: none;
-		}
-		@include _690 {
-			display: none;
 			pointer-events: none;
 		}
 	}
@@ -121,21 +127,11 @@
 		}
 	}
 
-	// .login-container__button
+	// .login-container__button//
 	&__button {
-		border: 1px solid #585856;
-		border-radius: 10px;
-		white-space: nowrap;
-		transition:
-			background-color 0.3s,
-			color 0.3s ease-in-out;
-		button {
-			font-size: 14px;
-			padding: 10px 25px;
-		}
-		&:active {
-			background-color: $color;
-			color: $bg-color;
+		@include _690 {
+			display: flex;
+			align-items: center;
 		}
 	}
 }

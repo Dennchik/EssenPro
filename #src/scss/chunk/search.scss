@@ -24,6 +24,10 @@
 }
 
 .search-form {
+	transition: all 0.2s ease-in-out;
+	&:active {
+		box-shadow: 0px 0px 5px rgb(78, 78, 78);
+	}
 	// .search-form__input
 	&__input {
 		input {
@@ -37,7 +41,7 @@
 			}
 			@include _min-690 {
 				&:focus {
-					width: 28rem;
+					width: 24.5rem;
 				}
 			}
 		}

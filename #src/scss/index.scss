@@ -22,7 +22,7 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	min-height: 100vh;
 	margin: 0 auto;
 }
 
@@ -42,9 +42,9 @@
 @import 'layouts/bem-block';
 @import 'layouts/header';
 @import 'layouts/footer';
-@import 'layouts/float-menu';
+// @import 'layouts/float-menu';
 // todo --------------------------- Pages --------------------------------------
-@import 'pages/page.scss';
+@import 'pages/page';
 // todo --------------------------- Chunk --------------------------------------
 @import 'chunk/search';
 @import 'chunk/burger-button';
@@ -57,10 +57,12 @@
 @import 'modules/sidebar-menu';
 // @import 'modules/swinging-menu';
 // todo -------------------------- Sections ------------------------------------
-// @import 'section/section-products-slide';
-// @import 'section/section-portiere-fabrics';
-// @import 'section/section-furniture-fabrics';
-// @import 'section/section-costume-fabrics';
-// @import 'section/section-delivery';
-// @import 'section/section-about';
-// @import 'section/section-reviews';
+@import 'section/section-perform';
+@import 'section/section-info';
+@import 'section/section-sales';
+@import 'section/section-categories';
+@import 'section/section-collection';
+@import 'section/section-map';
+@import 'section/section-providers';
+@import 'section/section-news';
+@import 'section/section-about';

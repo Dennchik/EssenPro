@@ -27,6 +27,81 @@
   //* Better Font Rendering
 }
 
+.icon-assortment {
+  &:before {
+    content: $icon-assortment;
+  }
+}
+.icon-cart {
+  &:before {
+    content: $icon-cart;
+  }
+}
+.icon-delivery {
+  &:before {
+    content: $icon-delivery;
+  }
+}
+.icon-quality {
+  &:before {
+    content: $icon-quality;
+  }
+}
+.icon-services {
+  &:before {
+    content: $icon-services;
+  }
+}
+.icon-trash {
+  &:before {
+    content: $icon-trash;
+  }
+}
+.icon-cross-middle {
+  &:before {
+    content: $icon-cross-middle;
+  }
+}
+.icon-cancel {
+  &:before {
+    content: $icon-cancel;
+  }
+}
+.icon-cancel-circle {
+  &:before {
+    content: $icon-cancel-circle;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-heart-like {
+  &:before {
+    content: $icon-heart-like;
+  }
+}
+.icon-user-check {
+  &:before {
+    content: $icon-user-check;
+  }
+}
+.icon-catalog {
+  &:before {
+    content: $icon-catalog;
+  }
+}
+.icon-group {
+  &:before {
+    content: $icon-group;
+  }
+}
+.icon-search-doc {
+  &:before {
+    content: $icon-search-doc;
+  }
+}
 .icon-star {
   &:before {
     content: $icon-star;
@@ -95,45 +170,5 @@
 .icon-shopping-cart {
   &:before {
     content: $icon-shopping-cart;
-  }
-}
-.icon-trash {
-  &:before {
-    content: $icon-trash;
-  }
-}
-.icon-cross-middle {
-  &:before {
-    content: $icon-cross-middle;
-  }
-}
-.icon-cancel {
-  &:before {
-    content: $icon-cancel;
-  }
-}
-.icon-cancel-circle {
-  &:before {
-    content: $icon-cancel-circle;
-  }
-}
-.icon-search {
-  &:before {
-    content: $icon-search;
-  }
-}
-.icon-heart-like {
-  &:before {
-    content: $icon-heart-like;
-  }
-}
-.icon-user-check {
-  &:before {
-    content: $icon-user-check;
-  }
-}
-.icon-search-doc {
-  &:before {
-    content: $icon-search-doc;
   }
 }

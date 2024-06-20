@@ -1,50 +1,8 @@
-nav.sidebar-menu.page__sidebar-menu 
-	._body 
-		//- span._button-close.menu-cansel
-		//- 	+iconfont('cancel-circle', 'icon')
-		._content 
-			._login
-				.login-container.bp-7
-			.menu-side-bar._menu
-				ul._list 
-					li._item
-						a(href="@@webRoot/index.html")._link Главная
-					li._item
-						a(href="")._link Компания
-					li._item
-						a(href="@@webRoot/catalog.html")._link Каталог
-					li._item
-						a(href="@@webRoot/catalog/information-work.html")._link Как купить
-					li._item
-						a(href="")._link В наличии
-					li._item
-						a(href="")._link Услуги
-					li._item
-						a(href="")._link Проекты
-					li._item
-						a(href="@@webRoot/404.html")._link Скидки
-					li._item
-						a(href="")._link Новости
-					li._item
-						a(href="@@webRoot/catalog/cart.html")._link Корзина
-					li._item
-						a(href="#contacts")._link.anchor-link Контакты
-		._search 
-			.search-container
-				form.search-form._form#menu-search(action="#" metod="get")
-					._input
-						label(for="search-menu") 
-							input.input(id='search-menu',placeholder="поиск..", autocomplete="off",data-value, name="search-menu", type="text")
-					button(type="submit")._button
-						+iconfont('search', '_icon')
-		._footer
-			._logo
-				img(src="@@webRoot/img/footer/logo-footer.png", alt="картинка")
-			.networks-brend 
-				._icon
-					+iconfont('vk-brand', 'icon')
-				._icon
-					+iconfont('whatsapp', 'icon')
-				._icon
-					+iconfont('telegram-fly', 'icon')
-				
+nav.sidebar-menu
+	._body
+		._top
+			._column.bp-4 
+			._column.bp-1
+			._column
+		._menu.bp-2
+		._search.bp-3

@@ -21,4 +21,14 @@ body
 	include ../includes/mixins
 	div(class="wrapper")
 		block page-content 
-			block main-content 
+			.page#page
+				._container
+					include ../chunk/sidebar-menu
+					header._header
+						block header
+							include ../layouts/header
+					main._content
+						block main-content 
+					footer._footer
+						block footer	
+							include ../layouts/footer 

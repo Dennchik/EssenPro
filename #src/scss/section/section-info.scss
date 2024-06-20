@@ -1,0 +1,140 @@
+.info-company {
+	// .info-company__body
+	&__body {
+		position: relative;
+	}
+
+	// .info-company__content
+	&__content {
+		position: relative;
+		z-index: 3;
+		padding: 8.5rem 0 14.2rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		border-radius: 15px;
+		background: #ffffff;
+
+		box-shadow: 20px 20px 30px #acacac6b;
+		@include _490 {
+			padding: 4.5rem 0 7.2rem;
+		}
+	}
+
+	// .info-company__column
+	&__column {
+		justify-content: center;
+		justify-self: end;
+		height: 100%;
+		position: relative;
+
+		&:nth-child(1) {
+			padding-right: 8.8rem;
+
+			@include _1024 {
+				padding-right: calc(0px + (148 - 5) * ((100vw - 320px) / (1024 - 320)));
+			}
+			@include _375 {
+				justify-self: stretch;
+			}
+		}
+	}
+
+	// .info-company__image
+	&__image {
+		min-width: 100%;
+		z-index: -1;
+		grid-row: 1 / -1;
+		padding-left: 175px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+
+		> * {
+			grid-area: 1 / 1;
+		}
+
+		@include _1024 {
+			padding-left: calc(0px + (175 - 5) * ((100vw - 490px) / (1024 - 490)));
+		}
+		img {
+			object-position: left;
+			max-width: 357px;
+			max-height: 201px;
+			object-fit: cover;
+			max-width: 100%;
+
+			@include _768 {
+				opacity: 0.4;
+			}
+
+			@include _375 {
+				min-width: 100%;
+			}
+		}
+	}
+}
+.page {
+	&__discounts {
+		.company-info {
+			&__title {
+				color: $color;
+			}
+		}
+	}
+}
+
+.page__clients {
+	.company-info {
+		&__title {
+			color: rgb(88, 88, 86);
+			font-size: 3.5rem;
+			@include _375 {
+				text-align: center;
+				font-size: 3rem;
+			}
+		}
+	}
+	.info-company {
+		&__image {
+			justify-self: start;
+			position: relative;
+			padding-left: 15px;
+
+			@include _1024 {
+				padding-left: calc(0px + (15 - 5) * ((100vw - 490px) / (1024 - 490)));
+			}
+			img {
+				object-position: right;
+				max-width: 610px;
+				max-height: 343px;
+				object-fit: cover;
+				max-width: 100%;
+
+				@include _screen-1140 {
+					opacity: 0.4;
+				}
+			}
+		}
+
+		&__content {
+			box-shadow: none;
+			padding: 8.5rem 0;
+
+			@include _490 {
+				padding: 4.2rem 0 4.2rem;
+			}
+			> * {
+				grid-area: 1 / 1;
+			}
+		}
+
+		&__column {
+			display: flex;
+			align-items: center;
+		}
+	}
+}

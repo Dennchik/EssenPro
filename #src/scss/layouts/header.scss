@@ -4,7 +4,7 @@
 
 	// .header__header
 	&__header {
-		padding: 10px;
+		padding: 1rem 0;
 		white-space: nowrap;
 		font-size: 1.4rem;
 		display: flex;
@@ -40,8 +40,7 @@
 
 	// .header__footer
 	&__footer {
-		padding: 15px;
-		margin: 0 10px;
+		padding: 1.5rem;
 		display: flex;
 		align-items: center;
 		border-radius: 10px;
@@ -109,22 +108,26 @@
 		margin-right: 10px;
 		width: 14.4rem;
 		height: 4.2rem;
+		width: 144px;
+		height: 42px;
 	}
 
 	// .top-menu__text
 	&__text {
 		font-size: 13px;
-		@include _768 {
-			display: none;
+		span {
+			@include _min-768 {
+				display: block;
+			}
 		}
 	}
 
 	// .top-menu__contacts
 	&__contacts {
-		font-size: 13px;
+		font-size: 12px;
 		font-weight: 500;
+
 		@include _min-425 {
-			border: 1px solid red;
 			flex-wrap: wrap;
 			@include flex-align-center;
 		}
@@ -152,6 +155,7 @@
 	&__body {
 		display: flex;
 		margin-right: 6.5rem;
+		gap: 2rem;
 		justify-content: space-between;
 
 		color: $bg-color;
@@ -165,6 +169,7 @@
 
 	// .main-menu__link
 	&__link {
+		white-space: nowrap;
 		@include _768 {
 			line-height: 250%;
 		}

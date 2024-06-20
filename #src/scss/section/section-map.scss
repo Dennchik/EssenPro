@@ -1,0 +1,62 @@
+.info-map {
+	// .info-map__body
+	&__body {
+		position: relative;
+	}
+
+	// .company-map__title
+	&__title {
+		margin-bottom: 6rem;
+		color: rgb(88, 88, 86);
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 120%; /* 42px/35 */
+		text-align: center;
+
+		@include _375 {
+			font-size: 3rem;
+		}
+	}
+
+	// .info-map__content
+	&__content {
+		display: flex;
+
+		@include _768 {
+			flex-direction: column-reverse;
+		}
+	}
+
+	// .info-mqp__column
+	&__column {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 15px;
+
+		&:nth-child(1) {
+			@include _min-768 {
+				padding: 0 3rem 0 15px;
+				flex: 0 1 65%;
+			}
+		}
+		&:nth-child(2) {
+			margin-bottom: 6rem;
+		}
+	}
+
+	// .info-map__image
+	&__image {
+		flex: 1 1 auto;
+		min-width: 100%;
+		box-shadow: 0 0 15px #0000004d;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			max-width: 100%;
+		}
+	}
+}

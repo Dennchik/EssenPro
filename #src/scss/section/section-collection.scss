@@ -1,0 +1,48 @@
+.section-collection {
+	// .section-collection__title
+	&__title {
+		h2 {
+			margin-bottom: 5.5rem;
+			color: rgb(88, 88, 86);
+			font-size: 3.5rem;
+			font-weight: 700;
+			line-height: 120%; /* 42px/35 */
+			text-align: center;
+
+			@include _375 {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	// .section-collection__products
+	&__products {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(5, 1fr);
+		justify-content: space-between;
+		@include _920 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@include _768 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include _568 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include _375 {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .section-collection__column
+	&__column {
+		justify-self: center;
+		max-width: 218px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+}

@@ -1,17 +1,150 @@
 // -----------------------------------------------------------------------------
-.menu-catalog__parent-menu > ._collapse:not(._show) {
-	display: none;
-}
-.select > ._collapse:not(._show) {
-	display: none;
-}
-@include _690 {
-	.catalog__categories > ._collapse:not(._show) {
-		display: none;
+// .menu-catalog__parent-menu > ._collapse:not(._show) {
+// 	display: none;
+// }
+// .select > ._collapse:not(._show) {
+// 	display: none;
+// }
+// @include _690 {
+// 	.catalog__categories > ._collapse:not(._show) {
+// 		display: none;
+// 	}
+// }
+
+//*  ------------------------ [Greed Card a] -----------------------------------
+.card-product {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+
+	// .card__thumb
+	&__thumb {
+		flex: 1 1 auto;
+	}
+
+	// .card__image
+	&__image {
+		height: 100%;
+		padding-bottom: 10px;
+
+		a {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		img {
+			vertical-align: bottom;
+		}
+	}
+
+	// .card__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .card__text
+	&__text {
+		h2 {
+			white-space: nowrap;
+			color: rgb(88, 88, 86);
+			font-size: 2rem;
+			font-weight: 700;
+			line-height: 120%; /* 24px/20 */
+			letter-spacing: 0%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+
+	// .card__button
+	&__button {
+		cursor: pointer;
+		width: 166px;
+		padding: 10px 50px;
+		border: 1px solid rgb(88, 88, 86);
+		border-radius: 10px;
+		transition:
+			background-color 0.3s,
+			color 0.3s ease-in-out;
+
+		&:hover {
+			background-color: $color;
+			border: 1px solid $color;
+			span {
+				color: $bg-color;
+			}
+		}
+
+		span {
+			color: rgb(0, 0, 0);
+			font-size: 1.4rem;
+			line-height: 121.428571%; /* 17px/14 */
+			letter-spacing: 0%;
+			text-align: center;
+		}
 	}
 }
 // -----------------------------------------------------------------------------
-.order-call {
+.company-info {
+	// .company-info__title
+	&__title {
+		width: 100%;
+		margin-bottom: 6rem;
+		color: $color;
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 120%; /* 48px/40 */
+
+		@include _375 {
+			text-align: center;
+		}
+	}
+
+	// .company-info__content
+	&__content {
+		height: 100%;
+
+		@include _768 {
+			display: flex;
+			flex-direction: column;
+			width: auto;
+			align-items: center;
+		}
+	}
+
+	// .discounts-info__list
+	&__list {
+		@include _768 {
+			font-weight: 600;
+		}
+	}
+
+	// .company-info__item
+	&__item {
+		display: flex;
+		align-items: center;
+
+		._icon {
+			color: $color;
+			font-size: 10px;
+			margin-right: 8px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		span {
+			font-size: 13px;
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------
+.button {
 	border: 1px solid #585856;
 	border-radius: 10px;
 	white-space: nowrap;
@@ -19,13 +152,25 @@
 		background-color 0.3s,
 		color 0.3s ease-in-out;
 	font-size: 1.4rem;
-	padding: 10px 25px;
+	height: 38px;
+	min-width: 16.5rem;
+
 	&:active {
 		background-color: $color;
 		color: $bg-color;
 	}
-}
 
+	&.button--red {
+		color: $bg-color;
+		background: $color;
+		border: none;
+
+		&:active {
+			background-color: $bg-color;
+			color: black;
+		}
+	}
+}
 // -----------------------------------------------------------------------------
 .login-container {
 	// .login-container__body
@@ -129,69 +274,32 @@
 
 	// .login-container__button//
 	&__button {
+		height: 38px;
 		@include _690 {
 			display: flex;
 			align-items: center;
 		}
 	}
 }
+
 // -----------------------------------------------------------------------------
 .swiper-wrapper {
 	align-items: flex-start;
 }
 // -----------------------------------------------------------------------------
-.title-text {
-	&__text {
-		position: relative;
-		display: flex;
-		align-items: center;
-		color: rgb(0, 70, 70);
-		font-size: 3rem;
-		font-weight: 500;
-		text-transform: uppercase;
-		line-height: 100%; /* 36px/30px */
-		text-align: center;
-
-		@include _425 {
-			font-size: 2.3rem;
-		}
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			width: 30px;
-			height: 30px;
-			background: url('../img/icons/brand.png') center / contain no-repeat;
-
-			@include _490 {
-				display: none;
-			}
-		}
-
-		&::before {
-			left: -13px;
-			transform: translateX(-100%);
-		}
-		&::after {
-			right: -13px;
-			transform: translateX(100%);
-		}
-	}
-}
 
 // -----------------------------------------------------------------------------
 ._ibg {
 	position: relative;
-	height: 100%;
-	width: 100%;
+	// height: 100%;
+	// width: 100%;
 	img {
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 100%;
+		right: 0;
+		// width: 100%;
 		height: 100%;
-		object-fit: fill;
+		object-fit: cover;
 	}
 }
 // -----------------------------------------------------------------------------

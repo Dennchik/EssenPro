@@ -1,72 +1,68 @@
-footer.footer(id="contacts")
+.footer(id="contacts")
 	._body
 		._column 
 			._logo 
-				img(src="@@webRoot/img/footer/logo-footer.png", alt="")
-			._title Все товары
+				img(src="@@webRoot/img/footer/logo.png", alt="картинка")
+			._title ИНФОРМАЦИЯ О МАГАЗИНЕ
+			._address
+				p г.Обнинск, Коммунальный 
+				p проезд, дом 23, склад 8
+			._phone
+				span 
+					a(href="tel:89308409757") +7 (930) 840 97-57
+				span 
+					a(href="tel:89307540348") +7 (930) 754 03-48
+				span 
+					a(href="mailto:zakaz@essenpro.ru") zakaz@essenpro.ru
+		._column 
+			._title КАТАЛОГ ТОВАРОВ
 			ul 
 				li
-					a(href="#")  Ткани 
+					a(href="#")._link HoReCa 
 				li
-					a(href="#")  Товары для рукоделия
+					a(href="#")._link Бакалея
 				li
-					a(href="#")  Швейная фурнитура
+					a(href="#")._link Молочная продукция
 				li
-					a(href="#")  Пряжа
+					a(href="#")._link Для барбекю 
 				li
-					a(href="#")  Новинки
+					a(href="#")._link Напитки
 				li
-					a(href="#")  Акции
+					a(href="#")._link Овощи и фрукты 
+				li
+					a(href="#")._link Яйцо 
 		._column 
-			._title Адрес магазина:
+			._title ОСНОВНАЯ ИНФОРМАЦИЯ
 			ul 
-				li 249038, Калужская область 
-				li г. Обнинск ул. Курчатова д.6А 
-				li ТД "Малыш"
-			._title Режим работы:
-			ul
-				li Пн-пт 10:00 — 19:00
-				li Сб 10:00 — 18:00
-				li Вс 10:00 — 17:00
-			._title Телефон:
-			ul 
-				li 
-					a(href="tel:88000000000") 8-800-000-00-00
 				li
-					a(href="tel:74950000000") 7-495-000-00-00
+					a(href="#")._link Личный кабинет 
+				li
+					a(href="#")._link О компании
+				li
+					a(href="#")._link Доставка и оплата
+				li
+					a(href="#")._link Поставщикам
+				li
+					a(href="#")._link Оптовикам
+				li
+					a(href="#")._link Новости
+				li
+					a(href="#")._link Пользовательское соглашение
+				li
+					a(href="#")._link Политика конфиденциальности
+				li
+					a(href="#")._link Условия возврата товара
 		._column 
-			._title Информация
-			ul  
-				li
-					a(href="#")  О магазине
-				li
-					a(href="#")  Как купить
-				li
-					a(href="#")  Оплата
-				li
-					a(href="#")  Доставка
-				li
-					a(href="#")  Скидки
-				li
-					a(href="#")  Контакты
-				li
-					a(href="#")  Отзывы
-				li
-					a(href="#")  Новости и статьи
-				li
-					a(href="#")  Условия обмена и возврата
-				li
-					a(href="#")  Пользовательское соглашение
-		._column 
-			._brand(data-move-el="[{'bp-max': 768, 'index': 0, 'target': '.bp-3'}]")
-				img(src="@@webRoot/img/footer/brand-footer.png", alt="rfhnbyrf")
+			._title ЗАКАЗАТЬ ПРАЙС
+			form(action="#"  method="get")._form 
+				._input-conttainer
+					._input 
+						input.input(autocomplete="on", id='phone', placeholder='номер телефона', type="text", name="phone") 
+					._bUtton 
+						button(type="submit").button заказать
 			include ../chunk/networks-links
-			
-
-
-
-
-
-
-
+		._column 
+			._text Оптовые постаки продуктов EssenPro © 2023 Все права защищены.
+			._text Сайт разработан 
+				a(href="#") Sadovskiy Design
 

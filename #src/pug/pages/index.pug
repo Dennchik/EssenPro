@@ -6,46 +6,29 @@ prepend script
 block title
 	- var text='Essen -Pro "Обнинск"' 
 
-block page-content
-	.page#page
-		._container
-			//- include ../chunk/modal-regisrations-fiz
-			//- include ../chunk/modal-regisrations-ure
-			nav.sidebar-menu
-				._body
-					._top.bp-1
-					._menu.bp-2
-					._search.bp-3
-			//- 	.sidebar-search.bp-4
-			//- 		._top.bp-2
-			//- 			button(type="button")._icon-cancel.catalog-cansel
-			//- 				+iconfont('cancel-circle', 'icon')
-				//- include ../chunk/sidebar-catalog
-			//- include ../chunk/sidebar-menu
-			section._header
-				include ../layouts/header
-			//- ._content 
-			//- 	section._textile 
-			//- 		img(src="./img/main/textile.png", alt="картинка")
-			//- 	section._new-products
-			//- 		include ../components/section-new-products
-			//- 	section._portiere-fabrics 
-			//- 		include ../components/section-portiere-fabrics 
-			//- 	section._furniture-fabrics
-			//- 		include ../components/section-furniture-fabrics
-			//- 	section._costume-fabrics
-			//- 		include ../components/section-costume-fabrics
-			//- 	section._sale-products
-			//- 		include ../components/section-sale-products
-			//- 	section._delivery
-			//- 		include ../components/section-delivery
-			//- 	section._about
-			//- 		include ../components/section-about
-			//- 	section._reviews
-			//- 		include ../components/section-reviews 
-			//- section._footer
-			//- 	include ../layouts/footer 
-			//- nav._buttom-menu
-			//- 	include ../layouts/float-menu
-			
-				
+block main-content 
+	block section-perform
+		include ../components/page-index/section-perform
+	block section-discounts
+		include ../components/page-index/section-discounts
+	block section-info
+		include ../components/page-index/section-info
+	block section-categories 
+		include ../components/page-index/section-categories
+	block section-clients
+		include ../components/page-index/section-clients
+	block section-collection
+		include ../components/page-index/section-collection
+	block section-about
+		include ../components/page-index/section-about
+
+
+	block section-news 
+		include ../components/page-index/section-news
+	block section-providers
+		include ../components/page-index/section-providers
+	block section-map
+		include ../components/page-index/section-map
+
+
+

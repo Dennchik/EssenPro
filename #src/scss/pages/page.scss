@@ -15,7 +15,7 @@
 		width: 100%;
 		transition: all 0.7s ease-in-out;
 
-		@include _768 {
+		@include _screen-768 {
 			box-shadow: 0 0 5px #000;
 		}
 	}
@@ -28,7 +28,7 @@
 	// .page__content
 	&__content {
 		margin-top: 12.2rem;
-		@include _768 {
+		@include _screen-768 {
 			margin-top: 7.5rem;
 		}
 	}
@@ -37,7 +37,7 @@
 	&__footer {
 		border-radius: 30px;
 
-		@include _425 {
+		@include _screen-425 {
 			border-radius: 15px;
 		}
 
@@ -112,6 +112,11 @@
 
 	// .page__about-company
 	&__about-company {
+		padding: 3rem 0 5.3rem;
+	}
+
+	// .page__new-products
+	&__new-products {
 		padding: 3rem 0 5.3rem;
 	}
 }

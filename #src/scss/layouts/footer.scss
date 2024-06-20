@@ -7,11 +7,11 @@
 		gap: 2rem;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 
-		@include _768 {
+		@include _screen-768 {
 			grid-template-columns: 1fr 1fr;
 		}
 
-		@include _425 {
+		@include _screen-425 {
 			padding: 2rem 2rem 4.2rem;
 			grid-template-columns: 1fr;
 		}
@@ -19,7 +19,7 @@
 
 	// .footer__column
 	&__column {
-		@include _490 {
+		@include _screen-490 {
 			&:not(:last-child) {
 				border-bottom: 1px solid #fff;
 				padding-bottom: 2rem;
@@ -63,7 +63,7 @@
 				grid-column: -3 / -1;
 			}
 
-			@include _425 {
+			@include _screen-425 {
 				flex-direction: column;
 				align-items: flex-start;
 			}
@@ -81,7 +81,7 @@
 		img {
 			object-fit: contain;
 		}
-		@include _490 {
+		@include _screen-490 {
 			width: 100%;
 		}
 	}
@@ -129,7 +129,7 @@
 	&__input-conttainer {
 		max-width: 217px;
 		position: relative;
-		@include _425 {
+		@include _screen-425 {
 			min-width: 100%;
 		}
 	}
@@ -140,7 +140,7 @@
 		input {
 			width: 100%;
 		}
-		@include _425 {
+		@include _screen-425 {
 			width: 100%;
 		}
 	}
@@ -159,7 +159,7 @@
 			font-weight: 500;
 			letter-spacing: 0.5px;
 
-			@include _425 {
+			@include _screen-425 {
 				text-align: center;
 				min-width: 100%;
 			}

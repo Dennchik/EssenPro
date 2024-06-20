@@ -3,7 +3,7 @@
 	&__content {
 		position: relative;
 		padding: 10.5rem 0 14.7rem;
-		@include _490 {
+		@include _screen-490 {
 			padding: 5.5rem 0 7.7rem;
 		}
 	}
@@ -22,7 +22,7 @@
 		h1 {
 			font-weight: 700;
 			font-size: 4rem;
-			@include _490 {
+			@include _screen-490 {
 				text-align: center;
 				font-size: 3rem;
 			}
@@ -39,7 +39,7 @@
 		font-size: 2rem;
 		font-weight: 500;
 		margin-bottom: 1.8rem;
-		@include _425 {
+		@include _screen-425 {
 			text-align: center;
 		}
 	}
@@ -48,7 +48,7 @@
 	&__buttons {
 		display: flex;
 		gap: 2rem;
-		@include _425 {
+		@include _screen-425 {
 			justify-content: space-evenly;
 		}
 		button {
@@ -71,11 +71,11 @@
 
 		img {
 			object-position: right;
-			@include _768 {
+			@include _screen-768 {
 				opacity: 0.5;
 			}
 
-			@include _425 {
+			@include _screen-425 {
 				object-position: center;
 			}
 		}

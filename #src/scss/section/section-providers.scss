@@ -16,7 +16,7 @@
 			line-height: 120%; /* 42px/35 */
 			text-align: center;
 
-			@include _375 {
+			@include _screen-375 {
 				font-size: 3rem;
 			}
 		}
@@ -39,7 +39,7 @@
 		justify-content: space-between;
 		width: 100%;
 
-		@include _490 {
+		@include _screen-490 {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}

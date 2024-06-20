@@ -15,7 +15,7 @@
 		background: #ffffff;
 
 		box-shadow: 20px 20px 30px #acacac6b;
-		@include _490 {
+		@include _screen-490 {
 			padding: 4.5rem 0 7.2rem;
 		}
 	}
@@ -30,10 +30,10 @@
 		&:nth-child(1) {
 			padding-right: 8.8rem;
 
-			@include _1024 {
+			@include _screen-1024 {
 				padding-right: calc(0px + (148 - 5) * ((100vw - 320px) / (1024 - 320)));
 			}
-			@include _375 {
+			@include _screen-375 {
 				justify-self: stretch;
 			}
 		}
@@ -57,7 +57,7 @@
 			grid-area: 1 / 1;
 		}
 
-		@include _1024 {
+		@include _screen-1024 {
 			padding-left: calc(0px + (175 - 5) * ((100vw - 490px) / (1024 - 490)));
 		}
 		img {
@@ -67,16 +67,17 @@
 			object-fit: cover;
 			max-width: 100%;
 
-			@include _768 {
+			@include _screen-768 {
 				opacity: 0.4;
 			}
 
-			@include _375 {
+			@include _screen-375 {
 				min-width: 100%;
 			}
 		}
 	}
 }
+
 .page {
 	&__discounts {
 		.company-info {
@@ -92,21 +93,24 @@
 		&__title {
 			color: rgb(88, 88, 86);
 			font-size: 3.5rem;
-			@include _375 {
+
+			@include _screen-375 {
 				text-align: center;
 				font-size: 3rem;
 			}
 		}
 	}
+
 	.info-company {
 		&__image {
 			justify-self: start;
 			position: relative;
 			padding-left: 15px;
 
-			@include _1024 {
+			@include _screen-1024 {
 				padding-left: calc(0px + (15 - 5) * ((100vw - 490px) / (1024 - 490)));
 			}
+
 			img {
 				object-position: right;
 				max-width: 610px;
@@ -114,7 +118,7 @@
 				object-fit: cover;
 				max-width: 100%;
 
-				@include _screen-1140 {
+				@include _screen-1024 {
 					opacity: 0.4;
 				}
 			}
@@ -124,7 +128,7 @@
 			box-shadow: none;
 			padding: 8.5rem 0;
 
-			@include _490 {
+			@include _screen-490 {
 				padding: 4.2rem 0 4.2rem;
 			}
 			> * {

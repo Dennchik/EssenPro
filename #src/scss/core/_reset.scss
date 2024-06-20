@@ -10,7 +10,7 @@ html {
 	counter-reset: heading;
 	color: $font-color-defoult;
 
-	@include _1024 {
+	@include _screen-1024 {
 		font-size: 50%;
 	}
 }

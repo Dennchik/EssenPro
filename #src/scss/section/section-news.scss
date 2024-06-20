@@ -10,7 +10,7 @@
 			span {
 				color: $color;
 			}
-			@include _375 {
+			@include _screen-375 {
 				font-size: 3rem;
 			}
 		}
@@ -72,12 +72,6 @@
 }
 
 .card {
-	// .card__thumb
-
-	&__thumb {
-		// flex: 1 1 auto;
-	}
-
 	// .card__image
 
 	&__image {
@@ -85,6 +79,7 @@
 		align-items: center;
 		height: 100%;
 		width: 100%;
+
 		img {
 			object-fit: cover;
 			vertical-align: bottom;
@@ -100,13 +95,11 @@
 	}
 
 	// .card__data
-
 	&__data {
 		margin-bottom: 4px;
 	}
 
 	// .card__text
-
 	&__text {
 	}
 }

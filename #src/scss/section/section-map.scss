@@ -13,7 +13,7 @@
 		line-height: 120%; /* 42px/35 */
 		text-align: center;
 
-		@include _375 {
+		@include _screen-375 {
 			font-size: 3rem;
 		}
 	}
@@ -22,7 +22,7 @@
 	&__content {
 		display: flex;
 
-		@include _768 {
+		@include _screen-768 {
 			flex-direction: column-reverse;
 		}
 	}

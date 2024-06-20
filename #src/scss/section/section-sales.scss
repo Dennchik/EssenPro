@@ -14,7 +14,7 @@
 				color: $color;
 			}
 
-			@include _375 {
+			@include _screen-375 {
 				font-size: 3rem;
 			}
 		}
@@ -67,11 +67,11 @@
 			rgb(234, 142, 127) 96.778%
 		);
 
-		@include _690 {
+		@include _screen-690 {
 			grid-template-columns: 1fr 1fr;
 		}
 
-		@include _425 {
+		@include _screen-425 {
 			grid-template-columns: 1fr;
 		}
 	}
@@ -93,7 +93,7 @@
 			font-weight: 700;
 			line-height: 21px;
 		}
-		@include _425 {
+		@include _screen-425 {
 			&:not(:last-child) {
 				&::after {
 					content: '';

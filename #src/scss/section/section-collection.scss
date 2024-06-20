@@ -9,7 +9,7 @@
 			line-height: 120%; /* 42px/35 */
 			text-align: center;
 
-			@include _375 {
+			@include _screen-375 {
 				font-size: 3rem;
 			}
 		}
@@ -21,18 +21,18 @@
 		gap: 2rem;
 		grid-template-columns: repeat(5, 1fr);
 		justify-content: space-between;
-		@include _920 {
+		@include _screen-920 {
 			grid-template-columns: repeat(4, 1fr);
 		}
 
-		@include _768 {
+		@include _screen-768 {
 			grid-template-columns: repeat(3, 1fr);
 		}
-		@include _568 {
+		@include _screen-568 {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@include _375 {
+		@include _screen-375 {
 			grid-template-columns: repeat(1, 1fr);
 		}
 	}

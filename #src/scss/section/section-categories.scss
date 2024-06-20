@@ -25,7 +25,9 @@
 		@include _768 {
 			grid-template-columns: repeat(3, 1fr);
 		}
+
 		@include _568 {
+			gap: 4rem;
 			grid-template-columns: repeat(2, 1fr);
 		}
 

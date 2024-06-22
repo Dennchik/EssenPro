@@ -116,6 +116,8 @@ export default {
 			// catalog: './#src/js/catalog.js',
 			// catalog: './#src/js/catalog.js',
 			// cart: './#src/js/cart.js',
+			brands: './#src/js/brands.js',
+			products: './#src/js/products.js',
 			index: './#src/js/index.js',
 			main: './#src/js/main.js',
 		},

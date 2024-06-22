@@ -1,15 +1,9 @@
 // -----------------------------------------------------------------------------
-// .menu-catalog__parent-menu > ._collapse:not(._show) {
-// 	display: none;
-// }
-// .select > ._collapse:not(._show) {
-// 	display: none;
-// }
-// @include _690 {
-// 	.catalog__categories > ._collapse:not(._show) {
-// 		display: none;
-// 	}
-// }
+.card__favourites:not(._like) {
+	.icon-heart-like {
+		opacity: 0;
+	}
+}
 
 //*  ------------------------ [Greed Card a] -----------------------------------
 .card-product {
@@ -24,6 +18,9 @@
 
 	// .card__image
 	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		height: 100%;
 		padding-bottom: 10px;
 
@@ -36,6 +33,9 @@
 
 		img {
 			vertical-align: bottom;
+			max-width: 100%;
+			height: auto;
+			width: 100%;
 		}
 	}
 

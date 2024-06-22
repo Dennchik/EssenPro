@@ -1,14 +1,15 @@
-section.new-products.page__new-products
+section.products.page__new-products
 	._title Новинки
 	._content
 		._column 
-			.card
+			.card(data-quantity)
 				._body
 					._header
 						._label
 							span хит
 						._favourites
 							+iconfont('heart', '_icon')
+							+iconfont('heart-like', '_icon')
 					._image 
 						img(src="@@webRoot/img/main/new-products/product-1.png", alt="картинка")
 					._info
@@ -21,23 +22,23 @@ section.new-products.page__new-products
 							.counter-product
 								.quantity.counter-product__quantity
 									.quantity__button.quantity-remove
-										i.icon-minus.icon
+										+iconfont('minus', '_icon') 
 									.quantity__input
 										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
-										span(style="margin-left: -5px;")
-									.quantity__button.quantity-add._arrow._arrow_next
-										i.icon-cancel.icon
+									.quantity__button.quantity-add
+										+iconfont('plus', '_icon')
 						._button 
 							button(type="submit") 
 								span В корзину
 		._column 
-			.card
+			.card(data-quantity)
 				._body
 					._header
 						._label
 							span хит
 						._favourites
 							+iconfont('heart', '_icon')
+							+iconfont('heart-like', '_icon')
 					._image 
 						img(src="@@webRoot/img/main/new-products/product-2.png", alt="картинка")
 					._info
@@ -50,23 +51,23 @@ section.new-products.page__new-products
 							.counter-product
 								.quantity.counter-product__quantity
 									.quantity__button.quantity-remove
-										i.icon-minus.icon
+										+iconfont('minus', '_icon') 
 									.quantity__input
-										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
-										span(style="margin-left: -5px;")
-									.quantity__button.quantity-add._arrow._arrow_next
-										i.icon-cancel.icon
+										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+									.quantity__button.quantity-add 
+										+iconfont('plus', '_icon')
 						._button 
 							button(type="submit") 
 								span В корзину
 		._column 
-			.card
+			.card(data-quantity)
 				._body
 					._header
 						._label
 							span хит
 						._favourites
 							+iconfont('heart', '_icon')
+							+iconfont('heart-like', '_icon')
 					._image 
 						img(src="@@webRoot/img/main/new-products/product-3.png", alt="картинка")
 					._info
@@ -79,23 +80,23 @@ section.new-products.page__new-products
 							.counter-product
 								.quantity.counter-product__quantity
 									.quantity__button.quantity-remove
-										i.icon-minus.icon
+										+iconfont('minus', '_icon') 
 									.quantity__input
-										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
-										span(style="margin-left: -5px;")
-									.quantity__button.quantity-add._arrow._arrow_next
-										i.icon-cancel.icon
+										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+									.quantity__button.quantity-add 
+										+iconfont('plus', '_icon')
 						._button 
 							button(type="submit") 
 								span В корзину
 		._column 
-			.card
+			.card(data-quantity)
 				._body
 					._header
 						._label
 							span хит
 						._favourites
 							+iconfont('heart', '_icon')
+							+iconfont('heart-like', '_icon')
 					._image 
 						img(src="@@webRoot/img/main/new-products/product-4.png", alt="картинка")
 					._info
@@ -108,14 +109,11 @@ section.new-products.page__new-products
 							.counter-product
 								.quantity.counter-product__quantity
 									.quantity__button.quantity-remove
-										+iconfont('minus', '_icon')
-										//- i.icon-minus
+										+iconfont('minus', '_icon') 
 									.quantity__input
-										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
-										span(style="margin-left: -5px;")
+										input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
 									.quantity__button.quantity-add
-										+iconfont('cancel', '_icon')
-										//- i.icon-cancel.icon
+										+iconfont('plus', '_icon')
 						._button 
 							button(type="submit") 
 								span В корзину

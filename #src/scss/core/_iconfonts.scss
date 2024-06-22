@@ -162,6 +162,11 @@
     content: $icon-minus;
   }
 }
+.icon-plus {
+  &:before {
+    content: $icon-plus;
+  }
+}
 .icon-heart {
   &:before {
     content: $icon-heart;

@@ -1,4 +1,4 @@
-.section-collection {
+.collection {
 	// .section-collection__title
 	&__title {
 		h2 {
@@ -19,21 +19,10 @@
 	&__products {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(5, 189px);
 		justify-content: space-between;
-		@include _screen-920 {
-			grid-template-columns: repeat(4, 1fr);
-		}
-
-		@include _screen-768 {
-			grid-template-columns: repeat(3, 1fr);
-		}
-		@include _screen-568 {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@include _screen-375 {
-			grid-template-columns: repeat(1, 1fr);
+		@include _screen-1024 {
+			grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
 		}
 	}
 

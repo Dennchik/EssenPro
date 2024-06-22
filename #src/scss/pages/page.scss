@@ -28,6 +28,9 @@
 	// .page__content
 	&__content {
 		margin-top: 12.2rem;
+		@include _screen-1024 {
+			margin-top: 13.5rem;
+		}
 		@include _screen-768 {
 			margin-top: 7.5rem;
 		}
@@ -96,7 +99,7 @@
 
 	// .page__map
 	&__map {
-		padding: 3rem 0 5.3rem;
+		padding: 3rem 0 8.6rem;
 	}
 
 	// .page__providers
@@ -118,5 +121,21 @@
 	// .page__new-products
 	&__new-products {
 		padding: 3rem 0 5.3rem;
+	}
+
+	// ---------------------------------------------------------------------------
+	// .page__product-catalog
+	&__product-catalog {
+		padding: 3rem 0 8.6rem;
+	}
+
+	// ..page__categories-by-type
+	&__categories-by-type {
+		padding: 3rem 0 8.6rem;
+	}
+
+	// .page__providers-by-brand
+	&__providers-by-brand {
+		padding: 3rem 0 8.6rem;
 	}
 }

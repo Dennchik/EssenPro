@@ -1,0 +1,58 @@
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+@import 'core/swiper-vars';
+//todo ----------------------------- Core --------------------------------------
+@import 'core/mixins';
+@import 'core/extend';
+@import 'core/reset';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+@import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo -------------------------- Plugins -------------------------------------
+
+// todo -------------------------- Classes -------------------------------------
+// #region
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+[class*='_container'] {
+	max-width: $maxWidthContainer;
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+[class*='icon-'] {
+	cursor: pointer;
+	height: 100%;
+	@include flex-align-center-justify-center;
+}
+// todo --------------------------- layout -------------------------------------
+@import 'layouts/bem-block';
+@import 'layouts/header';
+@import 'layouts/footer';
+// todo --------------------------- Pages --------------------------------------
+@import 'pages/page';
+// todo --------------------------- Chunk --------------------------------------
+@import 'chunk/search';
+@import 'chunk/burger-button';
+@import 'chunk/bread-crumbs';
+// todo -------------------------- Modules -------------------------------------
+@import 'modules/preloader';
+@import 'modules/sidebar-menu';
+// todo -------------------------- Sections ------------------------------------
+@import 'section/section-products-catalog';
+@import 'section/section-new-products';
+@import 'section/section-categories';
+
+@import 'section/section-providers.scss';

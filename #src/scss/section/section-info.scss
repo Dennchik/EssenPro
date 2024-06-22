@@ -1,7 +1,10 @@
 .info-company {
 	// .info-company__body
 	&__body {
+		overflow: hidden;
 		position: relative;
+		border-radius: 15px;
+		box-shadow: 10px 15px 30px #acacac6b;
 	}
 
 	// .info-company__content
@@ -11,10 +14,8 @@
 		padding: 8.5rem 0 14.2rem;
 		display: grid;
 		grid-template-columns: 1fr;
-		border-radius: 15px;
 		background: #ffffff;
 
-		box-shadow: 20px 20px 30px #acacac6b;
 		@include _screen-490 {
 			padding: 4.5rem 0 7.2rem;
 		}

@@ -1,6 +1,12 @@
 .bread-crumbs {
 	// .bread-crumbs__list
 	&__list {
+		padding: 1rem 1rem;
+		color: rgb(88, 88, 86);
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 118.181818%; /* 13px/11 */
+
 		li:not(:last-child) {
 			margin-right: 0.5rem;
 		}

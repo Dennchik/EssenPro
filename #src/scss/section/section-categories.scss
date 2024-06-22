@@ -1,8 +1,10 @@
-.section-categories {
-	// .section-categories__title
+.categories {
+	// .categories__title
 	&__title {
+		margin-bottom: 5.5rem;
 		h2 {
-			margin-bottom: 5.5rem;
+			flex: 0 1 auto;
+			padding-left: 1rem;
 			color: rgb(88, 88, 86);
 			font-size: 3.5rem;
 			font-weight: 700;
@@ -15,33 +17,47 @@
 		}
 	}
 
-	// .section-categories__products
+	// .categories__products
 	&__products {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 189px);
 		justify-content: space-between;
 
-		@include _screen-768 {
-			grid-template-columns: repeat(3, 1fr);
-		}
-
-		@include _screen-568 {
-			gap: 4rem;
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@include _screen-375 {
-			grid-template-columns: repeat(1, 1fr);
+		@include _screen-960 {
+			grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
 		}
 	}
 
-	// .section-categories__column
+	// .categories__column
 	&__column {
 		justify-self: center;
 		max-width: 218px;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+	}
+}
+
+.page {
+	&__categories-by-type {
+		.card-product__image a {
+			align-items: flex-start;
+		}
+
+		.categories__title {
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+
+			h2 {
+				text-align: left;
+			}
+		}
+		.categories__products {
+			@include _screen-1140 {
+				grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
+			}
+		}
 	}
 }

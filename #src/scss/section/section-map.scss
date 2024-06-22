@@ -2,6 +2,8 @@
 	// .info-map__body
 	&__body {
 		position: relative;
+		border-radius: 15px;
+		box-shadow: 10px 15px 30px #acacac6b;
 	}
 
 	// .company-map__title
@@ -37,7 +39,7 @@
 
 		&:nth-child(1) {
 			@include _min-768 {
-				padding: 0 3rem 0 15px;
+				padding: 15px 3rem 15px 15px;
 				flex: 0 1 65%;
 			}
 		}
@@ -48,9 +50,10 @@
 
 	// .info-map__image
 	&__image {
+		overflow: hidden;
 		flex: 1 1 auto;
 		min-width: 100%;
-		box-shadow: 0 0 15px #0000004d;
+		border-radius: 10px;
 
 		img {
 			width: 100%;

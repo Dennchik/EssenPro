@@ -39,13 +39,11 @@
 	}
 
 	// .news-company__footer
-
 	&__footer {
 		@include flex-justify-center;
 	}
 
 	// .news-company__button
-
 	&__button {
 		width: 173px;
 
@@ -73,7 +71,6 @@
 
 .card {
 	// .card__image
-
 	&__image {
 		display: flex;
 		align-items: center;
@@ -87,7 +84,6 @@
 	}
 
 	// .card__content
-
 	&__content {
 		padding: 30px 14px;
 		display: flex;

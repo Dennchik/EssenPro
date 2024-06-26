@@ -21,10 +21,14 @@ body {
 		size: 1.6rem;
 		weight: $font-weight-defoult;
 	}
+
 	@include _screen-690 {
 		&.no-scroll {
 			overflow: hidden;
 		}
+	}
+	&.no-scroll {
+		overflow: hidden;
 	}
 }
 

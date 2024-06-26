@@ -3,7 +3,7 @@
 	display: none;
 	overflow-x: hidden;
 	position: fixed;
-	z-index: 7;
+	z-index: 12;
 	top: 59px;
 	right: 0;
 	height: calc(100% - 59px);
@@ -19,6 +19,9 @@
 		&._opened-menu {
 			transform: translateX(0);
 		}
+	}
+	@include _screen-375 {
+		width: 100%;
 	}
 
 	&__body {

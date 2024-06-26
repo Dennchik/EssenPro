@@ -4,7 +4,13 @@
 		opacity: 0;
 	}
 }
+.side-bar__parent-menu > ._collapse:not(._show) {
+	display: none;
+}
 
+.sub-menu__menu > ._collapse:not(._show) {
+	display: none;
+}
 //*  ------------------------ [Greed Card a] -----------------------------------
 .card-product {
 	display: flex;
@@ -18,6 +24,7 @@
 
 	// .card__image
 	&__image {
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -26,6 +33,7 @@
 
 		a {
 			height: 100%;
+			width: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
@@ -35,7 +43,8 @@
 			vertical-align: bottom;
 			max-width: 100%;
 			height: auto;
-			width: 100%;
+			width: 290px;
+			object-fit: cover;
 		}
 	}
 
@@ -63,10 +72,13 @@
 	// .card__button
 	&__button {
 		cursor: pointer;
-		width: 166px;
-		padding: 10px 50px;
+		max-width: 200px;
+		width: 100%;
+		padding: 10px 0;
 		border: 1px solid rgb(88, 88, 86);
 		border-radius: 10px;
+		display: flex;
+		justify-content: center;
 		transition:
 			background-color 0.3s,
 			color 0.3s ease-in-out;
@@ -83,7 +95,6 @@
 			color: rgb(0, 0, 0);
 			font-size: 1.4rem;
 			line-height: 121.428571%; /* 17px/14 */
-			letter-spacing: 0%;
 			text-align: center;
 		}
 	}
@@ -166,6 +177,7 @@
 		border: none;
 
 		&:active {
+			border: 1px solid #585856;
 			background-color: $bg-color;
 			color: black;
 		}
@@ -175,7 +187,7 @@
 .login-container {
 	// .login-container__body
 	&__body {
-		position: relative;
+		// position: relative;
 		margin-right: 2rem;
 		width: 100%;
 		height: 100%;
@@ -189,7 +201,7 @@
 		justify-content: flex-end;
 
 		[class*='icon-'] {
-			font-size: 18px;
+			font-size: 20px;
 		}
 	}
 
@@ -201,17 +213,21 @@
 		justify-content: space-between;
 
 		@include _screen-960 {
+			min-width: 250px;
 			padding: 2rem;
 			pointer-events: none;
 			position: absolute;
-			top: 0;
+			top: 16px;
 			right: 0;
 			opacity: 0;
+			// transform: translate(50%, 60%);
 			transform: translateY(60%);
-			border: 1px solid $color;
+			border: 1px solid $color-border;
 			background: $bg-color;
 			border-radius: 10px;
 			transition: all 0.5s ease-in-out;
+			justify-content: space-evenly;
+			box-shadow: 1px 1px 5px #000;
 			&._visible {
 				pointer-events: all;
 				opacity: 1;
@@ -251,7 +267,7 @@
 
 	// .login-container__button
 	&__user-button {
-		&._icon {
+		@include _min-960 {
 			pointer-events: none;
 		}
 	}
@@ -390,7 +406,6 @@
 		}
 
 		.icon-arow-down {
-			position: absolute;
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -398,7 +413,6 @@
 			opacity: 0;
 			height: 28px;
 			font-size: 2.8rem;
-			color: #2cc55f;
 		}
 
 		&::before {
@@ -408,7 +422,7 @@
 			flex: 0 0 20px;
 			height: 20px;
 			align-self: center;
-			border: 1px solid $color;
+			border: 1px solid $color-border;
 			border-radius: 7px;
 			transition: box-shadow 0.3s ease-in-out;
 		}
@@ -424,7 +438,14 @@
 			font-size: 10px;
 		}
 	}
+
+	&__label--ure {
+		&::before {
+			// border: 1px solid $color-green;
+		}
+	}
 }
+// -----------------------------------------------------------------------------
 .product-offer {
 	&__title--favourites {
 		display: flex;

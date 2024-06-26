@@ -1,86 +1,102 @@
-// import ItcCollapse from "../assets/collapse.js";
+import ItcCollapse from "../assets/collapse.js";
 //! ---------------------------------- Root ------------------------------------
 const $ = {
-	header: document.querySelector('.page__header'),
-	bttnSearch: document.querySelector('.header__button-sidebarcatalog'),
-	burgerButton: document.querySelector('.burger-button'),
-	sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
-	sidebarMenu: document.querySelector('.page__sidebar-menu'),
-	bottomMenu: document.querySelector('.page__buttom-menu'),
-	cancelButtonsCatalog: document.querySelector('.catalog-cansel'),
-	cancelButtonsMenu: document.querySelector('.menu-cansel'),
-	menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
-	menuCatalog: document.querySelector('.menu-catalog'),
-	catalogCategories: document.querySelector('.catalog__categories'),
+	toggleButton: document.querySelector('.toggle-button'),
+	sidebarMenu: document.querySelector('.sidebar-menu'),
 	submenuParents: document.querySelectorAll('.submenu-parent'),
 	userButtons: document.querySelectorAll('.login-container__user-button'),
-	favouritItems: document.querySelectorAll('.slide-container__favourit')
+
+	// header: document.querySelector('.page__header'),
+	// bttnSearch: document.querySelector('.header__button-sidebarcatalog'),
+	// sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
+	// bottomMenu: document.querySelector('.page__buttom-menu'),
+	// cancelButtonsCatalog: document.querySelector('.catalog-cansel'),
+	// cancelButtonsMenu: document.querySelector('.menu-cansel'),
+	// menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
+	// menuCatalog: document.querySelector('.menu-catalog'),
+	// catalogCategories: document.querySelector('.catalog__categories'),
+	// favouritItems: document.querySelectorAll('.slide-container__favourit')
 };
 //! -------------------------- Добавить в избранное ---------------------------
 export function addFafouritItems() {
-	$.favouritItems.forEach(favouritItem => {
-		favouritItem.addEventListener('click', () => {
-			favouritItem.classList.toggle('_add-product');
+	let cardFavourites = document.querySelectorAll('.card__favourites');
+	cardFavourites.forEach(cardFavourit => {
+		cardFavourit.addEventListener('click', () => {
+			cardFavourit.classList.toggle('_like');
 		});
 	});
 }
 //! --------------------------------- Main.js ----------------------------------
 //todo закрываем "Menu-Catalog" 
-export function cancelButton() {
-	$.cancelButtonsCatalog.addEventListener('click', () => {
-		$.sidebarCatalog.classList.remove('_opened-menu');
-		document.body.classList.remove('no-scroll');
-	});
+// export function cancelButton() {
+// 	$.cancelButtonsCatalog.addEventListener('click', () => {
+// 		$.sidebarCatalog.classList.remove('_opened-menu');
+// 		document.body.classList.remove('no-scroll');
+// 	});
 
-}
+// }
 
 //todo запрещаем скроллинг страницы при открытии "Menu-Catalog"
 export function openMenuCatalog() {
-	$.bttnSearch.addEventListener('click', () => {
-		$.sidebarCatalog.classList.add('_opened-menu');
-		$.sidebarMenu.classList.remove('_opened-menu');
-		$.burgerButton.classList.remove('_active');
-		document.body.classList.add('no-scroll');
-	});
+	const toggleButton = document.querySelector('.toggle-catalog');
+	const sidebarMenu = document.querySelector('.categories__side-bar');
+	toggleButton.addEventListener('click', openedMenu);
+	function openedMenu() {
+		sidebarMenu.classList.toggle('_opened-menu');
+		toggleButton.classList.toggle('_opened-menu');
+
+		if (sidebarMenu.classList.contains('_opened-menu')) {
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
+		}
+	};
 }
 //todo запрещаем скроллинг страницы при открытии "Main-Menu"
 export function openMainMenu() {
-	$.burgerButton.addEventListener('click', () => {
+	const toggleMenuButton = document.querySelector('.toggle-button__toggle-menu');
+	$.toggleButton.addEventListener('click', openedMenu);
+	function openedMenu() {
+		toggleMenuButton.classList.toggle('_open');
 		$.sidebarMenu.classList.toggle('_opened-menu');
-		$.sidebarCatalog.classList.remove('_opened-menu');
-		$.burgerButton.classList.toggle('_active');
+		// $.sidebarCatalog.classList.remove('_opened-menu');
+		// $.burgerButton.classList.toggle('_active');
 		if ($.sidebarMenu.classList.contains('_opened-menu')) {
 			document.body.classList.add('no-scroll');
 		} else {
 			document.body.classList.remove('no-scroll');
 		}
-	});
+	};
 }
 // -----------------------------------------------------------------------------
-export function showSubMenuCollapse() {
-	const subMenuParents = document.querySelectorAll('.submenu-parent__menu');
-	subMenuParents.forEach(subMenuParent => {
-		const trigger = subMenuParent.querySelector('.submenu-parent__link');
+export function showChildSubmenu() {
+	const menuParents = document.querySelectorAll('.menu-parrent');
+	menuParents.forEach(menuParent => {
+		const trigger = menuParent.querySelector('._trigger-submenu');
 		trigger.addEventListener('click', () => {
-			if (trigger.classList.contains('_trigger')) {
-				_toggleMenu(subMenuParent);
-			}
-
+			_toggleMenu(menuParent);
 		});
 	});
 	const _toggleMenu = (el) => {
+		const collapse = new ItcCollapse(el.querySelector('._collapse'));
+		const trigger = el.querySelector('._trigger-submenu');
 		if (el.classList.contains('_active')) {
 			el.classList.remove('_active');
+			trigger.classList.remove('_rotate');
+			collapse.toggle();
 		} else {
 			el.classList.add('_active');
+			trigger.classList.add('_rotate');
+			collapse.toggle();
 		}
 	};
 }
 
 // -----------------------------------------------------------------------------
-export function collapseElement() {
-	const menuParents = document.querySelectorAll('.menu-catalog__parent-menu');
-	const menuList = document.querySelector('.sidebar-catalog__menu');
+export function collapseParentMenu() {
+	const menuParents = document.querySelectorAll('.side-bar__parent-menu');
+	const menuList = document.querySelector('.side-bar__menu-list');
+
 	menuParents.forEach((menuParent) => {
 		const trigger = menuParent.querySelector('._trigger-menu');
 
@@ -95,87 +111,71 @@ export function collapseElement() {
 
 	const _toggleMenu = (menuParent) => {
 		const collapse = new ItcCollapse(menuParent.querySelector('._collapse'));
+		const trigger = menuParent.querySelector('._trigger-menu');
 		if (menuParent.classList.contains('_open')) {
 			menuParent.classList.remove('_open');
+			trigger.classList.remove('_rotate');
 			collapse.toggle();
 		} else {
 			menuParent.classList.add('_open');
+			trigger.classList.add('_rotate');
 			collapse.toggle();
 		}
 	};
 }
-// -----------------------------------------------------------------------------
-function _loop(els, elClosest, md) {
-	for (let i = 0; i < els.length; i++) {
-		let item = els[i];
-		item.addEventListener('click', () => {
-			switch (true) {
-				case item.classList.contains(elClosest):
-					item.classList.toggle(md);
-					// $.openSide.classList.toggle('opened-menu');
-					break;
-				default:
-					item.closest(elClosest).classList.toggle(md);
-					break;
-			}
-		});
-	}
-}
-//! -------------------------------- Index.js ----------------------------------
-
 //! ------------------------------- Catalog.js ---------------------------------
 //todo Плавное открытие/закрытие блока при нажатии на кнопку "Фильтр:"
-export function collapseCatalogFilter() {
-	const trigger = $.catalogCategories.querySelector('._trigger');
-	trigger.addEventListener('click', () => {
-		_toggleMenu($.catalogCategories);
-	});
+// export function collapseCatalogFilter() {
+// 	const trigger = $.catalogCategories.querySelector('._trigger');
+// 	trigger.addEventListener('click', () => {
+// 		_toggleMenu($.catalogCategories);
+// 	});
 
-	const _toggleMenu = (el) => {
-		const collapse = new ItcCollapse($.catalogCategories.querySelector('._collapse'));
-		if ($.catalogCategories.classList.contains('_open')) {
-			el.classList.remove('_open');
-			collapse.toggle();
-		} else {
-			el.classList.add('_open');
-			collapse.toggle();
-		}
-	};
-}
+// 	const _toggleMenu = (el) => {
+// 		const collapse = new ItcCollapse($.catalogCategories.querySelector('._collapse'));
+// 		if ($.catalogCategories.classList.contains('_open')) {
+// 			el.classList.remove('_open');
+// 			collapse.toggle();
+// 		} else {
+// 			el.classList.add('_open');
+// 			collapse.toggle();
+// 		}
+// 	};
+// }
 //* --------------При загрузки "Catalog.html" открывает "Блэкаут"---------------
-export function loadedCatalog() {
-	document.addEventListener("DOMContentLoaded", function () {
-		const active_menu = $.menuCatalog.querySelector('._active');
-		_loadedMenu(active_menu);
-	});
-	const _loadedMenu = (el) => {
-		const collapse = new ItcCollapse(el.querySelector('._collapse'));
-		if (el.classList.contains('_active')) {
-			el.classList.add('_open');
-			collapse.toggle();
-		}
-	};
-}
+// export function loadedCatalog() {
+// 	document.addEventListener("DOMContentLoaded", function () {
+// 		const active_menu = $.menuCatalog.querySelector('._active');
+// 		_loadedMenu(active_menu);
+// 	});
+// 	const _loadedMenu = (el) => {
+// 		const collapse = new ItcCollapse(el.querySelector('._collapse'));
+// 		if (el.classList.contains('_active')) {
+// 			el.classList.add('_open');
+// 			collapse.toggle();
+// 		}
+// 	};
+// }
 //todo -----------Событие при нажатии на кнопку "Оформить заказ"----------------
-export function placeOrder() {
-	let orderCollapse = document.querySelector('.send-order');
-	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
-	const elcheckboxLabelement = document.querySelector('.order-place__checkbox');
+// export function placeOrder() {
+// 	let orderCollapse = document.querySelector('.send-order');
+// 	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
+// 	const elcheckboxLabelement = document.querySelector('.order-place__checkbox');
 
-	document.querySelector('.order-place__form-button').addEventListener('click', function () {
-		let titleDocument = document.querySelector('.cart-page__title');
-		// let sendOrder = document.querySelector('.order-place__send-order');
-		let sendButton = document.querySelector('.order-place__send-button');
-		let formButton = document.querySelector('.order-place__form-button');
-		// titleDocument.innerHTML = 'оформление заказа';
-		collapse.toggle();
-		sendButton.style.display = 'block';
-		formButton.style.display = 'none';
-		elcheckboxLabelement.style.display = 'block';
+// 	document.querySelector('.order-place__form-button').addEventListener('click', function () {
+// 		let titleDocument = document.querySelector('.cart-page__title');
+// 		// let sendOrder = document.querySelector('.order-place__send-order');
+// 		let sendButton = document.querySelector('.order-place__send-button');
+// 		let formButton = document.querySelector('.order-place__form-button');
+// 		// titleDocument.innerHTML = 'оформление заказа';
+// 		collapse.toggle();
+// 		sendButton.style.display = 'block';
+// 		formButton.style.display = 'none';
+// 		elcheckboxLabelement.style.display = 'block';
 
 
-	});
-}
+// 	});
+// }
 //* -----------------------------Login-container--------------------------------
 export function userMenu() {
 	for (let i = 0; i < $.userButtons.length; i++) {

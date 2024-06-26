@@ -2,15 +2,15 @@
 .login-modal {
 	padding: 3.2rem 4.5rem;
 	position: absolute;
-	top: 30px;
+	width: 300px;
+	top: 48px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
 	transform: translate(0, 20%);
-	border: 1px solid $color;
+	border: 1px solid $color-border;
 	background: $bg-color;
-	border: 1px solid $color;
 	border-radius: 10px;
 	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
@@ -40,7 +40,7 @@
 		align-items: center;
 		display: flex;
 		width: 100%;
-		border: 1px solid $color;
+		border: 1px solid $color-border;
 		border-radius: 5px;
 		margin-bottom: 2rem;
 		input {
@@ -60,7 +60,7 @@
 		top: -15px;
 		right: -35px;
 		font-size: 20px;
-		color: $color;
+		color: $color-border;
 	}
 
 	&__form {
@@ -83,7 +83,7 @@
 		justify-content: center;
 		width: 100%;
 		background-color: $color;
-		border-radius: 23px;
+		border-radius: 10px;
 		color: $bg-color;
 		margin-bottom: 2rem;
 	}
@@ -91,37 +91,35 @@
 	&__recovery {
 		padding: 1rem 0;
 		width: 100%;
-		border-radius: 5px;
-		border: 1px solid $color;
+		border-radius: 10px;
+		border: 1px solid $color-border;
 	}
 }
 
 /* Стили для кнопки закрытия */
 .recovery-modal {
 	position: absolute;
-	top: 30px;
+	top: 48px;
 	padding: 3.2rem 2.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
 	transform: translate(0, 20%);
-	border: 1px solid $color;
+	border: 1px solid $color-border;
 	background: $bg-color;
-	border: 1px solid $color;
 	border-radius: 10px;
 	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
 	pointer-events: none;
+	max-width: 400px;
 
 	box-shadow: 1px 1px 5px #000;
 	@include _min-690 {
-		min-width: 390px;
+		// min-width: 390px;
 	}
 
 	@include _screen-960 {
 		right: 0;
 	}
+
 	&._show {
 		transform: translate(0, 0);
 		pointer-events: all;
@@ -133,8 +131,9 @@
 		transition: transform 0.5s ease; /* Плавный переход для трансформации */
 		// transform: translateY(-100px); /* Начальная позиция */
 	}
-	&__text {
+	&__title {
 		margin-bottom: 2rem;
+		text-wrap: pretty;
 	}
 
 	&__input {
@@ -146,7 +145,7 @@
 
 		input {
 			padding-left: 0.5rem;
-			border: 1px solid $color;
+			border: 1px solid $color-border;
 			border-radius: 5px;
 			height: 32px;
 			width: 100%;
@@ -166,10 +165,10 @@
 
 	&__close {
 		position: absolute;
-		top: -2.5rem;
-		right: -2.5rem;
+		top: -20px;
+		right: -13px;
 		font-size: 20px;
-		color: $color;
+		color: $color-border;
 	}
 
 	&__close:hover,
@@ -179,6 +178,12 @@
 		cursor: pointer;
 	}
 
+	&__title {
+		position: relative;
+		display: flex;
+		font-size: 13px;
+	}
+
 	&__button-recovery {
 		padding: 1rem 0;
 		display: flex;
@@ -186,23 +191,23 @@
 		justify-content: center;
 		width: 100%;
 		background-color: $color;
-		border-radius: 23px;
+		border-radius: 10px;
 		color: $bg-color;
 	}
 }
 
 .registrations-modal {
+	margin: 0 auto;
 	position: absolute;
-	top: 30px;
+	top: 48px;
 	padding: 3.2rem 2.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
 	transform: translate(0, 20%);
-	border: 1px solid $color;
+	border: 1px solid $color-border;
 	background: $bg-color;
-	border: 1px solid $color;
 	border-radius: 10px;
 	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
@@ -235,7 +240,7 @@
 	&__button-private-person {
 		display: block;
 		height: 32px;
-		border: 1px solid $color;
+		border: 1px solid $color-border;
 		border-radius: 5px;
 		margin-bottom: 2rem;
 	}
@@ -243,7 +248,7 @@
 	&__button-corporate-person {
 		display: block;
 		height: 32px;
-		border: 1px solid $color;
+		border: 1px solid $color-border;
 		border-radius: 5px;
 	}
 }

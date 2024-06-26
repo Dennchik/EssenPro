@@ -35,6 +35,7 @@
 				padding-right: calc(0px + (148 - 5) * ((100vw - 320px) / (1024 - 320)));
 			}
 			@include _screen-375 {
+				padding: 0 1rem;
 				justify-self: stretch;
 			}
 		}

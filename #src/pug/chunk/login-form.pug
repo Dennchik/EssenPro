@@ -13,7 +13,7 @@
 		button(type="button")._recovery Забыли пароль?
 .recovery-modal
 	._modal-content
-		p._text Введите почту по которой регестрировались ранее, пароль отправим на нее
+		._title Введите почту по которой регестрировались ранее, пароль отправим на нее
 		span._close
 			+iconfont('cross-middle', 'icon')
 		form._form(action="")
@@ -22,7 +22,7 @@
 				input#email(type="email", name="email", autocomplete="off", required)
 			button(type="submit")._button-recovery Отправить
 .registrations-modal
-	._modal-content
+	._modal-content 
 		button(type="submit")._button-private-person Физическое лицо
 		button(type="submit")._button-corporate-person Юридическое лицо
 

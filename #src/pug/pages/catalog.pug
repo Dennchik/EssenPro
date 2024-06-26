@@ -1,6 +1,6 @@
 extends ../layouts/app_layout
 append link 
-	link(rel="stylesheet" type="text/css" href="@@webRoot/css/products.min.css")
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/catalog.min.css")
 prepend script 
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/products.min.js")
 block title
@@ -17,13 +17,5 @@ block main-content
 		.toggle-catalog
 			+iconfont('catalog', '_icon')
 			+iconfont('cross-middle', '_icon')
-
 	block section-new-products
-		include ../components/page-products/catalog-by-type
-	block section-new-products
-		include ../components/page-products/popular-products
-	block section-products-catalog 
-		include ../components/page-products/product-catalog
-
-
-
+		include ../components/page-products/catalog-products

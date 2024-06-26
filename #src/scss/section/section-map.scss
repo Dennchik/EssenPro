@@ -6,9 +6,8 @@
 		box-shadow: 10px 15px 30px #acacac6b;
 	}
 
-	// .company-map__title
 	&__title {
-		margin-bottom: 6rem;
+		margin-bottom: 3.8rem;
 		color: rgb(88, 88, 86);
 		font-size: 3.5rem;
 		font-weight: 700;
@@ -23,6 +22,7 @@
 	// .info-map__content
 	&__content {
 		display: flex;
+		justify-content: center;
 
 		@include _screen-768 {
 			flex-direction: column-reverse;
@@ -31,34 +31,21 @@
 
 	// .info-mqp__column
 	&__column {
-		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		padding: 0 15px;
-
-		&:nth-child(1) {
-			@include _min-768 {
-				padding: 15px 3rem 15px 15px;
-				flex: 0 1 65%;
-			}
-		}
-		&:nth-child(2) {
-			margin-bottom: 6rem;
-		}
 	}
 
 	// .info-map__image
 	&__image {
-		overflow: hidden;
-		flex: 1 1 auto;
-		min-width: 100%;
+		// min-width: 100%;
 		border-radius: 10px;
 
 		img {
-			width: 100%;
-			max-width: 100%;
-			object-fit: cover;
+			height: 100%;
+			object-fit: contain;
+			object-position: left;
 			max-width: 100%;
 		}
 	}

@@ -18,8 +18,9 @@
 	// .section-collection__products
 	&__products {
 		display: grid;
-		gap: 2rem;
-		grid-template-columns: repeat(5, 189px);
+		column-gap: 2rem;
+		row-gap: 8rem;
+		grid-template-columns: repeat(5, 1fr);
 		justify-content: space-between;
 		@include _screen-1024 {
 			grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
@@ -29,7 +30,6 @@
 	// .section-collection__column
 	&__column {
 		justify-self: center;
-		max-width: 218px;
 		height: 100%;
 		display: flex;
 		flex-direction: column;

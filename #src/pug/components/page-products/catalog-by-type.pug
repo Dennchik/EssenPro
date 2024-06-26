@@ -1,40 +1,187 @@
 section.categories.page__categories-by-type
 	._title 
-		h2 Каталог продукции по видам
-		.toggle-catalog
-			+iconfont('catalog', '_icon')
-			+iconfont('cross-middle', '_icon')
+		h1 Каталог продукции по видам
 	._body 
-		aside.side-bar._side-bar
-			nav._menu
-				ul._list 
-					li._item._active
-						._link Морепродукты
+		nav.side-bar._side-bar 
+			ul._menu-list
+				li._parent-menu
+					._link._trigger-menu Морепродукты
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link Бакалея
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse 
+						._item
+							ul._menu
+								li 
+									a(href="")._link Морепродукты
+								li
+									a(href="")._link Морепродукты
+								li
+									a(href="")._link Морепродукты
+								li
+									a(href="")._link Морепродукты
+								li
+									a(href="")._link Морепродукты 
+				li._parent-menu
+					._link._trigger-menu Бакалея
 						+iconfont('arow-right', '_icon')
-					li._item
-						a(href="")._link Молочная продукция
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse 
+						._item
+							ul._menu
+								li._item
+									a(href="")._link Бакалея
+								li._item
+									a(href="")._link Бакалея
+								li._item
+									a(href="")._link Бакалея
+								li._item
+									a(href="")._link Бакалея
+								li._item
+									a(href="")._link Бакалея 
+				li._parent-menu
+					._link._trigger-menu Молочная продукция
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link Для барбекю
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse 
+						ul._menu
+							li._item
+								a(href="")._link Весовая молочная продукция
+							li
+								a(href="")._link Йогурт, Твороженые сырки, Десерты
+							li._item
+								a(href="")._link Кефир
+							li._item
+								a(href="")._link Кисломолочные продукты
+							li._item
+								a(href="")._link Маргарин, Спред 
+							li._item
+								a(href="")._link Масло сливочное 
+							li._item
+								a(href="")._link Масло, Спред весовое 
+							li._item.menu-parrent
+								._link._trigger-submenu Молоко 
+									+iconfont('arow-right', '_icon')
+								.sub-menu
+									ul._menu
+										li._parrent-menu._collapse  
+											a(href="")._link Пастеризованное
+											a(href="")._link Ультрапастеризованное
+							li
+								a(href="")._link Молочные коктейли 
+							li
+								a(href="")._link Ряженка 
+							li
+								a(href="")._link Сгущёное молоко 
+							li
+								a(href="")._link Сливки 
+							li
+								a(href="")._link Сметана 
+							li
+								a(href="")._link Сыр весовой 
+							li
+								a(href="")._link Сыр плавленый 
+							li
+								a(href="")._link Сыр творожный 
+							li
+								a(href="")._link Сыр фасованный 
+							li
+								a(href="")._link Творог, Творожная масса 
+				li._parent-menu
+					._link._trigger-menu Для барбекю
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link Напитики
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse
+						ul._menu
+							li 
+								a(href="")._link Для барбекю
+							li
+								a(href="")._link Для барбекю
+							li
+								a(href="")._link Для барбекю
+							li
+								a(href="")._link Для барбекю
+							li
+								a(href="")._link Для барбекю 
+				li._parent-menu
+					._link._trigger-menu Напитики
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link HoReCa
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse 
+						ul._menu
+							li 
+								a(href="")._link Напитики
+							li
+								a(href="")._link Напитики
+							li
+								a(href="")._link Напитики
+							li
+								a(href="")._link Напитики
+							li
+								a(href="")._link Напитики 
+				li._parent-menu
+					._link._trigger-menu HoReCa
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link Яйцо
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse
+						ul._menu
+							li 
+								a(href="")._link HoReCa
+							li
+								a(href="")._link HoReCa
+							li
+								a(href="")._link HoReCa
+							li
+								a(href="")._link HoReCa
+							li
+								a(href="")._link HoReCa 
+				li._parent-menu
+					._link._trigger-menu Яйцо
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link Овощи и фрукты
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse
+						ul._menu
+							li 
+								a(href="")._link Яйцо
+							li
+								a(href="")._link Яйцо
+							li
+								a(href="")._link Яйцо
+							li
+								a(href="")._link Яйцо
+							li
+								a(href="")._link Яйцо 
+				li._parent-menu
+					._link._trigger-menu Овощи и фрукты
 						+iconfont('arow-right', '_icon')
-					li._item
-						._link Постные продукты
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse
+						ul._menu
+							li 
+								a(href="")._link Овощи и фрукты
+							li
+								a(href="")._link Овощи и фрукты
+							li
+								a(href="")._link Овощи и фрукты
+							li
+								a(href="")._link Овощи и фрукты
+							li
+								a(href="")._link Овощи и фрукты 
+				li._parent-menu
+					._link._trigger-menu Постные продукты
 						+iconfont('arow-right', '_icon')
+					//- Sub Menu
+					.sub-menu._sub-menu._collapse 
+						ul._menu
+							li 
+								a(href="")._link Постные продукты
+							li
+								a(href="")._link Постные продукты
+							li
+								a(href="")._link Постные продукты
+							li
+								a(href="")._link Постные продукты
+							li
+								a(href="")._link Постные продукты 
 
 		._products
 			._column

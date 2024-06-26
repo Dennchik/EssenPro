@@ -1,4 +1,5 @@
 .products {
+	flex: 1 1 auto;
 	// .new-products__title
 	&__title {
 		margin-bottom: 6rem;
@@ -16,13 +17,13 @@
 	// .new-products__content
 	&__content {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 255px);
 		gap: 2rem;
 		justify-content: space-between;
 
 		@include _screen-1140 {
 			justify-content: space-around;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(250px, 255px));
 		}
 
 		@include _screen-568 {
@@ -33,7 +34,7 @@
 	// .new-products__column
 
 	&__column {
-		max-width: 100%;
+		max-width: 255px;
 		border-radius: 15px;
 		padding: 10px;
 		box-shadow: 3px 3px 15px rgba(172, 172, 172, 0.8980392157);
@@ -111,7 +112,6 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		max-height: 100%;
 		min-height: 150px;
 
 		img {

@@ -72,6 +72,11 @@
 		@content;
 	}
 }
+@mixin _screen-1110 {
+	@media screen and (max-width: 1110px) {
+		@content;
+	}
+}
 @mixin _screen-1024 {
 	@media screen and (max-width: 1024px) {
 		@content;

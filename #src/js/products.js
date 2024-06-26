@@ -1,5 +1,6 @@
 import { counterProducy } from "./layouts/counter.js";
 counterProducy();
+
 //* ----------------------------------------------------------------------------
 import {
 	collapseParentMenu,
@@ -11,3 +12,5 @@ collapseParentMenu();
 showChildSubmenu();
 openMenuCatalog();
 //* ----------------------------------------------------------------------------
+import { newProductsSlide } from "./modules/new-products-slide.js";
+newProductsSlide();

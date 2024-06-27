@@ -9,7 +9,13 @@
 	// .side-bar__menu-list
 	&__menu-list {
 		width: 100%;
-		padding: 0 1rem;
+		height: 100%;
+		padding: 1rem 1rem;
+
+		@include _screen-768 {
+			padding: 1rem 2rem;
+			box-shadow: inset 0px 0px 2px #a83434cc;
+		}
 	}
 
 	// .side-bar__parent
@@ -71,7 +77,12 @@
 	&__body {
 		position: relative;
 		display: flex;
-		gap: 6rem;
+		justify-content: space-between;
+		gap: 4rem;
+
+		@include _screen-1440 {
+			column-gap: 1rem;
+		}
 	}
 
 	// .categories__side-bar
@@ -80,9 +91,9 @@
 		z-index: 9;
 		overflow-x: hidden;
 		flex: 0 1 275px;
+		min-width: 200px;
 
 		@include _screen-768 {
-			padding: 4rem 0;
 			width: 275px;
 			border-right: 1px solid #0000009c;
 			background: $bg-color;
@@ -100,7 +111,7 @@
 				}
 				@include _screen-375 {
 					width: 100%;
-					padding-right: 4rem;
+					padding-right: 5.5rem;
 				}
 			}
 		}
@@ -171,7 +182,6 @@
 		.icon-cross-middle {
 			opacity: 1;
 			scale: 1;
-			// transform: translateX(-335px) rotate(720deg);
 		}
 	}
 }

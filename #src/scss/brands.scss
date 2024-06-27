@@ -15,7 +15,7 @@
 //todo  ------------------------ Icon Fonts ------------------------------------
 @import 'core/iconfonts';
 // todo -------------------------- Plugins -------------------------------------
-
+@import 'assets/swiper';
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
@@ -31,7 +31,7 @@
 	margin: 0 auto;
 	padding: 0 10px;
 
-	@include _min-490 {
+	@include _min-960 {
 		padding: 0 30px;
 	}
 }
@@ -58,9 +58,9 @@
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
 @import 'modules/sidebar-menu';
+@import 'modules/card-content';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-products-catalog';
-@import 'section/section-new-products';
+@import 'section/section-products-slide.scss';
 @import 'section/section-categories';
-
 @import 'section/section-providers.scss';

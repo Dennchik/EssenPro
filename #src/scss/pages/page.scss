@@ -1,59 +1,12 @@
 .page {
-	// .page__container
-	&__container {
-		margin-bottom: 20px;
-	}
-	// .page__header
-	&__header {
-		padding: 0 30px;
-		position: relative;
-		z-index: 12;
-		background: $bg-color;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		transition: all 0.7s ease-in-out;
-
-		@include _screen-768 {
-			box-shadow: 0 0 5px #000;
-		}
-		@include _screen-490 {
-			padding: 0 10px;
-		}
+	// .page__about-company
+	&__about-company {
+		padding: 3rem 0 9.3rem;
 	}
 
-	// .page__perform
-	&__perform {
-		position: relative;
-	}
-
-	// .page__content
-	&__content {
-		margin-top: 12.2rem;
-		@include _screen-1024 {
-			margin-top: 13.5rem;
-		}
-		@include _screen-768 {
-			margin-top: 7.5rem;
-		}
-	}
-
-	// .page__footer
-	&__footer {
-		border-radius: 30px;
-
-		@include _screen-425 {
-			border-radius: 15px;
-		}
-
-		background: linear-gradient(
-			90deg,
-			rgb(182, 71, 68) 0.02%,
-			rgb(210, 109, 99) 99.618%
-		);
-
-		color: $bg-color;
+	// .page_card
+	&__card {
+		padding: 0 0 6.8rem;
 	}
 
 	// .page__buttom-menu
@@ -77,18 +30,34 @@
 		justify-content: space-between;
 	}
 
-	// .page__discounts
-	&__discounts {
-		padding: 3rem 0 9.3rem;
+	// .page__container
+	&__container {
+		margin-bottom: 20px;
 	}
 
-	// .page__info
-	&__info {
-		padding: 3rem 0 9.3rem;
+	// ..page__categories-by-type
+	&__categories-by-type {
+		padding: 3rem 0 8.6rem;
 	}
 
-	// .page__clients
-	&__clients {
+	// .page__content
+	&__content {
+		margin-top: 12.2rem;
+		@include _screen-1024 {
+			margin-top: 13.5rem;
+		}
+		@include _screen-768 {
+			margin-top: 7.5rem;
+		}
+	}
+
+	// .page__catalog-products
+	&__catalog-products {
+		padding: 3rem 0 8.6rem;
+	}
+
+	// .page__categories
+	&__categories {
 		padding: 3rem 0 9.3rem;
 	}
 
@@ -97,18 +66,67 @@
 		padding: 3rem 0 9.3rem;
 	}
 
+	// .page__clients
+	&__clients {
+		padding: 3rem 0 9.3rem;
+	}
+
 	// .page__collection
 	&__collection {
 		padding: 3rem 0 9.3rem;
 	}
 
-	// .page__map
-	&__map {
+	// .page__discounts
+	&__discounts {
 		padding: 3rem 0 9.3rem;
+		.info-company__body {
+			box-shadow: 10px 15px 30px rgba(172, 172, 172, 0.4196078431);
+		}
 	}
 
-	// .page__providers
-	&__providers {
+	// .page__footer
+	&__footer {
+		border-radius: 30px;
+
+		@include _screen-425 {
+			border-radius: 15px;
+		}
+
+		background: linear-gradient(
+			90deg,
+			rgb(182, 71, 68) 0.02%,
+			rgb(210, 109, 99) 99.618%
+		);
+
+		color: $bg-color;
+	}
+
+	// .page__header
+	&__header {
+		padding: 0 30px;
+		position: relative;
+		z-index: 12;
+		background: $bg-color;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition: all 0.7s ease-in-out;
+
+		@include _screen-768 {
+			box-shadow: 0 0 5px #000;
+		}
+		@include _screen-960 {
+			padding: 0 10px;
+		}
+	}
+
+	// .page__info
+	&__info {
+		padding: 3rem 0 9.3rem;
+	}
+	// .page__map
+	&__map {
 		padding: 3rem 0 9.3rem;
 	}
 
@@ -118,34 +136,31 @@
 		overflow-x: hidden;
 	}
 
-	// .page__about-company
-	&__about-company {
-		padding: 3rem 0 9.3rem;
-	}
-
 	// .page__new-products
 	&__new-products {
 		padding: 3rem 0 9.3rem;
 	}
 
-	// ---------------------------------------------------------------------------
+	// .page__perform
+	&__perform {
+		position: relative;
+	}
+
+	// .page__providers
+	&__providers {
+		padding: 3rem 0 9.3rem;
+	}
+
 	// .page__product-catalog
 	&__product-catalog {
-		padding: 3rem 0 8.6rem;
-	}
-
-	// .page__catalog-products
-	&__catalog-products {
-		padding: 3rem 0 8.6rem;
-	}
-
-	// ..page__categories-by-type
-	&__categories-by-type {
 		padding: 3rem 0 8.6rem;
 	}
 
 	// .page__providers-by-brand
 	&__providers-by-brand {
 		padding: 3rem 0 8.6rem;
+		.card-product__image img {
+			width: 100%;
+		}
 	}
 }

@@ -26,7 +26,7 @@
 	&__image {
 		width: 100%;
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: center;
 		height: 100%;
 		padding-bottom: 10px;
@@ -53,6 +53,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 	}
 
 	// .card__text
@@ -74,11 +75,9 @@
 		cursor: pointer;
 		max-width: 200px;
 		width: 100%;
-		padding: 10px 0;
+		max-width: 200px;
 		border: 1px solid rgb(88, 88, 86);
 		border-radius: 10px;
-		display: flex;
-		justify-content: center;
 		transition:
 			background-color 0.3s,
 			color 0.3s ease-in-out;
@@ -89,6 +88,14 @@
 			span {
 				color: $bg-color;
 			}
+		}
+
+		a {
+			display: flex;
+			justify-content: center;
+			padding: 10px 0;
+			height: 100%;
+			width: 100%;
 		}
 
 		span {
@@ -167,8 +174,11 @@
 	min-width: 16.5rem;
 
 	&:active {
-		background-color: $color;
-		color: $bg-color;
+		box-shadow: 1px 1px 4px #000;
+	}
+
+	&:hover {
+		box-shadow: 1px 1px 4px #000000a8;
 	}
 
 	&.button--red {
@@ -180,6 +190,10 @@
 			border: 1px solid #585856;
 			background-color: $bg-color;
 			color: black;
+		}
+
+		&:hover {
+			box-shadow: 1px 1px 4px #000;
 		}
 	}
 }
@@ -436,12 +450,6 @@
 		}
 		span {
 			font-size: 10px;
-		}
-	}
-
-	&__label--ure {
-		&::before {
-			// border: 1px solid $color-green;
 		}
 	}
 }

@@ -4,7 +4,6 @@
 		overflow: hidden;
 		position: relative;
 		border-radius: 15px;
-		box-shadow: 10px 15px 30px #acacac6b;
 	}
 
 	// .info-company__content
@@ -62,6 +61,7 @@
 		@include _screen-1024 {
 			padding-left: calc(0px + (175 - 5) * ((100vw - 490px) / (1024 - 490)));
 		}
+
 		img {
 			object-position: left;
 			max-width: 357px;

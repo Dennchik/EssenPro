@@ -11,8 +11,30 @@ export function thumbCardSlide(
 			spaceBetween: 10,
 			slidesPerView: 4,
 			freeMode: true,
+			grabCursor: true,
 			watchSlidesProgress: true,
 			updateOnWindowResize: true,
+
+			breakpoints: {
+				200: {
+					spaceBetween: 10,
+					slidesPerView: 3,
+				},
+				490: {
+					spaceBetween: 10,
+					slidesPerView: 4,
+				},
+
+				769: {
+					spaceBetween: 20,
+					slidesPerView: 3,
+				},
+				960: {
+					spaceBetween: 20,
+					slidesPerView: 4,
+				},
+
+			}
 
 		});
 
@@ -20,8 +42,13 @@ export function thumbCardSlide(
 			spaceBetween: 10,
 			speed: 800,
 			loop: true,
+			grabCursor: true,
 			slidesPerView: 1,
 			updateOnWindowResize: true,
+			navigation: {
+				prevEl: ".product-slide__prev",
+				nextEl: ".product-slide__next",
+			},
 			thumbs: {
 				swiper: swiper,
 			},

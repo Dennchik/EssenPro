@@ -31,8 +31,7 @@
 
 	&__column {
 		min-width: 217px;
-		flex: 0 1 35rem;
-		max-width: 35rem;
+		// max-width: 35rem;
 		border-radius: 15px;
 		background-color: #fff;
 		box-shadow: 3px 3px 15px #acacace5;
@@ -66,36 +65,5 @@
 				border: 1px solid $color;
 			}
 		}
-	}
-}
-
-.card {
-	// .card__image
-	&__image {
-		display: flex;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-
-		img {
-			object-fit: cover;
-			vertical-align: bottom;
-		}
-	}
-
-	// .card__content
-	&__content {
-		padding: 18px 30px 14px;
-		display: flex;
-		flex-direction: column;
-	}
-
-	// .card__data
-	&__data {
-		margin-bottom: 4px;
-	}
-
-	// .card__text
-	&__text {
 	}
 }

@@ -27,6 +27,81 @@
   //* Better Font Rendering
 }
 
+.icon-angle-left {
+  &:before {
+    content: $icon-angle-left;
+  }
+}
+.icon-angle-right {
+  &:before {
+    content: $icon-angle-right;
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star;
+  }
+}
+.icon-star-o {
+  &:before {
+    content: $icon-star-o;
+  }
+}
+.icon-arow-down {
+  &:before {
+    content: $icon-arow-down;
+  }
+}
+.icon-mobile-profile {
+  &:before {
+    content: $icon-mobile-profile;
+  }
+}
+.icon-mobile-catalog {
+  &:before {
+    content: $icon-mobile-catalog;
+  }
+}
+.icon-rub {
+  &:before {
+    content: $icon-rub;
+  }
+}
+.icon-arow-right {
+  &:before {
+    content: $icon-arow-right;
+  }
+}
+.icon-arow-left {
+  &:before {
+    content: $icon-arow-left;
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp;
+  }
+}
+.icon-vk-brand {
+  &:before {
+    content: $icon-vk-brand;
+  }
+}
+.icon-telegram-fly {
+  &:before {
+    content: $icon-telegram-fly;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
 .icon-assortment {
   &:before {
     content: $icon-assortment;
@@ -100,61 +175,6 @@
 .icon-search-doc {
   &:before {
     content: $icon-search-doc;
-  }
-}
-.icon-star {
-  &:before {
-    content: $icon-star;
-  }
-}
-.icon-star-o {
-  &:before {
-    content: $icon-star-o;
-  }
-}
-.icon-arow-down {
-  &:before {
-    content: $icon-arow-down;
-  }
-}
-.icon-mobile-profile {
-  &:before {
-    content: $icon-mobile-profile;
-  }
-}
-.icon-mobile-catalog {
-  &:before {
-    content: $icon-mobile-catalog;
-  }
-}
-.icon-rub {
-  &:before {
-    content: $icon-rub;
-  }
-}
-.icon-arow-right {
-  &:before {
-    content: $icon-arow-right;
-  }
-}
-.icon-arow-left {
-  &:before {
-    content: $icon-arow-left;
-  }
-}
-.icon-whatsapp {
-  &:before {
-    content: $icon-whatsapp;
-  }
-}
-.icon-vk-brand {
-  &:before {
-    content: $icon-vk-brand;
-  }
-}
-.icon-telegram-fly {
-  &:before {
-    content: $icon-telegram-fly;
   }
 }
 .icon-minus {

@@ -4,7 +4,7 @@
 			.top-menu._top-menu 
 				._logo 
 					._image
-						img(src="@@webRoot/img/header/logo.png", alt="logo")
+						img(src="@@webRoot/img/main/logo.png", alt="logo")
 					._text(data-move-el="[{'bp-max': 768.98, 'index': 1, 'target': '.bp-4'}]")
 						span поставки 
 						span продуктов питания
@@ -15,7 +15,7 @@
 						a(href="mailto:zakaz@essenpro.ru") zakaz@essenpro.ru
 		._column 
 			._cart 
-				a(href="@@webRoot/cart.html")._link
+				a(href="@@webRoot/products-card.html")._link
 					+iconfont('shopping-cart', '_icon')
 					span
 						| Моя корзина 
@@ -51,6 +51,6 @@
 				li 
 					a(href="@@webRoot/action.html" title="Доставка")._link Акции 
 				li 
-					a(href="#" title="Контакты")._link Контакты
+					a(href="#contacts" title="Контакты")._link.anchor-link Контакты
 		._search
 			include ../chunk/search 

@@ -12,13 +12,12 @@ export function counterProducy() {
 
 			counter.addEventListener('click', (e) => {
 				let target = e.target;
-				console.log(target);
 				if (target.closest('.quantity__button')) {
 					let input = target.closest('.quantity').querySelector('input');
 					let value = parseInt(input.value) || 0;
 
 					if (target.classList.contains('quantity-add')) {
-						console.log(input);
+
 						value++;
 					} else {
 						value--;

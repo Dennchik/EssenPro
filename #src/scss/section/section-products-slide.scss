@@ -1,7 +1,7 @@
 .products {
 	// .new-products__title
 	&__title {
-		margin-bottom: 6rem;
+		margin-bottom: 2.8rem;
 		color: rgb(88, 88, 86);
 		font-size: 3.5rem;
 		font-weight: 700;
@@ -46,170 +46,23 @@
 		align-items: center;
 		height: 100%;
 		width: 100%;
+		min-width: 255px;
+		max-width: 290px;
 
 		box-shadow: 3px 3px 15px rgba(172, 172, 172, 0.8980392157);
 		border-radius: 15px;
 		padding: 10px;
 
-		@include _screen-690 {
-			max-width: 330px;
+		@include _screen-375 {
+			max-width: 270px;
 		}
 	}
 
 	// .card__content
 	&__content {
-		padding: 18px 30px 14px;
+		padding: 23px 30px 18px;
 		display: flex;
 		flex-direction: column;
-	}
-
-	// .card__header
-	&__header {
-		top: 0;
-		left: 0;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-	}
-
-	// .card__label
-	&__label {
-		display: inline;
-		border-radius: 10px;
-
-		background: linear-gradient(
-			87.06deg,
-			rgb(168, 52, 52) 61.096%,
-			rgb(234, 142, 127) 99.181%
-		);
-
-		span {
-			padding: 6px 10px;
-			text-transform: uppercase;
-			color: $bg-color;
-			font-size: 12px;
-			font-weight: 700;
-			line-height: 125%; /* 15px/12 */
-			text-align: center;
-		}
-	}
-
-	// .card__favourites
-	&__favourites {
-		width: 22px;
-		height: 22px;
-		position: relative;
-		font-size: 22px;
-
-		&._like {
-			.icon-heart {
-				opacity: 0;
-			}
-		}
-
-		._icon {
-			transition: opacity 0.4s ease-in-out;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
-		.icon-heart-like {
-			color: $color;
-		}
-	}
-
-	// .card__image
-	&__image {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		max-height: 100%;
-		min-height: 190px;
-		max-width: 300px;
-
-		img {
-			object-fit: contain;
-			margin: 0 auto;
-			width: 100%;
-			object-fit: cover;
-		}
-	}
-
-	// .card__info
-	&__info {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-
-	// .card__title
-	&__title {
-		flex: 1 1 auto;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 125%; /* 15px/12 */
-		text-align: center;
-		text-wrap: pretty;
-	}
-
-	// .card__price
-	&__price {
-		margin-bottom: 5px;
-		color: $color;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 121.428571%; /* 17px/14 */
-		text-align: center;
-	}
-
-	// .card__text
-	&__text {
-		margin-bottom: 18px;
-		font-size: 12px;
-		font-weight: 500;
-		line-height: 125%; /* 15px/12 */
-		text-align: center;
-	}
-
-	// .card__buttons
-	&__buttons {
-		display: flex;
-	}
-
-	// .card__counter
-	&__counter {
-		margin-right: 5px;
-		width: 93px;
-		border: 1px solid #000;
-		border-radius: 10px;
-		display: flex;
-		align-items: center;
-	}
-
-	// .card__button
-	&__button {
-		width: 137px;
-		height: 38px;
-		border-radius: 10px;
-
-		background: linear-gradient(
-			90deg,
-			rgb(168, 52, 52) -23.739%,
-			rgb(234, 142, 127) 96.778%
-		);
-
-		span {
-			padding: 10.54px 33px;
-			display: block;
-			color: $bg-color;
-			font-size: 14px;
-			font-weight: 700;
-			line-height: 121.428571%; /* 17px/14 */
-		}
 	}
 }
 

@@ -67,6 +67,11 @@
 	justify-content: space-between;
 }
 // -----------------------------------------------------------------------------
+@mixin _screen-1440 {
+	@media screen and (max-width: 1440px) {
+		@content;
+	}
+}
 @mixin _screen-1140 {
 	@media screen and (max-width: 1140px) {
 		@content;
@@ -197,7 +202,11 @@
 	}
 }
 // -----------------------------------------------------------------------------
-
+@mixin _768-1440 {
+	@media (min-width: 768.98px) and (max-width: 1440px) {
+		@content;
+	}
+}
 @mixin _425-768 {
 	@media (min-width: 425.98px) and (max-width: 768px) {
 		@content;

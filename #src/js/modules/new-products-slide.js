@@ -22,22 +22,27 @@ export function newProductsSlide(
 				nextEl: nextEl,
 				prevEl: prevEl,
 			},
+
 			breakpoints: {
 				200: {
 					spaceBetween: 10,
 					slidesPerView: 1,
 				},
-				620: {
-					spaceBetween: 20,
+				586: {
+					spaceBetween: 10,
 					slidesPerView: 2,
 				},
-				870: {
+				880: {
+					spaceBetween: 20,
 					slidesPerView: 3,
 				},
 				1140: {
-
-					spaceBetween: 50,
 					slidesPerView: 4,
+				},
+				1440: {
+
+					spaceBetween: 20,
+					slidesPerView: 5,
 				},
 
 			}

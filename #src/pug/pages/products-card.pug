@@ -1,0 +1,28 @@
+extends ../layouts/app_layout
+append link 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/products-card.min.css")
+prepend script 
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/products-card.min.js")
+block title
+	- var text='Essen -Pro "Обнинск" / Наименование товара' 
+
+block main-content 
+	.page__bread-crumbs
+		nav.bread-crumbs
+			ul._list
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Главная / 
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Каталог / 
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Молоко / 
+				li
+					span._item Название товара 
+
+	block section-new-products
+		include ../components/cart/products-card
+	block section-new-products
+		include ../components/page-products/products-slide 
+
+
+

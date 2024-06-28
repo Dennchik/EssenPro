@@ -17,7 +17,6 @@
 	}
 
 	// .news-company__content
-
 	&__content {
 		overflow-x: auto;
 		display: grid;
@@ -28,13 +27,15 @@
 	}
 
 	// .news-company__column
-
 	&__column {
 		min-width: 217px;
-		// max-width: 35rem;
 		border-radius: 15px;
 		background-color: #fff;
 		box-shadow: 3px 3px 15px #acacace5;
+
+		.card__image img {
+			max-height: 100%;
+		}
 	}
 
 	// .news-company__footer

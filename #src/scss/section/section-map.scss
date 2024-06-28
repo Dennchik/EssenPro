@@ -3,7 +3,6 @@
 	&__body {
 		position: relative;
 		border-radius: 15px;
-		box-shadow: 10px 15px 30px #acacac6b;
 	}
 
 	&__title {
@@ -35,7 +34,10 @@
 
 	// .info-map__image
 	&__image {
-		border-radius: 10px;
+		border-radius: 15px;
+		overflow: hidden;
+		position: relative;
+		box-shadow: 7px 7px 17px 1px #7b7b7b80;
 
 		img {
 			height: 100%;

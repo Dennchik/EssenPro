@@ -66,12 +66,20 @@
 	}
 
 	&__link {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+
+		&:hover {
+			color: $color;
+			span {
+				text-decoration: underline;
+			}
+		}
 		._icon {
 			margin-right: 0.5rem;
 			font-size: 23px;
 		}
-		display: flex;
-		align-items: center;
 	}
 
 	// .header__search
@@ -147,7 +155,13 @@
 	}
 
 	// .top-menu__email
-	&__email {
+	&__email,
+	&__phone {
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			text-decoration: underline;
+			color: $color;
+		}
 	}
 }
 

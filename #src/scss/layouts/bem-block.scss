@@ -261,6 +261,11 @@
 		font-size: 14px;
 		transition: color 0.3s ease;
 
+		&._active {
+			font-weight: 700;
+			font-size: 13.7px;
+		}
+
 		&:hover {
 			color: $color;
 			text-decoration: underline;

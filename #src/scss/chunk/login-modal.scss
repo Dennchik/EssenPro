@@ -9,7 +9,6 @@
 	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
 	transform: translate(0, 20%);
-	border: 1px solid $color-border;
 	background: $bg-color;
 	border-radius: 10px;
 	z-index: 9;
@@ -103,7 +102,6 @@
 	padding: 3.2rem 2.5rem;
 	opacity: 0; /* Начальная прозрачность */
 	transform: translate(0, 20%);
-	border: 1px solid $color-border;
 	background: $bg-color;
 	border-radius: 10px;
 	z-index: 9;
@@ -206,7 +204,6 @@
 	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
 	transform: translate(0, 20%);
-	border: 1px solid $color-border;
 	background: $bg-color;
 	border-radius: 10px;
 	z-index: 9;

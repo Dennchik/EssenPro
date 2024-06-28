@@ -5,17 +5,8 @@ const $ = {
 	sidebarMenu: document.querySelector('.sidebar-menu'),
 	submenuParents: document.querySelectorAll('.submenu-parent'),
 	userButtons: document.querySelectorAll('.login-container__user-button'),
-
-	// header: document.querySelector('.page__header'),
-	// bttnSearch: document.querySelector('.header__button-sidebarcatalog'),
-	// sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
-	// bottomMenu: document.querySelector('.page__buttom-menu'),
-	// cancelButtonsCatalog: document.querySelector('.catalog-cansel'),
-	// cancelButtonsMenu: document.querySelector('.menu-cansel'),
-	// menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
-	// menuCatalog: document.querySelector('.menu-catalog'),
-	// catalogCategories: document.querySelector('.catalog__categories'),
-	// favouritItems: document.querySelectorAll('.slide-container__favourit')
+	registrations: document.querySelector('.registrations'),
+	login: document.querySelector('.login'),
 };
 //! -------------------------- Добавить в избранное ---------------------------
 export function addFafouritItems() {
@@ -27,15 +18,6 @@ export function addFafouritItems() {
 	});
 }
 //! --------------------------------- Main.js ----------------------------------
-//todo закрываем "Menu-Catalog" 
-// export function cancelButton() {
-// 	$.cancelButtonsCatalog.addEventListener('click', () => {
-// 		$.sidebarCatalog.classList.remove('_opened-menu');
-// 		document.body.classList.remove('no-scroll');
-// 	});
-
-// }
-
 //todo запрещаем скроллинг страницы при открытии "Menu-Catalog"
 export function openMenuCatalog() {
 	const toggleButton = document.querySelector('.toggle-catalog');
@@ -59,8 +41,6 @@ export function openMainMenu() {
 	function openedMenu() {
 		toggleMenuButton.classList.toggle('_open');
 		$.sidebarMenu.classList.toggle('_opened-menu');
-		// $.sidebarCatalog.classList.remove('_opened-menu');
-		// $.burgerButton.classList.toggle('_active');
 		if ($.sidebarMenu.classList.contains('_opened-menu')) {
 			document.body.classList.add('no-scroll');
 		} else {
@@ -124,59 +104,7 @@ export function collapseParentMenu() {
 	};
 }
 //! ------------------------------- Catalog.js ---------------------------------
-//todo Плавное открытие/закрытие блока при нажатии на кнопку "Фильтр:"
-// export function collapseCatalogFilter() {
-// 	const trigger = $.catalogCategories.querySelector('._trigger');
-// 	trigger.addEventListener('click', () => {
-// 		_toggleMenu($.catalogCategories);
-// 	});
-
-// 	const _toggleMenu = (el) => {
-// 		const collapse = new ItcCollapse($.catalogCategories.querySelector('._collapse'));
-// 		if ($.catalogCategories.classList.contains('_open')) {
-// 			el.classList.remove('_open');
-// 			collapse.toggle();
-// 		} else {
-// 			el.classList.add('_open');
-// 			collapse.toggle();
-// 		}
-// 	};
-// }
-//* --------------При загрузки "Catalog.html" открывает "Блэкаут"---------------
-// export function loadedCatalog() {
-// 	document.addEventListener("DOMContentLoaded", function () {
-// 		const active_menu = $.menuCatalog.querySelector('._active');
-// 		_loadedMenu(active_menu);
-// 	});
-// 	const _loadedMenu = (el) => {
-// 		const collapse = new ItcCollapse(el.querySelector('._collapse'));
-// 		if (el.classList.contains('_active')) {
-// 			el.classList.add('_open');
-// 			collapse.toggle();
-// 		}
-// 	};
-// }
-//todo -----------Событие при нажатии на кнопку "Оформить заказ"----------------
-// export function placeOrder() {
-// 	let orderCollapse = document.querySelector('.send-order');
-// 	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
-// 	const elcheckboxLabelement = document.querySelector('.order-place__checkbox');
-
-// 	document.querySelector('.order-place__form-button').addEventListener('click', function () {
-// 		let titleDocument = document.querySelector('.cart-page__title');
-// 		// let sendOrder = document.querySelector('.order-place__send-order');
-// 		let sendButton = document.querySelector('.order-place__send-button');
-// 		let formButton = document.querySelector('.order-place__form-button');
-// 		// titleDocument.innerHTML = 'оформление заказа';
-// 		collapse.toggle();
-// 		sendButton.style.display = 'block';
-// 		formButton.style.display = 'none';
-// 		elcheckboxLabelement.style.display = 'block';
-
-
-// 	});
-// }
-//* -----------------------------Login-container--------------------------------
+//todo ---------------------------Login-container------------------------------
 export function userMenu() {
 	for (let i = 0; i < $.userButtons.length; i++) {
 		const userButton = $.userButtons[i];
@@ -204,19 +132,21 @@ export function userMenu() {
 				let loginContainer = target.closest('.login-container');
 				if (!loginContainer.contains(e.target)) {
 					removeElement(loginContent, '_visible');
+
 				}
 			});
 		});
 	}
-
-	// Выбираем все элементы с calss="login"
+	//todo ----Добавляем обработчики событий для всех элементов с class="login----
 	const userLogins = document.querySelectorAll('.login');
 
-	// Добавляем обработчики событий для всех элементов с class="login";
 	userLogins.forEach((userLogin) => {
 		userLogin.addEventListener('click', (e) => {
 			let target = e.target;
-
+			$.login.classList.add('_active');
+			if ($.registrations.classList.contains('_active')) {
+				$.registrations.classList.remove('_active');
+			}
 			//Закрываем ранее открытое модальное окно "User-Content";
 			let loginContent = loginList(target, '.login-container__list');
 			removeElement(loginContent, '_visible');
@@ -242,15 +172,47 @@ export function userMenu() {
 				let loginContainer = target.closest('.login-container');
 				if (!loginContainer.contains(e.target)) {
 					removeElement(loginModal, '_show');
+					removeElement($.login, '_active');
 				}
 			});
 		});
 	});
+	//todo ----Добавляем обработчики событий для всех элементов 'Регистрация'-----
+	const registrations = document.querySelectorAll('.registrations');
+	registrations.forEach(registration => {
+		registration.addEventListener('click', (e) => {
+			let target = e.target;
+			$.registrations.classList.add('_active');
 
+			if ($.login.classList.contains('_active')) {
+				$.login.classList.remove('_active');
+			}
+			// Закрываем модальное окно "User-Content";
+			let loginContent = loginList(target, '.login-container__list');
+			removeElement(loginContent, '_visible');
 
-	// Добавляем обработчики событий для всех элементов востановить пароль;
+			// Закрываем ранее открытое модальное окно;
+			let loginModal = loginList(target, '.login-modal');
+			removeElement(loginModal, '_show');
+
+			// Открываем модальное окно "Регистрация";
+			let registrationModal = loginList(target, '.registrations-modal');
+			registrationModal.classList.toggle('_show');
+
+			let recoveryModal = loginList(target, '.recovery-modal');
+			removeElement(recoveryModal, '_show');
+
+			window.addEventListener('click', function (e) {
+				let loginContainer = target.closest('.login-container');
+				if (!loginContainer.contains(e.target)) {
+					removeElement(registrationModal, '_show');
+					removeElement(registration, '_active');
+				}
+			});
+		});
+	});
+	//todo ----Добавляем обработчики событий для элементов востановить пароль-----
 	const loginRecoverys = document.querySelectorAll('.login-modal__recovery');
-
 	loginRecoverys.forEach(loginRecovery => {
 		loginRecovery.addEventListener('click', (e) => {
 			let target = e.target;
@@ -275,37 +237,7 @@ export function userMenu() {
 			});
 		});
 	});
-
-	// Добавляем обработчики событий для всех элементов 'Регистрация';
-	const registrations = document.querySelectorAll('.registrations');
-	registrations.forEach(registration => {
-		registration.addEventListener('click', (e) => {
-			let target = e.target;
-
-			// Закрываем модальное окно "User-Content";
-			let loginContent = loginList(target, '.login-container__list');
-			removeElement(loginContent, '_visible');
-
-			// Закрываем ранее открытое модальное окно;
-			let loginModal = loginList(target, '.login-modal');
-			removeElement(loginModal, '_show');
-
-			// Открываем модальное окно "Регистрация";
-			let registrationModal = loginList(target, '.registrations-modal');
-			registrationModal.classList.toggle('_show');
-
-			let recoveryModal = loginList(target, '.recovery-modal');
-			removeElement(recoveryModal, '_show');
-
-			window.addEventListener('click', function (e) {
-				let loginContainer = target.closest('.login-container');
-				if (!loginContainer.contains(e.target)) {
-					removeElement(registrationModal, '_show');
-				}
-			});
-		});
-	});
-
+	//* --------------------------------------------------------------------------
 	const buttonPrivatePersons = document.querySelectorAll('.registrations-modal__button-private-person');
 	const registrationsFiz = document.querySelector('.modal-registrations-fiz');
 	buttonPrivatePersons.forEach(buttonPrivatePerson => {
@@ -324,8 +256,7 @@ export function userMenu() {
 				registrationsFiz.classList.remove('_show');
 			});
 		});
-
-
+		//* ------------------------------------------------------------------------
 		const buttonCorporatePersons = document.querySelectorAll('.registrations-modal__button-corporate-person');
 		const registrationsUre = document.querySelector('.modal-registrations-ure');
 		buttonCorporatePersons.forEach(buttonCorporatePerson => {

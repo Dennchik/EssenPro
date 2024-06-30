@@ -43,10 +43,15 @@
 						._article-number Артикул: 000000
 						._product-name Название товара 
 						._table-head
-							span._name Цена за единицу:
-							span._stock В наличии
-						._price 46.00
-							span р
+							._name Цена за единицу:
+							._condition 
+								span._stock В наличии
+								span._receipt ожидает поступлние
+						._price 
+							._new-price 46.00
+								span р
+							._old-price 50.00
+								span р
 						.card(data-quantity)
 							._buttons
 								._counter
@@ -89,9 +94,14 @@
 							._line 12 месяцев
 							._line Состав перечень
 							._line 10 штук
-			._card-brand
-				img(src="@@webRoot/img/main/providers/prov-5.png", alt="")
-
+			.brand-card._card-brand
+				._brand
+					img(src="@@webRoot/img/main/providers/prov-5.png", alt="картинка")
+					.card__blur
+				
+				._delivery
+					._text Возможна доставка
+					img(src="@@webRoot/img/main/providers/prov-11.png", alt="картинка")
 
 	._description
 		._title Описание - Название товара

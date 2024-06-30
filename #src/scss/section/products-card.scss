@@ -64,10 +64,11 @@
 		}
 
 		&:nth-child(2) {
-			padding: 0 10px;
+			padding: 10px 10px;
 			display: flex;
 			position: relative;
 			flex: 1 1 60%;
+			gap: 1.5rem;
 
 			@include _screen-1440 {
 				flex: 1 1 50%;
@@ -76,6 +77,7 @@
 			@include _768-1440 {
 				flex-direction: column-reverse;
 			}
+
 			@include _screen-490 {
 				flex-direction: column-reverse;
 			}
@@ -84,8 +86,24 @@
 
 	// .products-card__card-brand
 	&__card-brand {
-		img {
-			width: 200px;
+		flex: 0 1 200px;
+
+		gap: 2rem;
+		height: 100%;
+		max-height: 90px;
+
+		@include _min-768 {
+			padding-right: 2rem;
+		}
+		@include _screen-1440 {
+			display: inline-flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		@include _490-768 {
+			flex-direction: column;
+
+			padding-top: 12px;
 		}
 	}
 
@@ -194,13 +212,13 @@
 	&__slide {
 		border-radius: 26.35px;
 		box-shadow: 0px 0px 5px 7px #f7f7f7;
-		overflow: hidden;
 	}
 
 	// .product-slide__card
 	&__card {
 		display: flex;
 		justify-content: center;
+		height: 100%;
 
 		img {
 			opacity: 0.5;
@@ -212,6 +230,10 @@
 				opacity: 1;
 			}
 		}
+	}
+	.swiper-wrapper {
+		align-items: center;
+		height: 100%;
 	}
 }
 
@@ -248,12 +270,63 @@
 	}
 }
 
+.brand-card {
+	&__brand {
+		max-width: 200px;
+		position: relative;
+		margin-bottom: 22px;
+
+		img {
+			border-radius: 8.74px;
+			position: relative;
+			background: #fff;
+			z-index: 9;
+			width: 200px;
+			max-width: 100%;
+		}
+		.card__blur {
+			background: #7b7b7b49;
+			filter: blur(8px);
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 121.428571%; /* 17px/14 */
+		margin-bottom: 5px;
+	}
+
+	&__delivery {
+		max-width: 200px;
+		position: relative;
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
 .products-info {
 	flex: 1 1 auto;
+
 	// .products-info__body
 	&__body {
 		max-width: 51.5rem;
 		padding: 1.5rem 0;
+	}
+
+	// .product-info__header
+	&__header {
+		.card {
+			max-width: 315px;
+		}
+		.card__button {
+			width: 137px !important;
+		}
+		.card__counter {
+			width: 137px !important;
+		}
 	}
 
 	// .products-info__name
@@ -302,18 +375,41 @@
 		justify-content: space-between;
 	}
 
+	// .products-info__condition
+	&__condition {
+		display: flex;
+		align-items: center;
+		span {
+			color: $color;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 121.428571%; /* 17px/14 */
+		}
+	}
+
 	// .products-info__stock
 	&__stock {
+		display: none;
+	}
+
+	// .products-info__price
+	&__price {
+		max-width: 137px;
+		margin-bottom: 12px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__new-price {
 		color: $color;
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 121.428571%; /* 17px/14 */
 	}
 
-	// .products-info__price
-	&__price {
-		margin-bottom: 12px;
-		color: $color;
+	&__old-price {
+		text-decoration: line-through;
+		color: #b7b7b9;
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 121.428571%; /* 17px/14 */

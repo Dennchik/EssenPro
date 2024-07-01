@@ -37,22 +37,25 @@ export function openMenuCatalog() {
 //todo запрещаем скроллинг страницы при открытии "Main-Menu"
 export function openMainMenu() {
 	const toggleButton = document.querySelector('.toggle-catalog');
-	const sidebarMenu = document.querySelector('.categories__side-bar');
+	const categoriesSidebarMenu = document.querySelector('.categories__side-bar');
 	const toggleMenuButton = document.querySelector('.toggle-button__toggle-menu');
 	$.toggleButton.addEventListener('click', openedMenu);
+
 	function openedMenu() {
 		toggleMenuButton.classList.toggle('_open');
 		$.sidebarMenu.classList.toggle('_opened-menu');
+		categoriesSidebarMenu.classList.remove('_opened-menu');
+		toggleButton.classList.remove('_opened-menu');
 		if ($.sidebarMenu.classList.contains('_opened-menu')) {
 			document.body.classList.add('no-scroll');
 		} else {
 			document.body.classList.remove('no-scroll');
 		}
-		if (sidebarMenu.classList.contains('_opened-menu')) {
-			sidebarMenu.classList.remove('_opened-menu');
-			toggleButton.classList.remove('_opened-menu');
-		}
-
+		// if (categoriesSidebarMenu.classList.contains('_opened-menu')) {
+		// 	console.log('yes');
+		// 	categoriesSidebarMenu.classList.remove('_opened-menu');
+		// 	toggleButton.classList.remove('_opened-menu');
+		// }
 	};
 }
 // -----------------------------------------------------------------------------

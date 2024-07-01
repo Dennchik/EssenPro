@@ -1,0 +1,20 @@
+extends ../layouts/app_layout
+append link 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/account.min.css")
+prepend script 
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/account.min.js")
+block title
+	- var text='Личный кабинет' 
+
+block main-content 
+	.page__bread-crumbs
+		nav.bread-crumbs
+			ul._list
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Главная / 
+				li
+					a._link(href="@@webRoot/account.html" title="/ Личный кабинет") Личный кабинет / 
+				li
+					span._current-item Профиль
+	section.page__personal-account
+		include ../components/page-index/section-personal-account 

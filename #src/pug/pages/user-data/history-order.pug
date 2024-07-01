@@ -1,0 +1,33 @@
+.history-order
+	.date-period._period-date
+		._title Период
+		._input 
+			label._label(for="start-date") от: 
+			input(type="date", id="start-date" name="start-date")
+		._input 
+			label._label(for="end-date") до:
+			input(type="date", id="end-date" name="end-date")
+	.history-period._period-history
+		._thead
+			._item Номер заказа
+			._item Дата оформления
+			._item Сумма
+			._item Статус
+		._row
+			._item#number 
+				a(href="#")._link Заказ № 385
+			._item#date 23.03.2019 
+			._item#sum 5 480 рублей
+			._item#status Отправлен 
+		._row
+			._item#number 
+				a(href="#")._link Заказ № 385
+			._item#date 23.03.2019 
+			._item#sum 5 480 рублей
+			._item#status Получен 
+		._row
+			._item#number 
+				a(href="#")._link Заказ № 385
+			._item#date 23.03.2019 
+			._item#sum 5 480 рублей
+			._item#status Ожидает оплаты   

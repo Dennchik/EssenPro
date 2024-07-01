@@ -1,0 +1,22 @@
+extends ../layouts/app_layout
+append link 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/account.min.css")
+prepend script 
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/cart.min.js")
+block title
+	- var text='Essen -Pro "Обнинск" / Продукция компании' 
+
+block main-content 
+	.page__bread-crumbs
+		nav.bread-crumbs
+			ul._list
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Главная / 
+				li
+					span._current-item Корзина
+
+	block section-cart
+		include ../components/cart/section-cart
+
+
+

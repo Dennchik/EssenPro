@@ -1,0 +1,31 @@
+.feed-back
+	form(action="").data-form 
+		._body
+			._title Сменить пароль
+			._column
+				._line
+					label(for="user-data-phone")._lebel Задайте&nbsp;вопрос:
+					textarea.send-order__comments#form-massege(name="massege", placeholder="Enter your message...")
+				._line(data-select)
+					label(for="form-select")._lebel Выбрать способ ответа:
+					.select._input
+						._box-button
+							input._button.input(id="form-select", type="button", name="form-select", value="Выбрать способ ответа") 
+							i.icon-arow-right
+						ul._list._collapse
+							li._list-item._selected(value="Телефон") Телефон
+							li._list-item(value="Эл.почта") Эл.почта
+							li._list-item(value="Ватсап") Ватсап
+
+				._line
+					label(for="user-data-phone")._lebel Телефон:
+					._input
+						input.input(id='user-data-phone', autocomplete="off", type="text", value="+7 900 (545) 17-54", name="phone")
+				._line
+					label(for="user-data-email")._lebel Эл.почта:
+					._input
+						input.input(id="user-data-email", autocomplete="off", type="text", value="fjjopk@mail.ru", name="email")
+				._line
+					label(for="user-data-whatsapp")._lebel Ватсап:
+					._input
+						input.input(id='user-data-whatsapp', autocomplete="off", type="text", value="+7 900 (545) 17-54", name="phone")

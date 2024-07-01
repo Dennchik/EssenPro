@@ -1,0 +1,69 @@
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+//todo ----------------------------- Core --------------------------------------
+@import 'core/mixins';
+@import 'core/extend';
+@import 'core/reset';
+// @import 'core/ui';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+@import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo -------------------------- Classes -------------------------------------
+// #region
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+[class*='_container'] {
+	max-width: $maxWidthContainer;
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	@include _min-1140 {
+		padding: 0 30px;
+	}
+}
+
+[class*='icon-'] {
+	cursor: pointer;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+// todo --------------------------- layout -------------------------------------
+@import 'layouts/bem-block';
+@import 'layouts/header';
+@import 'layouts/footer';
+// todo --------------------------- Pages --------------------------------------
+@import 'pages/page';
+// todo --------------------------- Chunk --------------------------------------
+@import 'chunk/search';
+@import 'chunk/burger-button';
+@import 'chunk/bread-crumbs';
+@import 'chunk/modal-registration';
+@import 'chunk/login-modal';
+@import 'chunk/form-user-data';
+@import 'chunk/user-order-cart';
+@import 'chunk/history-order';
+@import 'chunk/user-discount';
+// todo -------------------------- Modules -------------------------------------
+@import 'modules/preloader';
+@import 'modules/sidebar-menu';
+@import 'modules/counter-product';
+@import 'modules/select';
+// todo -------------------------- Sections ------------------------------------
+@import 'section/section-personal-account';
+@import 'section/section-cart';
+@import 'section/section-sendorder';
+@import 'section/section-personal-account';

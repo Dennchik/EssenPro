@@ -1,0 +1,149 @@
+.user-order-cart
+	.cart-page
+		._user-order
+			._main-content
+				._table-head
+					._column
+							span Товар 
+					._column
+						._thead
+							span Количество
+					._column 
+							span Цена 
+					._column 
+							span Сумма 
+					._column 
+						._button 
+							i.icon-trash 
+				.order-place
+					form(action="", method="get")._place-order
+						._content 
+							.shopping-cart
+								._item
+									.product-cart._row(data-quantity) 
+										._column
+											._product-info
+												._image 
+													img(src="./img/main/products/product-4.png", alt="картинка")
+												._description
+													span Название описание Артикул&nbsp;00000 
+										._column
+											._counter
+												.counter-product 
+													.quantity._quantity
+														._button.quantity-remove 
+															i.icon-minus 
+														._input
+															input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+														._button.quantity-add._arrow._arrow_next
+															i.icon-plus 
+													p._price В наличии&nbsp;
+														span._quantity-product 5 
+														span шт.
+										._column
+											._price
+												p._price.product-price 1000
+													span._units
+														i.icon-rub
+										._column 
+											span._quantity-price
+										._column
+											._cancel
+												button(type="button")._button 
+													i.icon-cancel 
+									.product-cart._row(data-quantity) 
+										._column
+											._product-info
+												._image 
+													img(src="./img/main/products/product-2.png", alt="картинка")
+												._description
+													span Название описание Артикул&nbsp;00000 
+										._column
+											._counter
+												.counter-product 
+													.quantity._quantity
+														._button.quantity-remove
+															i.icon-minus 
+														._input
+															input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+														._button.quantity-add._arrow._arrow_next
+															i.icon-plus 
+													p._price В наличии&nbsp;
+														span._quantity-product 5 
+														span шт.
+										._column
+											._price
+												p._price.product-price 1000 
+													span._units
+														i.icon-rub
+										._column 
+											span._quantity-price
+										._column
+											._cancel
+												button(type="button")._button 
+													i.icon-cancel 
+									.product-cart._row(data-quantity) 
+										._column
+											._product-info
+												._image 
+													img(src="./img/main/products/product-1.png", alt="картинка")
+												._description
+													span Название описание Артикул&nbsp;00000 
+										._column
+											._counter
+												.counter-product 
+													.quantity._quantity
+														._button.quantity-remove
+															i.icon-minus 
+														._input
+															input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+														._button.quantity-add._arrow._arrow_next
+															i.icon-cancel
+													p._price В наличии&nbsp;
+														span._quantity-product 5 
+														span шт.
+										._column
+											._price
+												p._price.product-price 1000 
+													span._units
+														i.icon-rub
+										._column 
+											span._quantity-price
+										._column
+											._cancel
+												button(type="button")._button 
+													i.icon-cancel
+							.result-container
+								._body 
+									._column 
+										p У вас накоплено 100 бонусов
+										p Доступных к списанию 50 бонусов 
+										button._button списать
+
+									._column.--result 
+										._totalprice-order.input-total Сумма:&nbsp;
+											span._total-sum 9 800
+										._discounts Скидка 3%
+											._discounts-sum 300,80 рублей
+										._final-order Итого к оплате: 
+											span.__final-sum 9 800 рублей
+							.send-order._send-order
+								include ../../components/page-index/section-send-order
+							._footer 
+								._column.--footer
+									._info 
+										p После поступления заказа, с&nbsp;вами свяжется менеджер. Он&nbsp;подтвердит наличие необходимого количества товара и&nbsp;обсудит все детали заказа. После согласования вам&nbsp;выставят счет для&nbsp;оплаты на&nbsp;электронную почту и&nbsp;в&nbsp;личный кабинет.
+								._column.--button 
+									button(type="button")._form-button
+										span оформить заказ 
+									button(type="submit")._send-button 
+										span отправить заказ
+									._checkbox
+										.checkbox
+											input._input(id="form-agreement", name="agreement", type="checkbox", checked) 
+											label(for="form-agreement")._label 
+												span.icon
+													i.icon-arow-down
+												span Я согласен с&nbsp;
+													a(href="#") условиями 
+													| предоставления услуг и&nbsp;политикой конфиденциальности

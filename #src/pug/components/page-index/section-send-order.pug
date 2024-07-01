@@ -1,0 +1,61 @@
+.send-order
+	._wrapp-collapse._collapse
+		._order-place 
+			._column  
+				._row
+					._title Данные покупателя
+					._line
+						label(for="form-phone")._lebel Телефон: 
+							span *
+						._input
+							input.input(id='form-phone', autocomplete=" ", type="text", name="phone")
+					._line
+						label(for="form-surname")._lebel Фамилия:
+							span *
+						._input
+							input.input(id='form-surname', autocomplete=" ", type="text", name="surname")
+					._line
+						label(for="form-name")._lebel Имя:
+							span  *
+						._input
+							input.input(id="form-name", autocomplete=" ", type="text", name="name")
+					._line
+						label(for="form-middlename")._lebel Отчество:
+							span *
+						._input
+							input.input(id="form-middlename", autocomplete=" ", type="text", name="middle-name")
+					._line
+						label(for="form-email")._lebel Эл.почта":
+						._input
+							input.input(id="form-email", autocomplete=" ", type="text", name="email")
+			._column
+				._row
+					._title Доставка
+					._line
+						label(for="form-index")._lebel Индекс:
+							span *
+						._input
+							input.input(id="form-index", autocomplete=" ", type="text", name="index-city")
+					._line
+						label(for="form-address")._lebel Адрес доставки:
+							span *
+						._input
+							input.input(id="form-address", autocomplete=" ", type="text", name="address")
+					._line(data-select)
+						label(for="form-select")._lebel Способ доставки*:
+						.select._input
+							._box-button
+								input._button.input(id="form-select", type="button", name="form-select", value="способ доставки") 
+								i.icon-arow-right
+							ul._list._collapse
+								li._list-item._selected(value="CDK") СДЭК
+								li._list-item(value="RussianPost") Почта России
+								li._list-item(value="Boxberry") Boxberry
+								li._list-item(value="TransportCompany") Траспортная компания 
+								li._list-item(value="CourierToDoor")  Курьер до двери 
+								li._list-item(value="Pickup") Самовывоз
+					._line 
+						label(for="form-massege")._lebel Комментарии:
+						._input
+							textarea._comments(id='form-massege', name="massege", placeholder="Enter your message...")
+

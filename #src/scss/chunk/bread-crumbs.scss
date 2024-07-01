@@ -22,7 +22,8 @@
 		}
 	}
 
-	// .breadcrumbs__item
-	&__item {
+	// .bread-crumbs__current-item
+	&__current-item {
+		font-weight: 600;
 	}
 }

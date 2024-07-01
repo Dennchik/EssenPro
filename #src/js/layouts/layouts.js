@@ -58,7 +58,25 @@ export function openMainMenu() {
 
 	};
 }
-// -----------------------------------------------------------------------------
+//todo -----------Событие при нажатии на кнопку "Оформить заказ"----------------
+export function placeOrder() {
+	let orderCollapse = document.querySelector('.send-order');
+	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
+	const elcheckboxLabelement = document.querySelector('.order-place__checkbox');
+
+	document.querySelector('.order-place__form-button').addEventListener('click', function () {
+		let titleDocument = document.querySelector('.cart-page__title');
+		// let sendOrder = document.querySelector('.order-place__send-order');
+		let sendButton = document.querySelector('.order-place__send-button');
+		let formButton = document.querySelector('.order-place__form-button');
+		titleDocument.innerHTML = 'оформление заказа';
+		collapse.toggle();
+		sendButton.style.display = 'block';
+		formButton.style.display = 'none';
+		elcheckboxLabelement.style.display = 'block';
+	});
+}
+//* ----------------------------------------------------------------------------
 export function showChildSubmenu() {
 	const menuParents = document.querySelectorAll('.menu-parrent');
 	menuParents.forEach(menuParent => {

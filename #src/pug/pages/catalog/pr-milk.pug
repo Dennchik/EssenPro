@@ -1,4 +1,4 @@
-extends ../layouts/app_layout
+extends ../../layouts/app_layout
 append link 
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/catalog.min.css")
 prepend script 
@@ -18,4 +18,4 @@ block main-content
 			+iconfont('catalog', '_icon')
 			+iconfont('cross-middle', '_icon')
 	block section-new-products
-		include ../components/page-products/catalog-products
+		include ../../components/page-products/catalog-products

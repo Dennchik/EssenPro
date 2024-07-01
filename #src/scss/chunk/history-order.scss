@@ -5,7 +5,7 @@
 		grid-template-columns: min-content min-content min-content;
 		align-items: center;
 		margin-bottom: 3rem;
-		@include _425 {
+		@include _screen-425 {
 			grid-template-columns: 1fr 1fr;
 		}
 	}
@@ -22,7 +22,7 @@
 	// .date-period__title
 	&__title {
 		margin-right: 5px;
-		@include _425 {
+		@include _screen-425 {
 			grid-column: 1 / 3;
 			margin-bottom: 2rem;
 		}
@@ -50,7 +50,7 @@
 			border: 1px solid $color;
 			border-radius: 5px;
 
-			@include _425 {
+			@include _screen-425 {
 				max-width: 105px;
 			}
 
@@ -85,7 +85,7 @@
 		display: flex;
 		align-items: center;
 		flex: 23%;
-		@include _425 {
+		@include _screen-425 {
 			font-size: 10px;
 		}
 	}

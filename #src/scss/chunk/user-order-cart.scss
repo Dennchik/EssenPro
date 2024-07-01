@@ -8,7 +8,7 @@
 		border-radius: 5px;
 		padding: 17px 10px;
 		margin-bottom: 4.3rem;
-		@include _490 {
+		@include _screen-490 {
 			gap: 15px;
 			grid-template-columns: 1fr;
 		}
@@ -67,23 +67,12 @@
 		margin-bottom: 8px;
 	}
 
-	// .result-container__total-sum
-
-	&__total-sum {
-	}
-
 	// .result-container__discounts
-
 	&__discounts {
 		display: flex;
 		justify-content: flex-end;
 		gap: 10px;
 		margin-bottom: 8px;
-	}
-
-	// .result-container__discounts-sum
-
-	&__discounts-sum {
 	}
 
 	// .result-container__final-order
@@ -93,11 +82,4 @@
 		gap: 10px;
 		font-weight: 700;
 	}
-
-	// .result-container__final-sum
-
-	&__final-sum {
-	}
-}
-.input-total {
 }

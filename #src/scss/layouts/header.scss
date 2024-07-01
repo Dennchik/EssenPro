@@ -68,7 +68,7 @@
 	&__link {
 		display: flex;
 		align-items: center;
-		font-size: 14px;
+		font-size: 13px;
 
 		&:hover {
 			color: $color;
@@ -146,7 +146,7 @@
 
 	// .top-menu__phone
 	&__phone {
-		font-size: 14px;
+		font-size: 13px;
 		@include _min-425 {
 			margin-right: 1.5rem;
 		}
@@ -156,7 +156,7 @@
 	}
 
 	&__email {
-		font-size: 15px;
+		font-size: 14px;
 	}
 
 	// .top-menu__email
@@ -197,8 +197,13 @@
 	// .main-menu__link
 	&__link {
 		white-space: nowrap;
+
 		@include _screen-768 {
 			line-height: 250%;
+		}
+
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }

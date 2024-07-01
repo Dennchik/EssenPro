@@ -6,7 +6,8 @@
 		border-radius: 5px;
 		font-weight: 700;
 		margin-bottom: 20px;
-		@include _375 {
+
+		@include _screen-375 {
 			padding: 10px;
 		}
 	}
@@ -17,7 +18,8 @@
 		border-radius: 5px;
 		padding: 27px 13px;
 		margin-bottom: 35px;
-		@include _375 {
+
+		@include _screen-375 {
 			padding: 27px 10px;
 		}
 	}
@@ -39,7 +41,8 @@
 	// .user-discount__text-content
 	&__text-content {
 		padding: 0 13px;
-		@include _375 {
+
+		@include _screen-375 {
 			padding: 0 10px;
 		}
 

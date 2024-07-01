@@ -225,7 +225,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include _screen-960 {
+		@include _screen-1140 {
 			min-width: 250px;
 			padding: 2rem;
 			pointer-events: none;
@@ -257,20 +257,21 @@
 	// .login-container__link
 	&__link {
 		white-space: nowrap;
-		font-size: 14px;
+		font-size: 13px;
 		transition: color 0.3s ease;
 
 		&._active {
 			font-weight: 700;
-			font-size: 13.7px;
+			font-size: 12.8px;
 		}
 
 		&:hover {
 			color: $color;
 			text-decoration: underline;
 		}
+
 		&:not(:last-child) {
-			margin-right: 0.3rem;
+			margin-right: 0.5rem;
 		}
 
 		@include _min-960 {
@@ -285,7 +286,7 @@
 
 	// .login-container__button
 	&__user-button {
-		@include _min-960 {
+		@include _min-1140 {
 			pointer-events: none;
 		}
 	}

@@ -1,0 +1,160 @@
+.cart-page.page__cart
+	._title ваша корзина
+	._body
+		._user-order 
+			._table-head
+				._column
+						span Товар 
+				._column
+					._thead
+						span Количество
+				._column 
+						span Цена 
+				._column 
+						span Сумма 
+				._column 
+					._button 
+						+iconfont('trash', 'icon')
+			.order-place
+				form(action="", method="get")._place-order
+					._content 
+						.shopping-cart
+							._item
+								.product-cart._row(data-quantity) 
+									._column
+										._product-info
+											._image 
+												img(src="./img/main/products/product-4.png", alt="картинка")
+											._description
+												span Название описание Артикул&nbsp;00000 
+									._column
+										._counter
+											.counter-product 
+												.quantity._quantity
+													._button.quantity-remove
+														+iconfont('minus', 'icon')
+													._input
+														input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+													._button.quantity-add._arrow._arrow_next
+														+iconfont('plus', 'icon')
+												p._price В наличии&nbsp;
+													span._price-product 5 
+													span шт.
+									._column
+										._price
+											p._price.product-price 1000 
+												span._units
+													+iconfont('rub', '_icon')
+									._column 
+										span._quantity-price
+									._column
+										._cancel
+											button(type="button")._button 
+												+iconfont('cancel', 'icon')
+								.product-cart._row(data-quantity) 
+									._column
+										._product-info
+											._image 
+												img(src="./img/main/products/product-1.png", alt="картинка")
+											._description
+												span Название описание Артикул&nbsp;00000 
+									._column
+										._counter
+											.counter-product 
+												.quantity._quantity
+													._button.quantity-remove
+														+iconfont('minus', 'icon')
+													._input
+														input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+													._button.quantity-add._arrow._arrow_next
+														+iconfont('cancel', 'icon')
+												p._price В наличии&nbsp;
+													span._price-product 5 
+													span шт.
+									._column
+										._price
+											p._price.product-price 1000 
+												span._units
+													+iconfont('rub', '_icon')
+									._column 
+										span._quantity-price
+									._column
+										._cancel
+											button(type="button")._button 
+												+iconfont('cancel', 'icon')
+								.product-cart._row(data-quantity) 
+									._column
+										._product-info
+											._image 
+												img(src="./img/main/products/product-3.png", alt="картинка")
+											._description
+												span Название описание Артикул&nbsp;00000 
+									._column
+										._counter
+											.counter-product 
+												.quantity._quantity
+													._button.quantity-remove
+														+iconfont('minus', 'icon')
+													._input
+														input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+													._button.quantity-add._arrow._arrow_next
+														+iconfont('plus', 'icon')
+												p._price В наличии&nbsp;
+													span._price-product 5 
+													span шт.
+									._column
+										._price
+											p._price.product-price 1000 
+												span._units
+													+iconfont('rub', '_icon')
+									._column 
+										span._quantity-price
+									._column
+										._cancel
+											button(type="button")._button 
+												+iconfont('cancel', 'icon') 
+						.result-container
+							._body 
+								._column 
+									._discounts Скидка 3%
+								._column.--result 
+									._totalprice-order.input-total Итого:
+										span._total-sum 
+						.send-order._send-order
+							include ../page-index/section-send-order
+						._footer 
+							._column.--footer
+								._info 
+									p После поступления заказа, с&nbsp;вами свяжется менеджер. Он&nbsp;подтвердит наличие необходимого количества товара и&nbsp;обсудит все детали заказа. После согласования вам&nbsp;выставят счет для&nbsp;оплаты на&nbsp;электронную почту и&nbsp;в&nbsp;личный кабинет.
+							._column.--button 
+								button(type="button")._form-button
+									span оформить заказ 
+								button(type="submit")._send-button 
+									span отправить заказ
+								._checkbox
+									.checkbox
+										input._input(id="form-agreement", name="agreement", type="checkbox", checked) 
+										label(for="form-agreement")._label 
+											span.icon
+												i.icon-arow-down
+											span Я согласен с&nbsp;
+												a(href="#") условиями 
+												| предоставления услуг и&nbsp;политикой конфиденциальности
+
+		aside._help-order
+			.help-order
+				._info
+					._title Возникли вопросы при оформлении заказа?
+					._text
+						p Проконсультируйтесь с&nbsp;нашим специалистом
+						._phone +7&nbsp;(930)&nbsp;840&nbsp;97&nbsp;57
+				._info 
+					._title Наша система скидок
+					._text
+						p - на сумму 5&nbsp;000 руб. и более, 
+							span скидка&nbsp;3%
+						p - на сумму 10&nbsp;000 руб. и более, 
+							span скидка&nbsp;5%
+						p - на сумму 20&nbsp;000 руб. и более, 
+							span скидка&nbsp;10% 
+				

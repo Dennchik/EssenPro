@@ -25,10 +25,12 @@
 			justify-content: space-around;
 			grid-template-columns: repeat(4, minmax(250px, 280px));
 		}
+
 		@include _screen-1140 {
-			justify-content: space-around;
+			justify-content: space-evenly;
 			grid-template-columns: repeat(3, minmax(250px, 280px));
 		}
+
 		@include _screen-830 {
 			grid-template-columns: repeat(2, minmax(250px, 270px));
 		}
@@ -40,7 +42,6 @@
 	}
 
 	// .new-products__column
-
 	&__column {
 		max-width: 100%;
 		border-radius: 15px;
@@ -50,6 +51,7 @@
 
 .counter-product {
 	width: 100%;
+
 	// .counter-product__quantity
 	&__quantity {
 		display: flex;
@@ -60,7 +62,6 @@
 
 .quantity {
 	// .quantity__button
-
 	&__button {
 		cursor: pointer;
 		width: 3rem;

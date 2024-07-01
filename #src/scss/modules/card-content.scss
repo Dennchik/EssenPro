@@ -2,8 +2,6 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	// display: flex;
-	// justify-content: center;
 
 	// .card__body
 	&__body {
@@ -56,7 +54,7 @@
 
 	// .card__label
 	&__label {
-		display: inline;
+		display: flex;
 		border-radius: 10px;
 
 		background: linear-gradient(
@@ -228,6 +226,7 @@
 		}
 	}
 }
+
 .swiper-slide {
 	.card {
 		max-width: 290px;

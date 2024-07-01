@@ -1,0 +1,35 @@
+.user-personal-data
+	form(action="").data-form
+		._body
+			._title Персональные данные
+			._column
+				._line
+					label(for="user-data-surname")._lebel Фамилия:
+					._input
+						input.input(id='user-data-surname', autocomplete="off", type="text", value='Белова', name="surname")
+				._line
+					label(for="user-data-name")._lebel Имя:
+					._input
+						input.input(id="user-data-name", autocomplete="off", type="text", value="Валентина" name="name")
+				._line
+					label(for="user-data-middlename")._lebel Отчество:
+						span *
+					._input
+						input.input(id="user-data-middlename", autocomplete="off", type="text", value="Петровна", name="middle-name") 
+				._line
+					label(for="user-data-phone")._lebel Телефон:
+					._input
+						input.input(id='user-data-phone', autocomplete="off", type="text", value="+7 900 (545) 17-54", name="phone")
+			._column
+				._line
+					label(for="user-data-email")._lebel Эл.почта:
+					._input
+						input.input(id="user-data-email", autocomplete="off", type="text", value="fjjopk@mail.ru", name="email")
+				._line
+					label(for="user-data-index")._lebel Индекс:
+					._input
+						input.input(id="user-data-index", autocomplete="off", type="text", name="index-city")
+				._line
+					label(for="user-data-city")._lebel Город:
+					._input
+						input.input(id="user-data-city", autocomplete="off", type="text", name="city")

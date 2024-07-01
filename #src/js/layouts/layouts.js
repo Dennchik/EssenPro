@@ -36,6 +36,8 @@ export function openMenuCatalog() {
 }
 //todo запрещаем скроллинг страницы при открытии "Main-Menu"
 export function openMainMenu() {
+	const toggleButton = document.querySelector('.toggle-catalog');
+	const sidebarMenu = document.querySelector('.categories__side-bar');
 	const toggleMenuButton = document.querySelector('.toggle-button__toggle-menu');
 	$.toggleButton.addEventListener('click', openedMenu);
 	function openedMenu() {
@@ -46,6 +48,11 @@ export function openMainMenu() {
 		} else {
 			document.body.classList.remove('no-scroll');
 		}
+		if (sidebarMenu.classList.contains('_opened-menu')) {
+			sidebarMenu.classList.remove('_opened-menu');
+			toggleButton.classList.remove('_opened-menu');
+		}
+
 	};
 }
 // -----------------------------------------------------------------------------

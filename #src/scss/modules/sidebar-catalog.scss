@@ -90,8 +90,8 @@
 		position: relative;
 		z-index: 9;
 		overflow-x: hidden;
-		flex: 0 1 275px;
 		min-width: 200px;
+		flex: 0 1 19%;
 
 		@include _screen-768 {
 			width: 275px;
@@ -106,9 +106,6 @@
 
 			&._opened-menu {
 				transform: translateX(-3%);
-				@include _min-490 {
-					transform: translateX(-10%);
-				}
 				@include _screen-375 {
 					width: 100%;
 					padding-right: 5.5rem;

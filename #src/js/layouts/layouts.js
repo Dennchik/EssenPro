@@ -44,18 +44,18 @@ export function openMainMenu() {
 	function openedMenu() {
 		toggleMenuButton.classList.toggle('_open');
 		$.sidebarMenu.classList.toggle('_opened-menu');
-		categoriesSidebarMenu.classList.remove('_opened-menu');
-		toggleButton.classList.remove('_opened-menu');
 		if ($.sidebarMenu.classList.contains('_opened-menu')) {
 			document.body.classList.add('no-scroll');
 		} else {
 			document.body.classList.remove('no-scroll');
 		}
-		// if (categoriesSidebarMenu.classList.contains('_opened-menu')) {
-		// 	console.log('yes');
-		// 	categoriesSidebarMenu.classList.remove('_opened-menu');
-		// 	toggleButton.classList.remove('_opened-menu');
-		// }
+		if (categoriesSidebarMenu) {
+			if (categoriesSidebarMenu.classList.contains('_opened-menu')) {
+				categoriesSidebarMenu.classList.remove('_opened-menu');
+				toggleButton.classList.remove('_opened-menu');
+			}
+		}
+
 	};
 }
 // -----------------------------------------------------------------------------

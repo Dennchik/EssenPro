@@ -3,9 +3,15 @@
 	&__content {
 		position: relative;
 		padding: 10.5rem 0 14.7rem;
-		@include _screen-490 {
-			padding: 5.5rem 0 7.7rem;
+		display: flex;
+
+		@include _screen-690 {
+			padding: 0;
+			flex-direction: column-reverse;
 		}
+		// @include _screen-490 {
+		// 	padding: 5.5rem 0 7.7rem;
+		// }
 	}
 
 	// .perform__body
@@ -23,10 +29,14 @@
 		h1 {
 			font-weight: 700;
 			font-size: 4rem;
-			@include _screen-490 {
+
+			@include _screen-690 {
 				text-align: center;
+			}
+			@include _screen-490 {
 				font-size: 3rem;
 			}
+
 			span {
 				margin-top: 1rem;
 				display: block;
@@ -40,8 +50,10 @@
 		font-size: 2rem;
 		font-weight: 500;
 		margin-bottom: 1.8rem;
-
-		@include _screen-425 {
+		@include _screen-690 {
+			text-align: center;
+		}
+		@include _screen-490 {
 			text-align: center;
 		}
 	}
@@ -51,7 +63,7 @@
 		display: flex;
 		gap: 2rem;
 
-		@include _screen-425 {
+		@include _screen-690 {
 			justify-content: space-evenly;
 		}
 
@@ -65,19 +77,23 @@
 
 	// .perform__image
 	&__image {
-		margin-top: 3rem;
-		position: absolute;
-		top: 0;
-		right: 0;
 		z-index: 1;
 		width: 100%;
 		height: 100%;
 
+		@include _min-690 {
+			margin-top: 3rem;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
 		img {
+			float: right;
+
+			height: 100%;
+			object-fit: cover;
 			object-position: right;
-			@include _screen-768 {
-				opacity: 0.5;
-			}
 
 			@include _screen-690 {
 				object-position: center;

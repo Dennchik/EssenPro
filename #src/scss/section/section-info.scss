@@ -10,68 +10,53 @@
 	&__content {
 		position: relative;
 		z-index: 3;
-		padding: 8.5rem 0 14.2rem;
 		display: grid;
-		grid-template-columns: 1fr;
+		gap: 4rem;
+		grid-template-columns: 1fr 1fr;
 		background: #ffffff;
 
-		@include _screen-490 {
-			padding: 4.5rem 0 7.2rem;
+		@include _screen-690 {
+			grid-template-columns: 1fr;
 		}
+
+		// @include _screen-490 {
+		// 	padding: 4.5rem 0 7.2rem;
+		// }
 	}
 
 	// .info-company__column
 	&__column {
 		justify-content: center;
-		justify-self: end;
+		justify-self: start;
 		height: 100%;
 		position: relative;
-
-		&:nth-child(1) {
-			padding-right: 8.8rem;
-
-			@include _screen-1024 {
-				padding-right: calc(0px + (148 - 5) * ((100vw - 320px) / (1024 - 320)));
-			}
-			@include _screen-375 {
-				padding: 0 1rem;
-				justify-self: stretch;
-			}
+		@include _screen-690 {
+			grid-row: 1 / 2;
+			padding-left: 2.2rem;
+			justify-self: center;
 		}
 	}
 
 	// .info-company__image
 	&__image {
+		padding-left: 15px;
 		min-width: 100%;
-		z-index: -1;
-		grid-row: 1 / -1;
-		padding-left: 175px;
 		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-end;
 
-		> * {
-			grid-area: 1 / 1;
-		}
-
-		@include _screen-1024 {
-			padding-left: calc(0px + (175 - 5) * ((100vw - 490px) / (1024 - 490)));
+		@include _screen-690 {
+			grid-row: 2 / 3;
+			padding-left: 0;
 		}
 
 		img {
 			object-position: left;
-			max-width: 357px;
-			max-height: 201px;
+			max-width: 610px;
+			max-height: 343px;
 			object-fit: cover;
 			max-width: 100%;
-
-			@include _screen-768 {
-				opacity: 0.4;
-			}
 
 			@include _screen-375 {
 				min-width: 100%;
@@ -89,6 +74,11 @@
 		}
 	}
 }
+.page__discounts {
+	.info-company__content {
+		padding: 8.7rem 0;
+	}
+}
 
 .page__clients {
 	.company-info {
@@ -97,50 +87,10 @@
 			font-size: 3.5rem;
 
 			@include _screen-375 {
-				text-align: center;
+				text-align: left;
+				padding-left: 4.8rem;
 				font-size: 3rem;
 			}
-		}
-	}
-
-	.info-company {
-		&__image {
-			justify-self: start;
-			position: relative;
-			padding-left: 15px;
-
-			@include _screen-1024 {
-				padding-left: calc(0px + (15 - 5) * ((100vw - 490px) / (1024 - 490)));
-			}
-
-			img {
-				object-position: right;
-				max-width: 610px;
-				max-height: 343px;
-				object-fit: cover;
-				max-width: 100%;
-
-				@include _screen-1024 {
-					opacity: 0.4;
-				}
-			}
-		}
-
-		&__content {
-			box-shadow: none;
-			padding: 8.5rem 0;
-
-			@include _screen-490 {
-				padding: 4.2rem 0 4.2rem;
-			}
-			> * {
-				grid-area: 1 / 1;
-			}
-		}
-
-		&__column {
-			display: flex;
-			align-items: center;
 		}
 	}
 }

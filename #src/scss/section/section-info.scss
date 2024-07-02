@@ -18,18 +18,16 @@
 		@include _screen-690 {
 			grid-template-columns: 1fr;
 		}
-
-		// @include _screen-490 {
-		// 	padding: 4.5rem 0 7.2rem;
-		// }
 	}
 
 	// .info-company__column
 	&__column {
-		justify-content: center;
+		display: flex;
+		align-items: center;
 		justify-self: start;
 		height: 100%;
 		position: relative;
+
 		@include _screen-690 {
 			grid-row: 1 / 2;
 			padding-left: 2.2rem;

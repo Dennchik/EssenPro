@@ -11,7 +11,7 @@
 		position: relative;
 		z-index: 3;
 		display: grid;
-		gap: 4rem;
+		gap: 2rem;
 		grid-template-columns: 1fr 1fr;
 		background: #ffffff;
 
@@ -22,11 +22,18 @@
 
 	// .info-company__column
 	&__column {
+		padding-left: 138px;
 		display: flex;
 		align-items: center;
 		justify-self: start;
 		height: 100%;
 		position: relative;
+		@include _768-1497 {
+			padding-left: calc(1px + (130 - 1) * ((100vw - 768px) / (1497 - 768)));
+		}
+		@include _screen-768 {
+			padding-left: 0;
+		}
 
 		@include _screen-690 {
 			grid-row: 1 / 2;

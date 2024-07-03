@@ -26,16 +26,17 @@
 		h1 {
 			font-weight: 700;
 			font-size: 4rem;
+			line-height: 120%; /* 48px/40 */
 
 			@include _screen-690 {
 				text-align: center;
 			}
 			@include _screen-490 {
-				font-size: 3rem;
+				line-height: 100%; /* 48px/40 */
+				font-size: 4rem;
 			}
 
 			span {
-				margin-top: 1rem;
 				display: block;
 				color: #a83333;
 			}

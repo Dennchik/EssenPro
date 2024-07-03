@@ -5,7 +5,7 @@
 		padding: 10.5rem 0 14.7rem;
 		display: flex;
 
-		@include _screen-690 {
+		@include _screen-768 {
 			padding: 0;
 			flex-direction: column-reverse;
 		}
@@ -28,12 +28,16 @@
 			font-size: 4rem;
 			line-height: 120%; /* 48px/40 */
 
-			@include _screen-690 {
+			@include _screen-768 {
 				text-align: center;
+				font-size: 30px;
 			}
 			@include _screen-490 {
 				line-height: 100%; /* 48px/40 */
-				font-size: 4rem;
+			}
+
+			@include _768-1140 {
+				font-size: calc(30px + (40 - 30) * ((100vw - 768px) / (1140 - 768)));
 			}
 
 			span {
@@ -49,7 +53,7 @@
 		font-weight: 500;
 		margin-bottom: 1.8rem;
 
-		@include _screen-690 {
+		@include _screen-768 {
 			text-align: center;
 		}
 		@include _screen-490 {
@@ -62,7 +66,7 @@
 		display: flex;
 		gap: 2rem;
 
-		@include _screen-690 {
+		@include _screen-768 {
 			justify-content: space-around;
 		}
 
@@ -80,21 +84,26 @@
 		width: 100%;
 		height: 100%;
 
-		@include _min-690 {
-			margin-top: 3rem;
+		@include _min-768 {
 			position: absolute;
 			top: 0;
 			right: 0;
 		}
 
+		@include _screen-768 {
+			padding: 0 3rem;
+			display: flex;
+			justify-content: center;
+		}
+
 		img {
 			float: right;
 			max-width: 100%;
+			max-height: 100%;
 			object-fit: contain;
 
 			@include _screen-690 {
 				max-height: 343px;
-				object-position: center;
 			}
 		}
 	}

@@ -2750,10 +2750,12 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 .toggle-catalog .icon-cross-middle {
   font-size: 32px;
   scale: 0;
+  opacity: 0;
 }
 
 .toggle-catalog .icon-catalog {
   scale: 1;
+  opacity: 1;
 }
 
 .toggle-catalog._opened-menu .icon-catalog {

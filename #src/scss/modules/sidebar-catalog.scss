@@ -165,10 +165,12 @@
 	.icon-cross-middle {
 		font-size: 32px;
 		scale: 0;
+		opacity: 0;
 	}
 
 	.icon-catalog {
 		scale: 1;
+		opacity: 1;
 	}
 
 	&._opened-menu {

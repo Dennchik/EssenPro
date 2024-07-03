@@ -138,7 +138,7 @@
 		font-size: 12px;
 		font-weight: 500;
 
-		@include _min-425 {
+		@include _min-490 {
 			flex-wrap: wrap;
 			@include flex-align-center;
 		}

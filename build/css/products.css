@@ -2758,6 +2758,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 .toggle-catalog._opened-menu .icon-catalog {
   scale: 0;
+  opacity: 0;
 }
 
 .toggle-catalog._opened-menu .icon-cross-middle {

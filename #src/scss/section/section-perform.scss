@@ -89,12 +89,12 @@
 
 		img {
 			float: right;
-
 			height: 100%;
+			max-width: 100%;
 			object-fit: cover;
-			object-position: right;
 
 			@include _screen-690 {
+				max-height: 343px;
 				object-position: center;
 			}
 		}

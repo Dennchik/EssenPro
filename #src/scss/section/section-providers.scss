@@ -11,10 +11,9 @@
 		h2 {
 			margin-bottom: 20px;
 			color: rgb(88, 88, 86);
-			font-size: 3.5rem;
+			font-size: 4rem;
 			font-weight: 700;
 			line-height: 120%; /* 42px/35 */
-			text-align: center;
 
 			@include _screen-375 {
 				font-size: 3rem;

@@ -1,6 +1,6 @@
 extends ../layouts/app_layout
 append link 
-	link(rel="stylesheet" type="text/css" href="@@webRoot/css/products-card.min.css")
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/favourites.min.css")
 prepend script 
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/products-card.min.js")
 block title
@@ -11,18 +11,12 @@ block main-content
 		nav.bread-crumbs
 			ul._list
 				li
-					a._link(href="@@webRoot/index.html" title="/ Главная") Главная / 
+					a._link(href="@@webRoot/index.html" title="/ Главная") Главная /  
 				li
-					a._link(href="@@webRoot/index.html" title="/ Главная") Каталог / 
-				li
-					a._link(href="@@webRoot/index.html" title="/ Главная") Молоко / 
-				li
-					span._current-item Название товара 
+					span._current-item Избранное 
 
 	block section-favourites
-		include ../components/page-index/section-favourites
-	//- block section-new-products
-	//- 	include ../components/page-products/products-slide 
+		include ../components/page-index/section-favourites 
 
 
 

@@ -7,7 +7,7 @@
 		h2 {
 			padding-left: 1rem;
 			color: rgb(88, 88, 86);
-			font-size: 3.5rem;
+			font-size: 4rem;
 			font-weight: 700;
 			line-height: 120%; /* 42px/35 */
 			text-align: center;
@@ -20,7 +20,6 @@
 
 	// .categories__products
 	&__products {
-		flex: 0 1 auto;
 		display: grid;
 		height: 100%;
 		width: 100%;

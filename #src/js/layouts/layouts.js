@@ -277,10 +277,12 @@ export function userMenu() {
 
 			// Открываем модальное окно "Регистрация для физ-лиц";
 			registrationsFiz.classList.add('_show');
+			document.body.classList.add('no-scroll');
 
 			let closeButton = registrationsFiz.querySelector('.modal-registrations-fiz__close-btn');
 			closeButton.addEventListener('click', () => {
 				registrationsFiz.classList.remove('_show');
+				document.body.classList.remove('no-scroll');
 			});
 		});
 		//* ------------------------------------------------------------------------
@@ -296,10 +298,12 @@ export function userMenu() {
 
 				// Открываем модальное окно "Регистрация для юр-лиц";
 				registrationsUre.classList.add('_show');
+				document.body.classList.add('no-scroll');
 
 				let closeButton = registrationsUre.querySelector('.modal-registrations-ure__close-btn');
 				closeButton.addEventListener('click', () => {
 					registrationsUre.classList.remove('_show');
+					document.body.classList.remove('no-scroll');
 				});
 			});
 		});

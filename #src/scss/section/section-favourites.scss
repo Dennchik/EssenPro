@@ -1,0 +1,19 @@
+.favourites-product {
+	&__title {
+		color: rgb(88, 88, 86);
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 120%; /* 48px/40 */
+		margin-bottom: 44px;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: space-between;
+
+		@include _screen-830 {
+			grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
+		}
+	}
+}

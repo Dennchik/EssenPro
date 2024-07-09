@@ -185,13 +185,13 @@
 	&__buttons {
 		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
+		gap: 80px;
 	}
 
 	// .card__counter
 	&__counter {
 		flex: 0 1 50%;
-		margin-right: 5px;
 		width: 100%;
 		border: 1px solid #000;
 		border-radius: 10px;

@@ -2,8 +2,11 @@
 	// .perform__content
 	&__content {
 		position: relative;
-		padding: 10.5rem 0 14.7rem;
+		padding: 25rem 0;
 		display: flex;
+		@include _768-1920 {
+			padding: calc(90px + (250 - 90) * ((100vw - 768px) / (1920 - 768))) 0;
+		}
 
 		@include _screen-768 {
 			padding: 0;
@@ -18,26 +21,33 @@
 	}
 
 	// .perform__title
-
 	&__title {
 		color: #585856;
-		margin-bottom: 5rem;
+		margin-bottom: 13rem;
+
+		@include _768-1920 {
+			margin-bottom: calc(50px + (130 - 50) * ((100vw - 768px) / (1920 - 768)));
+		}
+
+		@include _screen-768 {
+			margin-bottom: 3rem;
+		}
 
 		h1 {
 			font-weight: 700;
-			font-size: 4rem;
+			font-size: 50px;
 			line-height: 120%; /* 48px/40 */
+
+			@include _768-1440 {
+				font-size: calc(28px + (50 - 28) * ((100vw - 768px) / (1440 - 768)));
+			}
 
 			@include _screen-768 {
 				text-align: center;
-				font-size: 30px;
+				font-size: 28px;
 			}
 			@include _screen-490 {
 				line-height: 100%; /* 48px/40 */
-			}
-
-			@include _768-1140 {
-				font-size: calc(30px + (40 - 30) * ((100vw - 768px) / (1140 - 768)));
 			}
 
 			span {
@@ -69,17 +79,38 @@
 		@include _screen-768 {
 			justify-content: space-around;
 		}
-
-		button {
-			background: $bg-color;
-			flex: 0 1 16.5rem;
-			font-weight: 600;
-			letter-spacing: 1.2px;
-		}
+	}
+	&__button {
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $bg-color;
+		flex: 0 1 16.5rem;
+		font-weight: 600;
+		letter-spacing: 1.2px;
 	}
 
+	&__button--red {
+		color: $bg-color;
+		background: $color;
+		border: none;
+
+		&:active {
+			border: 1px solid #585856;
+			background-color: $bg-color;
+			color: black;
+		}
+
+		&:hover {
+			box-shadow: 1px 1px 4px #000;
+		}
+	}
 	// .perform__image
 	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 		z-index: 1;
 		width: 100%;
 		height: 100%;
@@ -88,6 +119,10 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+		}
+
+		@include _768-1920 {
+			width: calc(400px + (900 - 300) * ((100vw - 768px) / (1920 - 768)));
 		}
 
 		@include _screen-768 {

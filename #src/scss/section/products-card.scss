@@ -14,6 +14,7 @@
 
 	// .products-card__button
 	&__button {
+		max-width: 135px;
 		transition: color 0.3s ease-in-out;
 		color: #949494;
 		&:hover {
@@ -319,12 +320,14 @@
 	// .product-info__header
 	&__header {
 		.card {
-			max-width: 315px;
+			// max-width: 315px;
 		}
 		.card__button {
-			width: 137px !important;
+			width: 150px !important;
+			flex: 0 1 150px;
 		}
 		.card__counter {
+			flex: 0 1 137px;
 			width: 137px !important;
 		}
 	}

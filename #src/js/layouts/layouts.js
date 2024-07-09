@@ -131,7 +131,6 @@ export function collapseParentMenu() {
 		}
 	};
 }
-//! ------------------------------- Catalog.js ---------------------------------
 //todo ---------------------------Login-container------------------------------
 export function userMenu() {
 	for (let i = 0; i < $.userButtons.length; i++) {
@@ -171,7 +170,7 @@ export function userMenu() {
 	userLogins.forEach((userLogin) => {
 		userLogin.addEventListener('click', (e) => {
 			let target = e.target;
-			$.login.classList.add('_active');
+			$.login.classList.toggle('_active');
 			if ($.registrations.classList.contains('_active')) {
 				$.registrations.classList.remove('_active');
 			}

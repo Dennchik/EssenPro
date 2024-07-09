@@ -117,10 +117,9 @@
 	// .top-menu__image
 	&__image {
 		margin-right: 10px;
-		width: 14.4rem;
-		height: 4.2rem;
-		width: 144px;
-		height: 42px;
+		img {
+			width: 149px;
+		}
 	}
 
 	// .top-menu__text

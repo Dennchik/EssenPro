@@ -5,20 +5,24 @@
 				._logo 
 					._image
 						img(src="@@webRoot/img/main/logo.png", alt="logo")
-					._text(data-move-el="[{'bp-max': 768.98, 'index': 1, 'target': '.bp-4'}]")
+					._text(data-move-el="[{'bp-max': 968.98, 'index': 1, 'target': '.bp-4'}]")
 						span поставки 
 						span продуктов питания
-				._contacts(data-move-el="[{'bp-max': 490.98, 'index': 1, 'target': '.bp-1'}]") 
+				._contacts(data-move-el="[{'bp-max': 690.98, 'index': 1, 'target': '.bp-1'}]") 
 					._phone
 						a(href="tel:89308409757") +7 (930) 840 97-57
 					._email
 						a(href="mailto:zakaz@essenpro.ru") zakaz@essenpro.ru
 		._column 
+			._favourites
+				a(href="@@webRoot/favourites.html")._link
+					+iconfont('heart', '_icon')
+					span._fa-value (0)
 			._cart 
 				a(href="@@webRoot/cart.html")._link
 					+iconfont('shopping-cart', '_icon')
 					span
-						| Моя корзина 
+						| Корзина 
 					span._value-cart (0) 
 			.login-container._login
 				._body
@@ -28,7 +32,8 @@
 						._list
 							._link
 								a(href="./account.html") Личный кабинет
-							._link.login Войти 
+							._link.login
+								+iconfont('enter-signin', '_icon')
 							span /
 							._link.registrations Регистриция
 						include ../chunk/login-form
@@ -51,7 +56,7 @@
 				li 
 					a(href="@@webRoot/catalog.html" title="Оплата и доставка")._link Оплата и доставка
 				li 
-					a(href="@@webRoot/account.html" title="Акции")._link Акции 
+					a(href="@@webRoot/products-card.html" title="Акции")._link Акции 
 				li 
 					a(href="#contacts" title="Контакты")._link.anchor-link Контакты
 		._search

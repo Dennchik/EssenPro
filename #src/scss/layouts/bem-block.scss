@@ -179,28 +179,11 @@
 	&:hover {
 		box-shadow: 1px 1px 4px #000000a8;
 	}
-
-	&.button--red {
-		color: $bg-color;
-		background: $color;
-		border: none;
-
-		&:active {
-			border: 1px solid #585856;
-			background-color: $bg-color;
-			color: black;
-		}
-
-		&:hover {
-			box-shadow: 1px 1px 4px #000;
-		}
-	}
 }
 // -----------------------------------------------------------------------------
 .login-container {
 	// .login-container__body
 	&__body {
-		// position: relative;
 		margin-right: 2rem;
 		width: 100%;
 		height: 100%;
@@ -263,11 +246,13 @@
 		&._active {
 			font-weight: 700;
 			font-size: 12.8px;
-		}
-
-		&:hover {
 			color: $color;
-			text-decoration: underline;
+		}
+		@include _screen-690 {
+			&:hover {
+				color: $color;
+				text-decoration: underline;
+			}
 		}
 
 		&:not(:last-child) {
@@ -307,7 +292,7 @@
 		}
 	}
 
-	// .login-container__button//
+	// .login-container__button
 	&__button {
 		height: 38px;
 		@include _screen-690 {
@@ -341,5 +326,87 @@
 	&__title--favourites {
 		display: flex;
 		justify-content: center;
+	}
+}
+// -----------------------------------------------------------------------------
+.checkbox {
+	&._error {
+		.checkbox__lable::before {
+			box-shadow: 0px 0px 14px 3px #f16666;
+		}
+	}
+
+	// .checkbox__input
+	&__input {
+		display: none;
+		&:checked + .checkbox__label .icon-arow-down {
+			display: block;
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	&__checed {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 140%;
+	}
+
+	// .checkbox__lable
+	&__label {
+		max-width: 250px;
+		cursor: pointer;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 110%;
+
+		.icon {
+			margin-right: 0.5rem;
+			margin-left: -3.2rem;
+			height: 3.5rem;
+			@include _screen-1024 {
+				margin-left: -3.6rem;
+			}
+		}
+
+		.icon-arow-down {
+			position: absolute;
+			position: relative;
+			display: flex;
+			align-items: center;
+			transition: all 0.3s ease-in-out;
+			opacity: 0;
+			height: 28px;
+			font-size: 2.8rem;
+			color: #131414;
+		}
+
+		&::before {
+			content: '';
+			position: relative;
+			margin-right: 10px;
+			flex: 0 0 20px;
+			height: 20px;
+			align-self: center;
+			border: 1px solid $color;
+			border-radius: 7px;
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		a {
+			text-decoration: underline;
+			font-weight: 600;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		span {
+			font-size: 10px;
+		}
 	}
 }

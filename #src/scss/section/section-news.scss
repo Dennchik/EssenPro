@@ -2,14 +2,17 @@
 	// .news-company__title
 	&__title {
 		text-align: center;
+
 		h2 {
 			color: #585856;
 			font-size: 3.5rem;
 			font-weight: 700;
 			line-height: 42px;
+
 			span {
 				color: $color;
 			}
+
 			@include _screen-375 {
 				font-size: 3rem;
 			}
@@ -24,6 +27,7 @@
 		justify-items: center;
 		gap: 2rem;
 		padding: 5.2rem 0 5.6rem;
+		scrollbar-width: thin;
 	}
 
 	// .news-company__column
@@ -41,6 +45,7 @@
 
 	// .news-company__footer
 	&__footer {
+		margin-top: 10px;
 		@include flex-justify-center;
 	}
 

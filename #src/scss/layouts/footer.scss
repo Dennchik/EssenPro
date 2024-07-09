@@ -7,7 +7,7 @@
 		gap: 2rem;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 
-		@include _screen-768 {
+		@include _425-768 {
 			grid-template-columns: 1fr 1fr;
 		}
 
@@ -19,10 +19,12 @@
 
 	// .footer__column
 	&__column {
-		@include _screen-490 {
-			&:not(:last-child) {
-				border-bottom: 1px solid #fff;
+		// border: 1px solid blue;
+
+		@include _screen-690 {
+			&:nth-child(n + 1):nth-child(-n + 4) {
 				padding-bottom: 2rem;
+				border-bottom: 1px solid #fff;
 			}
 		}
 
@@ -30,42 +32,56 @@
 			@include _min-768 {
 				grid-row: 1 / 3;
 			}
+
 			@include _425-768 {
 				grid-row: 1 / 2;
 			}
 		}
 
+		&:nth-child(2) {
+			@include _425-768 {
+				grid-column: 1 / 2;
+			}
+		}
+
 		&:nth-child(3) {
 			@include _425-768 {
-				grid-row: 2 / 3;
-				grid-column: 1 / 2;
+				grid-column: 2 / 3;
+				grid-row: 1 / 2;
 			}
 		}
 
 		&:nth-child(4) {
 			@include _425-768 {
 				grid-row: 2 / 3;
-				transform: translateY(-120px);
+				grid-column: 2 / 3;
 			}
 		}
 
 		&:nth-child(5) {
-			display: flex;
-			gap: 1rem;
-			align-items: end;
-			justify-content: space-between;
-
 			@include _min-768 {
-				grid-column: -4 / -1;
+				grid-row: 2 / 3;
+				grid-column: 2 / 4;
+			}
+
+			align-self: end;
+
+			@include _425-768 {
+				grid-row: 3 / 4;
+				grid-column: 1 / 2;
+			}
+		}
+
+		&:nth-child(6) {
+			@include _min-768 {
+				grid-column: 4 / 5;
+				grid-row: 2 / 3;
+				align-self: end;
 			}
 
 			@include _425-768 {
-				grid-column: -3 / -1;
-			}
-
-			@include _screen-425 {
-				flex-direction: column;
-				align-items: flex-start;
+				grid-row: 3 / 4;
+				grid-column: 2 / 3;
 			}
 		}
 	}
@@ -149,7 +165,7 @@
 	}
 
 	// .footer__bUtton
-	&__bUtton {
+	&__button {
 		margin-bottom: 30px;
 
 		button {
@@ -168,13 +184,9 @@
 			}
 		}
 	}
+
 	//.footer__text {
 	&__text {
-		&:nth-child(2) {
-			text-align: right;
-			white-space: nowrap;
-		}
-
 		a {
 			text-decoration: underline;
 			&:hover {

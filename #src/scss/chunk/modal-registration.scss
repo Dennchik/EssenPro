@@ -9,6 +9,28 @@
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.4s ease-in-out;
+	overflow-x: hidden;
+	height: 100vh;
+
+	// .modal-registrations-fiz__body
+	&__body {
+		position: relative;
+		display: inline-block;
+		margin: 0 auto;
+		background-color: #fefefe;
+		margin: 10% auto;
+		padding: 3rem 4rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+		@include _screen-690 {
+			padding: 3rem 2rem;
+			margin: 55px auto 55px;
+		}
+		@include _screen-375 {
+			padding: 3rem 1rem;
+		}
+	}
 
 	&._show {
 		opacity: 1;
@@ -20,7 +42,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 100vh;
 		width: 100%;
 	}
 
@@ -42,26 +63,6 @@
 		font-size: 1.7rem;
 		font-weight: 700;
 		margin-bottom: 2rem;
-	}
-
-	// .modal-registrations-fiz__body
-	&__body {
-		display: inline-block;
-		margin: 0 auto;
-		background-color: #fefefe;
-		margin: 0 auto;
-		padding: 3rem 4rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		transform: translate(0, 60%);
-
-		@include _screen-690 {
-			transform: translate(0, 15%);
-			padding: 3rem 2rem;
-		}
-		@include _screen-375 {
-			padding: 3rem 1rem;
-		}
 	}
 
 	// .modal-registrations-fiz__info

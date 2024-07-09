@@ -3,7 +3,7 @@
 		color: rgb(88, 88, 86);
 		font-size: 40px;
 		font-weight: 700;
-		line-height: 120%; /* 48px/40 */
+		line-height: 100%; /* 48px/40 */
 		margin-bottom: 44px;
 	}
 
@@ -11,8 +11,10 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		justify-content: space-between;
+		gap: 2rem;
+		row-gap: 8rem;
 
-		@include _screen-830 {
+		@include _screen-1140 {
 			grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
 		}
 	}

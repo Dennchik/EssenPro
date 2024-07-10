@@ -314,6 +314,7 @@ export function userMenu() {
 		el.addEventListener('click', () => {
 			// Скрываем модальное окно с плавным исчезновением;
 			modal.classList.remove('_show');
+			removeElement($.login, '_active');
 		});
 	}
 

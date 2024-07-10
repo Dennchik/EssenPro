@@ -32,9 +32,7 @@
 	padding: 0 10px;
 	display: flex;
 	flex-direction: column;
-
 	min-height: calc(100vh - 2rem);
-	// border: 5px solid red;
 
 	@include _min-1140 {
 		padding: 0 30px;

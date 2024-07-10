@@ -3,6 +3,7 @@
 		color: $color;
 		opacity: 1 !important;
 	}
+
 	&__title {
 		color: rgb(88, 88, 86);
 		font-size: 40px;
@@ -32,9 +33,52 @@
 			gap: 20px;
 			justify-content: space-evenly;
 			grid-template-columns: repeat(5, minmax(250px, 290px));
+
 			@include _screen-1440 {
 				grid-template-columns: repeat(auto-fit, minmax(259px, 290px));
 			}
+		}
+	}
+}
+
+.counter-product {
+	width: 100%;
+	// .counter-product__quantity
+	&__quantity {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.quantity {
+	// .quantity__button
+
+	&__button {
+		cursor: pointer;
+		font-size: 15px;
+		width: 3rem;
+		height: 3rem;
+		line-height: 100%;
+
+		._icon {
+			pointer-events: none;
+			font-size: 12px;
+		}
+
+		&._disabled {
+			opacity: 0.3;
+		}
+	}
+
+	// .quantity__input
+	&__input {
+		input {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 121.428571%; /* 17px/14 */
+			text-align: center;
+			max-width: 33px;
 		}
 	}
 }

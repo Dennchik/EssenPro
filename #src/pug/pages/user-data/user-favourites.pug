@@ -1,92 +1,500 @@
 .favourites-product
 	._title 
 		.title-text Избранное 
-	._content
-		._column
-			.card-product
-				._thumb
-					._image
-						img(src="./img/main/products/product-1.png", alt="картинка")
-				._content
-					._text 
-						h2 Морепродукты
-					._button 
-						a(href="./products-card.html")
-							span смотреть 
-		._column
-			.card-product
-				._thumb
-					._image 
-						img(src="./img/main/products/product-2.png", alt="картинка")
-				._content
-					._text 
-						h2 Бакалея
-					._button 
-						a(href="")
-							span смотреть
-		._column
-			.card-product
-				._thumb
-					._image
-						img(src="./img/main/products/product-3.png", alt="картинка")
-				._content
-					._text 
-						h2 Молочная продукция
-					._button 
-						a(href="")
-							span смотреть
-		._column
-			.card-product
-				._thumb
-					._image 
-						img(src="./img/main/products/product-4.png", alt="картинка")
-				._content
-					._text 
-						h2 Для барбекю
-					._button 
-						a(href="")
-							span смотреть
-		._column
-			.card-product
-				._thumb
-					._image 
-						img(src="./img/main/products/product-5.png", alt="картинка")
-				._content
-					._text 
-						h2 Напитки
-					._button 
-						a(href="")
-							span смотреть
-		._column
-			.card-product
-				._thumb
-					._image
-						img(src="./img/main/products/product-6.png", alt="картинка")
-				._content
-					._text 
-						h2 HoReCa
-					._button 
-						a(href="")
-							span смотреть
-		._column
-			.card-product
-				._thumb
-					._image 
-						img(src="./img/main/products/product-7.png", alt="картинка")
-				._content
-					._text 
-						h2 Яйцо
-					._button 
-						a(href="")
-							span смотреть
-		._column
-			.card-product
-				._thumb
-					._image 
-						img(src="@@webRoot/img/main/products/product-8.png", alt="картинка")
-				._content
-					._text 
-						h2 Овощи и фрукты
-					._button 
-						a(href="")
-							span смотреть
+	.products
+		._content
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span новинка
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-14.png", alt="картинка")
+						._info
+							._title Макароные изделия ТМ”Щербинские” Вермишелька 450гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-15.png", alt="картинка")
+						._info
+							._title Суп грибной с&nbsp;вермешелью ТМ”Жар востока” 50 гр
+							._content
+								._price 17.40
+									span р
+								._text Жар востока
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span новинка
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-16.png", alt="картинка")
+						._info
+							._title Сок виноградный осветленный восстановлинный ТМ”Давыдов Продукт” 3л
+							._content
+								._price 46.00
+									span р
+								._text Соки, Нектары
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-17.png", alt="картинка")
+						._info
+							._title Сыр плавленный ТМ”Экомилк” 400гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-14.png", alt="картинка")
+						._info
+							._title Макароные изделия ТМ”Щербинские” Вермишелька 450гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span новинка
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+							img(src="@@webRoot/img/main/products/product-15.png", alt="картинка")
+						._info
+							._title Суп грибной с вермешелью ТМ”Жар востока” 50&nbsp;гр
+							._content
+								._price 17.40
+									span р
+								._text Жар востока
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-16.png", alt="картинка")
+						._info
+							._title Сок виноградный осветленный восстановлинный ТМ”Давыдов Продукт” 3л
+							._content
+								._price 46.00
+									span р
+								._text Соки, Нектары
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-17.png", alt="картинка")
+						._info
+							._title Сыр плавленный ТМ”Экомилк” 400гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-14.png", alt="картинка")
+						._info
+							._title Макароные изделия ТМ”Щербинские” Вермишелька 450гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-15.png", alt="картинка")
+						._info
+							._title Суп грибной с вермешелью ТМ”Жар востока” 50&nbsp;гр
+							._content
+								._price 17.40
+									span р
+								._text Жар востока
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span новинка
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-16.png", alt="картинка")
+						._info
+							._title Сок виноградный осветленный восстановлинный ТМ”Давыдов Продукт” 3л
+							._content
+								._price 46.00
+									span р
+								._text Соки, Нектары
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-17.png", alt="картинка")
+						._info
+							._title Сыр плавленный ТМ”Экомилк” 400гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span новинка
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-14.png", alt="картинка")
+						._info
+							._title Макароные изделия ТМ”Щербинские” Вермишелька 450гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off")
+										.quantity__button.quantity-add
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-15.png", alt="картинка")
+						._info
+							._title Суп грибной с&nbsp;вермешелью ТМ”Жар востока” 50&nbsp;гр
+							._content
+								._price 17.40
+									span р
+								._text Жар востока
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span хит
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-16.png", alt="картинка")
+						._info
+							._title Сок виноградный осветленный восстановлинный ТМ”Давыдов Продукт” 3л
+							._content
+								._price 46.00
+									span р
+								._text Соки, Нектары
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add 
+											i.icon-plus
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur
+			._column 
+				.card(data-quantity)
+					._body
+						._header
+							._label
+								span новинка
+							._favourites
+								i.icon-heart
+								i.icon-heart-like
+						._image 
+							img(src="@@webRoot/img/main/products/product-17.png", alt="картинка")
+						._info
+							._title Сыр плавленный ТМ”Экомилк” 400гр
+							._content
+								._price 46.00
+									span р
+								._text Щебекинские
+						._buttons 
+							._counter
+								.counter-product
+									.quantity.counter-product__quantity
+										.quantity__button.quantity-remove
+											i.icon-minus
+										.quantity__input
+											input.input(type="text", name="form[]", value="0", placeholder="<+>", autocomplete="off") 
+										.quantity__button.quantity-add
+											i.icon-plus 
+							._button 
+								button(type="submit") 
+									span В корзину
+					._blur

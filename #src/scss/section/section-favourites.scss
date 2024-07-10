@@ -1,10 +1,15 @@
 .favourites-product {
+	.icon-heart-like {
+		color: $color;
+		opacity: 1 !important;
+	}
 	&__title {
 		color: rgb(88, 88, 86);
 		font-size: 40px;
 		font-weight: 700;
 		line-height: 100%; /* 48px/40 */
 		margin-bottom: 44px;
+		text-align: center;
 	}
 
 	&__content {
@@ -15,10 +20,16 @@
 	}
 
 	.products {
+		flex: 1 1 auto;
+		height: 100%;
+
 		&__column {
 			max-width: 290px;
 		}
+
 		&__content {
+			display: grid;
+			gap: 20px;
 			justify-content: space-evenly;
 			grid-template-columns: repeat(5, minmax(250px, 290px));
 			@include _screen-1440 {

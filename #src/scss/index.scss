@@ -28,6 +28,7 @@
 	box-sizing: content-box;
 	margin: 0 auto;
 	padding: 0 10px;
+	min-height: 100vh;
 
 	@include _min-1140 {
 		padding: 0 30px;

@@ -42,6 +42,8 @@
 
 	// .page__content
 	&__content {
+		flex: 1 1 auto;
+		height: 100%;
 		margin-top: 12.2rem;
 		@include _screen-1024 {
 			margin-top: 13.5rem;
@@ -177,5 +179,8 @@
 	// .page__favourites
 	&__favourites {
 		padding: 0 0 8.6rem;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 }

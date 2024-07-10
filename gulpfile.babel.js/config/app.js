@@ -109,10 +109,7 @@ export default {
 			},
 		},
 		entry: {
-			// favourites: './#src/js/favourites.js',
-			// 'info-work': './#src/js/info-work.js',
-			// 'product-card': './#src/js/product-card.js',
-			// catalog: './#src/js/catalog.js',
+			favourites: './#src/js/favourites.js',
 			account: './#src/js/account.js',
 			catalog: './#src/js/catalog.js',
 			'products-card': './#src/js/products-card.js',

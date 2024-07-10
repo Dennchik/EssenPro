@@ -1,7 +1,7 @@
 // todo -------------------------- Variables -----------------------------------
 @import 'core/variables';
 @import 'core/variables-icon';
-@import 'core/swiper-vars';
+// @import 'core/swiper-vars';
 //todo ----------------------------- Core --------------------------------------
 @import 'core/mixins';
 @import 'core/extend';
@@ -15,7 +15,7 @@
 //todo  ------------------------ Icon Fonts ------------------------------------
 @import 'core/iconfonts';
 // todo -------------------------- Plugins -------------------------------------
-@import 'assets/swiper';
+// @import 'assets/swiper';
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
@@ -58,5 +58,7 @@
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
 @import 'modules/sidebar-menu';
+@import 'modules/card-content';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-favourites';
+@import 'section/section-catalog-products';

@@ -10,12 +10,20 @@
 	&__content {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		justify-content: space-between;
 		gap: 2rem;
 		row-gap: 8rem;
+	}
 
-		@include _screen-1140 {
-			grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
+	.products {
+		&__column {
+			max-width: 290px;
+		}
+		&__content {
+			justify-content: space-evenly;
+			grid-template-columns: repeat(5, minmax(250px, 290px));
+			@include _screen-1440 {
+				grid-template-columns: repeat(auto-fit, minmax(259px, 290px));
+			}
 		}
 	}
 }

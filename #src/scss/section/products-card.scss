@@ -1,4 +1,7 @@
 .products-card {
+	.card__buttons {
+		gap: 80px;
+	}
 	// .products-card__navigation
 	&__navigation {
 		padding: 1rem 2rem;
@@ -388,7 +391,7 @@
 
 	// .products-info__condition
 	&__condition {
-		flex: 0 1 137px;
+		flex: 0 1 150px;
 		display: flex;
 		align-items: center;
 		span {

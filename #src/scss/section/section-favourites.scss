@@ -40,7 +40,15 @@
 		}
 	}
 }
-
+.order-place {
+	.counter-product {
+		padding: 10px 0;
+	}
+	.counter-product__quantity {
+		border: 1px solid $color;
+		border-radius: 5px;
+	}
+}
 .counter-product {
 	width: 100%;
 	// .counter-product__quantity
@@ -48,6 +56,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	&__price {
+		margin-top: 2rem;
+		@include _screen-690 {
+			margin-top: 4rem;
+			text-align: center;
+		}
 	}
 }
 

@@ -2688,6 +2688,15 @@ h6 {
   grid-template-columns: repeat(5, minmax(250px, 290px));
 }
 
+.order-place .counter-product {
+  padding: 10px 0;
+}
+
+.order-place .counter-product__quantity {
+  border: 1px solid #a83434;
+  border-radius: 5px;
+}
+
 .counter-product {
   width: 100%;
 }
@@ -2705,6 +2714,10 @@ h6 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.counter-product__price {
+  margin-top: 2rem;
 }
 
 .quantity__button {
@@ -3154,6 +3167,11 @@ h6 {
     -ms-grid-columns: min-content;
     grid-template-columns: -webkit-min-content;
     grid-template-columns: min-content;
+  }
+
+  .counter-product__price {
+    margin-top: 4rem;
+    text-align: center;
   }
 }
 

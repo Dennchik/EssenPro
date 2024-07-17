@@ -442,6 +442,7 @@ h6 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 .card__favourites:not(._like) .icon-heart-like {
@@ -3094,77 +3095,6 @@ h6 {
   max-width: 290px;
 }
 
-.counter-product {
-  padding: 10px 0;
-}
-
-.counter-product__quantity {
-  border: 1px solid #a83434;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.counter-product__quantity [class*=icon-] {
-  pointer-events: none;
-}
-
-.counter-product__price {
-  margin-top: 2rem;
-}
-
-.quantity__button {
-  cursor: pointer;
-  font-size: 15px;
-  width: 3rem;
-  height: 3rem;
-  line-height: 100%;
-}
-
-.quantity__button .icon {
-  pointer-events: none;
-}
-
-.quantity__button .icon-minus {
-  font-size: 13px;
-}
-
-.quantity__button .icon-cancel {
-  font-size: 7px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.quantity__input {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.quantity__input input {
-  font-size: 12px;
-  text-align: center;
-  max-width: 50px;
-}
-
-.quantity-remove._disabled {
-  opacity: 0.3;
-}
-
 .personal-account {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -4669,11 +4599,6 @@ h6 {
 
   .data-form__input input {
     min-width: 30rem;
-  }
-
-  .counter-product__price {
-    margin-top: 4rem;
-    text-align: center;
   }
 
   .greed-laout,

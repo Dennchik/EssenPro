@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
 					select();
 				} else if (page === 'history-order') {
 					sleectData();
+				} else if (page === 'user-favourites') {
+					counterProducy();
 				}
 
 			})

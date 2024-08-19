@@ -1,28 +1,6 @@
-// todo -------------------------- Variables -----------------------------------
 @import 'core/variables';
-@import 'core/variables-icon';
-//todo ----------------------------- Core --------------------------------------
 @import 'core/mixins';
 @import 'core/extend';
-@import 'core/reset';
-// @import 'core/ui';
-//todo ------------------------- Default fonts ---------------------------------
-// &display=swap&subset=cyrillic-ext
-@import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
-
-// todo --------------------------- Fonts --------------------------------------
-@import 'core/fonts';
-//todo  ------------------------ Icon Fonts ------------------------------------
-@import 'core/iconfonts';
-// todo -------------------------- Classes -------------------------------------
-// #region
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0 auto;
-}
-
 [class*='_container'] {
 	max-width: $maxWidthContainer;
 	box-sizing: content-box;
@@ -38,14 +16,6 @@
 	}
 }
 
-[class*='icon-'] {
-	cursor: pointer;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	pointer-events: none;
-}
 // todo --------------------------- layout -------------------------------------
 @import 'layouts/bem-block';
 @import 'layouts/header';

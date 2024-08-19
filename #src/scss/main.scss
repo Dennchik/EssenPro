@@ -1,0 +1,75 @@
+:root {
+	--font-body-color: rgb(0, 0, 0);
+	--font-color-second: rgb(0, 70, 70);
+	--font-color-title: #88c0ff;
+	--font-color-active: #7796f3;
+	--font-color-not-active: #8bb0ff6c;
+	//* ---------------------------- [Background] --------------------------------
+	--background-color: #0e0e0e;
+	--background-second: #020a10;
+	--background-selected: #2b2d4156;
+	--background-terminal: #16161e;
+	--background-side-bar: #191b27;
+	--background-active-bar: #1e202e;
+	--background-color-title: #0e0e13;
+	--background-transparent: #0e0e13da;
+	//* ---------------------------- [Scrollbar] ---------------------------------
+	--selected-color: #71cbff;
+	--themes-color: #5e4da8;
+	--background-thumb: #16161e;
+	--scrollbar-thumb-bgcolor: rgb(71, 83, 45);
+	//* -------------------------- [Other colors] --------------------------------
+	// --border-color: #3c548d49;
+
+	// ---------------------------------------------------------------------------
+	--pos: center;
+	--size: 0;
+	--inset-top: 0;
+	--inset-right: 100%;
+	--inset-bottom: 100%;
+	--inset-left: 0;
+	// ---------------------------------------------------------------------------
+	--stripe-width: 10px;
+	--nav-marker-border: #3b8686;
+	--sidebar-width: 28.5rem;
+	--duration: 0.3s;
+
+	--button-size: 4rem;
+	--mob-expanded-width: 320px;
+	--mob-collapsed-width: 4rem;
+}
+
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+@import 'core/swiper-vars';
+//todo ----------------------------- Core --------------------------------------
+@import 'core/mixins';
+@import 'core/extend';
+@import 'core/reset';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+@import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo -------------------------- Plugins -------------------------------------
+@import 'assets/swiper';
+// todo -------------------------- Classes -------------------------------------
+// #region
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+[class*='icon-'] {
+	cursor: pointer;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

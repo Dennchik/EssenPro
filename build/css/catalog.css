@@ -2094,6 +2094,22 @@
   height: 100%;
 }
 
+.card.out-stock {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.card.out-stock .card__buttons {
+  display: none;
+}
+
+.card.out-stock .card__button-stock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .card__body {
   background: #fff;
   position: relative;
@@ -2134,15 +2150,11 @@
 }
 
 .card__header {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .card__thumb {
@@ -2171,10 +2183,18 @@
 }
 
 .card__favourites {
-  width: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   height: 22px;
   position: relative;
   font-size: 22px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .card__favourites._like .icon-heart {
@@ -2182,12 +2202,17 @@
 }
 
 .card__favourites ._icon {
+  width: 100%;
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .card__favourites .icon-heart-like {
@@ -2351,7 +2376,6 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 137px;
   width: 100%;
   height: 38px;
   border-radius: 10px;
@@ -2372,6 +2396,39 @@
 }
 
 .card__button span {
+  white-space: nowrap;
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 121.428571%;
+}
+
+.card__button-stock {
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 15px;
+  height: 38px;
+  border-radius: 10px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-23.739%, rgb(168, 52, 52)), color-stop(96.778%, rgb(234, 142, 127)));
+  background: -webkit-linear-gradient(left, rgb(168, 52, 52) -23.739%, rgb(234, 142, 127) 96.778%);
+  background: -o-linear-gradient(left, rgb(168, 52, 52) -23.739%, rgb(234, 142, 127) 96.778%);
+  background: linear-gradient(90deg, rgb(168, 52, 52) -23.739%, rgb(234, 142, 127) 96.778%);
+}
+
+.card__button-stock span {
   white-space: nowrap;
   display: block;
   color: white;
@@ -2571,76 +2628,6 @@
   max-width: 33px;
 }
 
-.products__title {
-  padding: 0 10px;
-  margin-bottom: 2.8rem;
-  color: rgb(88, 88, 86);
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 120%;
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.products__title ._icon {
-  font-size: 20px;
-}
-
-.products__content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 100%;
-  padding: 3.5rem 1rem;
-  overflow: hidden;
-}
-
-.products__column {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.counter-product {
-  width: 100%;
-}
-
-.counter-product__quantity {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 .quantity__button {
   cursor: pointer;
   font-size: 15px;
@@ -2664,6 +2651,57 @@
   line-height: 121.428571%;
   text-align: center;
   max-width: 33px;
+}
+
+.page__new-products .products__title {
+  padding: 0 10px;
+  margin-bottom: 2.8rem;
+  color: rgb(88, 88, 86);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page__new-products .products__title ._icon {
+  font-size: 20px;
+}
+
+.page__new-products .products__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3.5rem 1rem;
+  overflow: hidden;
+}
+
+.page__new-products .products__column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .categories__title {
@@ -3237,7 +3275,7 @@
     font-size: 3rem;
   }
 
-  .products__title {
+  .page__new-products .products__title {
     font-size: 3rem;
   }
 

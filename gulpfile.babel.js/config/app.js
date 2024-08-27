@@ -109,6 +109,7 @@ export default {
 			},
 		},
 		entry: {
+			counter: './#src/js/counter.js',
 			favourites: './#src/js/favourites.js',
 			account: './#src/js/account.js',
 			catalog: './#src/js/catalog.js',

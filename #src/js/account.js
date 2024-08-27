@@ -54,11 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function loadPage(page) {
-		fetch(`user-data/${page}.html`)
+		fetch(`user-data/${page}.php`)
 			.then(response => response.text())
-			.then(data => {
-				content.innerHTML = data;
+			.then(innerContent => {
+				content.innerHTML = innerContent;
 				bindEvents(); // Повторно привязываем события после загрузки контента
+
 				if (page === 'order-cart') {
 					select();
 					counterProducy();
@@ -79,30 +80,40 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	bindEvents(); // Вызываем в начале, чтобы привязать события к уже существующим ссылкам
+	// Находим элемент с классом "_active" и получаем значение атрибута data-page
+	const activeItem = document.querySelector('.user-bar__item._active .link');
+	if (activeItem) {
+		const page = activeItem.getAttribute('data-page');
+		loadPage(page); // Загружаем страницу, указанную в атрибуте data-page
+	}
 });
 
 function sleectData() {
-	const startDateInput = document.getElementById('start-date');
-	const endDateInput = document.getElementById('end-date');
+	const datePeriod = document.querySelector('.date-period');
+	if (datePeriod) {
 
-	startDateInput.addEventListener('change', function () {
-		console.log('Start date selected:', startDateInput.value);
-		validateDates();
-	});
+		const startDateInput = document.getElementById('start-date');
+		const endDateInput = document.getElementById('end-date');
 
-	endDateInput.addEventListener('change', function () {
-		console.log('End date selected:', endDateInput.value);
-		validateDates();
-	});
+		startDateInput.addEventListener('change', function () {
+			console.log('Start date selected:', startDateInput.value);
+			validateDates();
+		});
 
-	function validateDates() {
-		const startDate = new Date(startDateInput.value);
-		const endDate = new Date(endDateInput.value);
+		endDateInput.addEventListener('change', function () {
+			console.log('End date selected:', endDateInput.value);
+			validateDates();
+		});
 
-		if (startDate > endDate) {
-			alert('Дата "до" не может быть раньше даты "от".');
-		} else {
-			console.log(`Выбранный диапазон дат: От ${startDate.toLocaleDateString()} до ${endDate.toLocaleDateString()}`);
+		function validateDates() {
+			const startDate = new Date(startDateInput.value);
+			const endDate = new Date(endDateInput.value);
+
+			if (startDate > endDate) {
+				alert('Дата "до" не может быть раньше даты "от".');
+			} else {
+				console.log(`Выбранный диапазон дат: От ${startDate.toLocaleDateString()} до ${endDate.toLocaleDateString()}`);
+			}
 		}
 	}
 }

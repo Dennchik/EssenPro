@@ -789,6 +789,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 [class*=icon-] {
   cursor: pointer;
+  pointer-events: none;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;

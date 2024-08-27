@@ -3,7 +3,6 @@ export function counterProducy() {
 	const productPrices = document.querySelectorAll('.product-price');
 
 	if (counters) {
-
 		counters.forEach(counter => {
 			let input = counter.querySelector('input');
 

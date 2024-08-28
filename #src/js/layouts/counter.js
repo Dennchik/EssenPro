@@ -5,20 +5,16 @@ export function counterProducy() {
 	if (counters) {
 		counters.forEach(counter => {
 			let input = counter.querySelector('input');
-
 			let disabledButton = counter.querySelector('.quantity-remove');
 			if (input.value === '0') {
 				disabledButton.classList.add('_disabled');
 			}
-
 			counter.addEventListener('click', (e) => {
 				let target = e.target;
 				if (target.closest('.quantity__button')) {
 					let input = target.closest('.quantity').querySelector('input');
 					let value = parseInt(input.value) || 0;
-
 					if (target.classList.contains('quantity-add')) {
-
 						value++;
 					} else {
 						value--;
@@ -34,7 +30,6 @@ export function counterProducy() {
 					_totalSum();
 				}
 			});
-
 			input.addEventListener('input', function (e) {
 				this.value = this.value.replace(/[^0-9.]/g, '');
 			});

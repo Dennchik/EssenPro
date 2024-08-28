@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function loadPage(page) {
-		fetch(`user-data/${page}.php`)
+		fetch(`user-data/${page}.html`)
 			.then(response => response.text())
 			.then(innerContent => {
 				content.innerHTML = innerContent;

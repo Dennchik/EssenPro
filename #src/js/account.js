@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(response => response.text())
 			.then(innerContent => {
 				content.innerHTML = innerContent;
-				bindEvents(); // Повторно привязываем события после загрузки контента
+				// bindEvents(); // Повторно привязываем события после загрузки контента
 
 				if (page === 'order-cart') {
 					select();
